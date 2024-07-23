@@ -14,13 +14,13 @@ body {
   h1, h2, h3, p {
     font-family: 'Poppins', sans-serif;
   }
-  h1, h2, h3 {
+  h1, h2, h3, .headf {
     position: relative;
     display: inline-block;
     padding-bottom: 5px;
   }
   
-  h1::after, h2::after, h3::after {
+  h1::after, h2::after, h3::after, .headf::after {
     content: '';
     position: absolute;
     left: 0;
@@ -39,7 +39,7 @@ body {
 nav {
     position: fixed;
     width: 100%;
-    background-color: #1f1e1e;
+    background-color: #313030;
     padding: 10px 0;
     z-index: 1000;
     color: white;
@@ -86,7 +86,7 @@ li{
 }
 
 header {
-    padding-top: 100px;
+    /* padding-top: 100px; */
     background-color: #f4f4f4;
 }
 
@@ -95,7 +95,6 @@ header {
     max-width: 1200px;
     margin: 0 auto;
     padding: 20px;
-    
 }
 
 .image-container, .info-container {
@@ -117,6 +116,7 @@ section {
 #about, #conference, #services, #contact {
         
     margin-top: 20px;
+    margin-bottom: 20px;
 }
 
 h2 {
@@ -134,7 +134,20 @@ h2 {
     padding: 20px;
     max-width: 12000vh;
     margin: 0 auto;
-    margin-top: 50px;
+    /* margin-top: 50px; */
+}
+.background3 {
+    position: relative;
+    background-image: url('progress.jpg');
+    background-size: cover;
+    background-position: center;
+    /* display: flex; */
+    /* align-items: center; */
+    /* justify-content: space-between; */
+    padding: 20px;
+    max-width: 12000vh;
+    margin: 0 auto;
+    /* margin-top: 50px; */
 }
 .background2 {
     position: relative;
@@ -243,15 +256,18 @@ h2 {
 }
 .button{
     padding: 7px;
-    background: white;
-    color:#4caf50;
+    background: #1f1e1e;
+    color:#ffffff;
     font-size: larger;
-    border-radius: 10px;
+    border-radius: 5px;
     border: none;
     font-weight: 600;
-    margin-left: 150px;
     margin-top: 10px;
     cursor: pointer;
+}
+button :hover{
+    background-color: #4caf50;
+
 }
 
 .outer-div{
@@ -265,4 +281,8 @@ h2 {
     margin-bottom: 20px;
     color: black;
     border-radius: 30px;
+}
+.imgc{
+    height: auto;
+    width: 600px;
 }
