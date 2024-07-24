@@ -4,276 +4,170 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>ICDSCI</title>
-    <link rel="stylesheet" href="styles.css" />
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <style>
+      body {
+        font-family: 'Poppins', sans-serif;
+      }
+      .underline-green {
+        text-decoration: underline;
+        text-decoration-color: rgb(34 197 94 / var(--tw-bg-opacity));
+      }
+
+    </style>
   </head>
-  <body>
-    <nav>
-      <div class="nav-container">
-        <a href="#" class="logo"><span>ICDSCI</span> 2025</a>
-        <ul class="nav-links">
-          <li><a style="color: white;" href="#home">Home</a></li>
-          <li><a style="color: white;" href="#about">About</a></li>
-          <li><a style="color: white;" href="#services">Services</a></li>
-          <li><a style="color: white;" href="#contact">Contact</a></li>
+  <body class="bg-gray-900 text-white">
+    <nav class="fixed w-full bg-gray-800 text-white py-4 z-50">
+      <div class="container mx-auto flex justify-between items-center px-4">
+        <a href="#" class="text-2xl font-bold"><span class="bg-green-500 px-2 py-1 rounded">ICDSCI</span> 2025</a>
+        <ul class="flex space-x-6">
+          <li><a href="#home" class="hover:text-green-400">Home</a></li>
+          <li><a href="#about" class="hover:text-green-400">About</a></li>
+          <li><a href="#services" class="hover:text-green-400">Services</a></li>
+          <li><a href="#contact" class="hover:text-green-400">Contact</a></li>
         </ul>
       </div>
     </nav>
 
-    <header id="home" style="background-color: #1f1e1e;">
-      <div>
-          <div style="background-color: #4caf50; padding: 30px  ">
-              <div style="margin-left: 300px;"><img style="padding-top: 40px;" class="imgc" src="pscmr.png" alt="Sample Image" /></div>
-            <h1 >
-                International Conference on Date Science and Computational Intelligence(ICDSCI)
-            </h1>
-            <h2>March 20-21, 2025</h2>
-            <div></div>
-            <h2 style="color: black;"><u>Conference Proceedings</u></h2> <br>
-            <h3>
-              ALL ACCEPTED & PRESENTED papers will be published in SCOPUS
-              indexed SPRINGER PROMS.
-            </h3>
-            <div>
-              <img height="150px" width="150px" src="springer.png" alt="" />
-              <img height="150px" width="150px" src="bg2.jpg" alt="" />
-            </div>
-            <div style="margin-left: 500px;"><button class="button">Submit Your Paper</button></div>
-          </div>
- 
+    <header id="home" class="bg-gray-800 py-24 text-center">
+      <div class="container mx-auto">
+        <h1 class="text-4xl font-bold mb-2">International Conference on Data Science and Computational Intelligence (ICDSCI)</h1>
+        <h2 class="text-2xl mb-2">March 20-21, 2025</h2>
+        <h2 class="text-xl text-black underline mb-4">Conference Proceedings</h2>
+        <h3 class="text-lg mb-4">ALL ACCEPTED & PRESENTED papers will be published in SCOPUS indexed SPRINGER PROMS.</h3>
+        <div class="flex justify-center space-x-4 mb-4">
+          <img src="springer.png" alt="Springer" class="h-36 w-36" />
+          <img src="bg2.jpg" alt="Background" class="h-36 w-36" />
+        </div>
+        <button class="bg-black text-white px-4 py-2 rounded hover:bg-green-600 mb-4">Submit Your Paper</button>
       </div>
+      <img src="pscmr.png" alt="Sample Image" class="mx-auto mb-4" style="max-width: 100%; height: auto;" />
     </header>
 
-    <section id="conference" >
-      <h2>About the Conference</h2>
-      <p>`
-        The International Conference on Data Science and Artificial Intelligence
-        (ICDSAI) 2024 is a pivotal event that embodies the core elements of the
-        5th Industrial Revolution. The widespread application of data science is
-        revolutionizing products and services, significantly impacting labor
-        markets, economies, and societies globally.
-      </p>
-      <p>
-        The event aims to gather scientific and technical contributions across a
-        broad spectrum of models, tools, technologies, and applications in
-        modern data science. The conference will cover the full range of
-        concepts from theoretical foundations to practical implementations,
-        including case studies, works-in-progress, and conceptual explorations.
-      </p>
+    <section id="conference" class="container mx-auto py-12 p-3">
+      <h2 class="text-3xl font-bold mb-4 underline-green">About the Conference</h2>
+      <p class="mb-4">The International Conference on Data Science and Artificial Intelligence (ICDSAI) 2024 is a pivotal event that embodies the core elements of the 5th Industrial Revolution. The widespread application of data science is revolutionizing products and services, significantly impacting labor markets, economies, and societies globally.</p>
+      <p>The event aims to gather scientific and technical contributions across a broad spectrum of models, tools, technologies, and applications in modern data science. The conference will cover the full range of concepts from theoretical foundations to practical implementations, including case studies, works-in-progress, and conceptual explorations.</p>
     </section>
 
-    <section id="new-section" class="background">
-      <div class="grid-container">
-        <div class="grid-item" id="grid-item1">
-          <h3>FOCUSED NETWORKING</h3>
-          <p>
-            Provides a free and open atmosphere where attendees talk and engage
-            in creative ways.
-          </p>
+    <section id="new-section" class="py-12 bg-cover" style="background-image: url('img.jpg');">
+      <div class="container grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+        <div class="p-6 ml-2 mr-2 bg-gray-800 rounded">
+          <h3 class="text-2xl font-bold mb-2 underline-green">FOCUSED NETWORKING</h3>
+          <p>Provides a free and open atmosphere where attendees talk and engage in creative ways.</p>
         </div>
-        <div class="grid-item" id="grid-item2">
-          <h3>EXPERT SPEAKERS</h3>
-          <p>
-            Our speakers represent the cream of research and development
-            practitioners worldwide.
-          </p>
+        <div class="p-6 ml-2 mr-2 bg-gray-800 rounded">
+          <h3 class="text-2xl font-bold mb-2 underline-green">EXPERT SPEAKERS</h3>
+          <p>Our speakers represent the cream of research and development practitioners worldwide.</p>
         </div>
-        <div class="grid-item" id="grid-item3">
-          <h3>BRILLIANT IDEAS</h3>
-          <p>
-            High-impact, collaborative and new approaches to some of the world’s
-            toughest problems.
-          </p>
+        <div class="p-6 ml-2 mr-2 bg-gray-800 rounded">
+          <h3 class="text-2xl font-bold mb-2 underline-green">BRILLIANT IDEAS</h3>
+          <p>High-impact, collaborative and new approaches to some of the world’s toughest problems.</p>
         </div>
-        <div class="grid-item" id="grid-item4">
-          <h3>EXCEPTIONAL PROGRAM</h3>
-          <p>
-            Includes demonstrations, keynote speeches, plenary panel, breakout
-            sessions as well as the industry program.
-          </p>
+        <div class="p-6 ml-2 mr-2 bg-gray-800 rounded">
+          <h3 class="text-2xl font-bold mb-2 underline-green">EXCEPTIONAL PROGRAM</h3>
+          <p>Includes demonstrations, keynote speeches, plenary panel, breakout sessions as well as the industry program.</p>
         </div>
-        <div class="grid-item" id="grid-item5">
-          <h3>GLOBAL PARTICIPATION</h3>
-          <p>
-            Anticipating attendees from various countries all over the world.
-          </p>
+        <div class="p-6 ml-2 mr-2 bg-gray-800 rounded">
+          <h3 class="text-2xl font-bold mb-2 underline-green">GLOBAL PARTICIPATION</h3>
+          <p>Anticipating attendees from various countries all over the world.</p>
         </div>
-        <div class="grid-item" id="grid-item6">
-          <h3>INSPIRATIONAL LEARNING</h3>
-          <p>
-            Bringing together a researchers from several fields to collaborate
-            together and create lasting change.
-          </p>
+        <div class="p-6 ml-2 mr-2 bg-gray-800 rounded">
+          <h3 class="text-2xl font-bold mb-2 underline-green">INSPIRATIONAL LEARNING</h3>
+          <p>Bringing together researchers from several fields to collaborate together and create lasting change.</p>
         </div>
       </div>
     </section>
 
-    <section class="background3">
-        <div class="grid-container">
-          <p class="headf" style="font-size: xx-large; font-weight: bold; ">Deadlines</p>
-        <div class="zigzag-container">
-          <div class="zigzag-item left">
-            <h3 >Manuscript submissions open: </h3>
-            <p>September 1, 2024</p>
+    <section class="py-12 bg-cover" style="background-image: url('progress.jpg');">
+      <div class="container mx-auto">
+        <h2 class="text-4xl font-bold text-center mb-8 underline-green">Deadlines</h2>
+        <div class="flex flex-wrap justify-between">
+          <div class="w-full md:w-1/2 p-2">
+            <div class="bg-green-500 p-6 rounded-lg text-black">
+              <h3 class="text-xl font-bold underline-green">Manuscript submissions open:</h3>
+              <p>September 1, 2024</p>
+            </div>
           </div>
-          <div class="zigzag-item right">
-            <h3>Deadline for Manuscript submissions: </h3>
-            <p>December 15,2024</p>
+          <div class="w-full md:w-1/2 p-2">
+            <div class="bg-green-500 p-6 rounded-lg text-black">
+              <h3 class="text-xl font-bold underline-green">Deadline for Manuscript submissions:</h3>
+              <p>December 15, 2024</p>
+            </div>
           </div>
-          <div class="zigzag-item left">
-            <h3>Initial review and feedback:</h3>
-            <p>December 15, 2024 - January 31,2025</p>
+          <div class="w-full md:w-1/2 p-2">
+            <div class="bg-green-500 p-6 rounded-lg text-black">
+              <h3 class="text-xl font-bold underline-green">Initial review and feedback:</h3>
+              <p>December 15, 2024 - January 31, 2025</p>
+            </div>
           </div>
-          <div class="zigzag-item right">
-            <h3>Notification of acceptance:</h3>
-            <p>February 15, 2025</p>
+          <div class="w-full md:w-1/2 p-2">
+            <div class="bg-green-500 p-6 rounded-lg text-black">
+              <h3 class="text-xl font-bold underline-green">Notification of acceptance:</h3>
+              <p>February 15, 2025</p>
+            </div>
           </div>
-          <div class="zigzag-item left">
-            <h3>Final revised manuscripts due: </h3>
-            <p>March 1, 2025</p>
+          <div class="w-full md:w-1/2 p-2">
+            <div class="bg-green-500 p-6 rounded-lg text-black">
+              <h3 class="text-xl font-bold underline-green">Final revised manuscripts due:</h3>
+              <p>March 1, 2025</p>
+            </div>
           </div>
-          <div class="zigzag-item right">
-            <h3>Author registration deadline:</h3>
-            <p>March 7, 2025</p>
+          <div class="w-full md:w-1/2 p-2">
+            <div class="bg-green-500 p-6 rounded-lg text-black">
+              <h3 class="text-xl font-bold underline-green">Author registration deadline:</h3>
+              <p>March 7, 2025</p>
+            </div>
           </div>
-          <div class="zigzag-item left">
-            <h3>Conference program finalized:</h3>
-            <p>March 2, 2025</p>
+          <div class="w-full md:w-1/2 p-2">
+            <div class="bg-green-500 p-6 rounded-lg text-black">
+              <h3 class="text-xl font-bold underline-green">Conference program finalized:</h3>
+              <p>March 2, 2025</p>
+            </div>
           </div>
         </div>
       </div>
     </section>
-
-    <section
-      id="new-section"
-      class="background2"
-      
-    >
-      <div class="grid-container2">
-        <!-- <h1>Indexing</h1>
-        <br />
-        <p>
-          Post-conference, proceedings will be made available to the following
-          indexing
-        </p>
-        <p>Services for possible inclusion:</p> -->
-        <div class="grid-item" id="grid-item1">
-          <img height="100px" width="400px" src="scopus.png" alt="" />
-        </div>
-        <div class="grid-item" id="grid-item2">
-          <img height="100px" width="400px" src="dblp.png" alt="" />
-        </div>
-        <div class="grid-item" id="grid-item3">
-          <img
-            height="100px"
-            width="400px"
-            src="clarivate-analytics.png"
-            alt=""
-          />
-        </div>
-        <div class="grid-item" id="grid-item4">
-          <img height="100px" width="400px" src="google-scholar.png" alt="" />
-        </div>
-      </div>
-    </section>
-
-    <!-- <div class="new-div">
-      <h1 style="text-align: center;">Countdown</h1>
-      <p>
-        Enthusiastic minds will be all together on the same floor to exchange
-        ideas, share the trends and converge towards a usable knowledge
-        application in the fascinating world of IoT.
-      </p>
-      <div>.</div>
-      <p>
-        Yes, with you we are also counting moments, see you during the
-        Conference.
-      </p>
-    </div> -->
-
-    <div style="background-color: #f2f5f2;">
-      <h1 style="color: black; margin-left: 500px;">Conference Tracks</h1>
-      <div class="outer-div">
-        <div class="conf-div">
-            <h2>Data Science Foundations:</h2>
-            <p>-Statistical learning theory</p>
-            <p>-Data mining techniques</p>
-            <p>-Big data analytics</p>
-            <p>-Machine learning algorithms</p>
-            <p>-Deep learning techniques</p>
-
-        </div>
-        <div class="conf-div">
-            <h2>Computational Intelligence:</h2>
-                <p>-Evolutionary computation</p>
-                <p>-Neural networks</p>
-                <p>-Fuzzy systems</p>
-                <p>-intelligence</p>
-                <p>-Genetic algorithms</p>
-        </div>
-        <div class="conf-div">
-            <h2>Applications of Data Science:</h2>
-            <p>-Statistical learning theory</p>
-            <p>-Data mining techniques</p>
-            <p>-Big data analytics</p>
-            <p>-Machine learning algorithms</p>
-            <p>-Deep learning techniques</p>
-
-        </div>
-    </div>
-      <div class="outer-div">
-        <div class="conf-div">
-            <h2>Computational intelligence</h2><br><h2>applications:</h2>
-                 <p>-Robotics and autonomous systems.</p>
-                 <p>-Decision support systems</p>        
-                 <p>-Optimization problems</p>
-                 <p>-Computational neuroscience</p>
-                 <p>-Intelligent control</p>
-        </div>
-        <div class="conf-div">
-            <h2>Data Science and Al Ethics:</h2>
-                <p>-Privacy and security in data analytics</p>
-                <p>-Fairness and transparency in Al</p>
-                <p>-Ethical considerations in big data research</p>
-
-        </div>
-        <div class="conf-div">
-            <h2>Data Visualization and </h2><br><h2>Interpretation:</h2>
-            <p>-Visual analytics</p>
-            <p>-Interactive data exploration</p>
-            <p>-Interpretability of machine learning models</p>
-        </div>
-    </div>
-      <div class="outer-div">
-        <div class="conf-div">
-            <h2>Cloud Computing and</h2><br><h2>Virtualization:</h2>
-            <p>-Cloud service models</p>
-            <p>-Containerization technologies</p>
-            <p>-Serverless computing and functions-as-a</p><p>-service</p>
-        </div>
-        <div class="conf-div">
-            <h2>Software Engineering </h2> <br> <h2>Practices:</h2></h2>
-            <p>-Agile methodologies and DevOps practices</p>
-            <p>-Software testing and quality assurance</p>
-            <p>-Software architecture and design pattems</p>
-
-        </div>
-        <div class="conf-div">
-            <h2>Emerging Trends:</h2>
-            <p>-Quantum computing and data science</p>
-            <p>-Edge computing for data analytics</p>
-            <p>-Blockchain and Al</p>
-        </div>
-    </div>
-    <div class="outer-div">
-        <div class="conf-div">
-            <h2>Industry Applications:</h2>
-            <p>-Financial analytics</p>
-            <p>-Heathcare informatics</p>
-            <p>-Industrial IoT appications</p>
-            <p>-Smart c and arbian analytics</p>
-        </div>
-    </div>
     
+    <section class="py-12">
+      <div class="container mx-auto text-center mb-8">
+        <h1 class="text-4xl font-bold underline-green">Indexing</h1> <br>
+        <p>Post-conference, proceedings will be made available to the following indexing services for possible inclusion:</p>
+      </div>
+      <div class="container mx-auto grid grid-cols-2 md:grid-cols-4 gap-6">
+        <img src="scopus.png" alt="Scopus" class="w-48 h-auto mx-auto" />
+        <img src="dblp.png" alt="dblp" class="w-48 h-auto mx-auto" />
+        <img src="clarivate-analytics.png" alt="clarivate-analytics" class="w-48 h-auto mx-auto" />
+        <img src="google-scholar.png" alt="google-scholar" class="w-48 h-auto mx-auto" />
+      </div>
+    </section>
+
+    <section id="contact" class="py-12 bg-gray-800">
+      <div class="container mx-auto">
+        <h2 class="text-4xl font-bold text-center mb-8 underline-green">Contact Us</h2>
+        <form class="max-w-xl mx-auto bg-gray-900 p-8 rounded-lg">
+          <div class="mb-4">
+            <label for="name" class="block text-sm font-bold mb-2">Name:</label>
+            <input type="text" id="name" name="name" class="w-full px-3 py-2 bg-gray-800 border border-gray-700 rounded text-white" required />
+          </div>
+          <div class="mb-4">
+            <label for="email" class="block text-sm font-bold mb-2">Email:</label>
+            <input type="email" id="email" name="email" class="w-full px-3 py-2 bg-gray-800 border border-gray-700 rounded text-white" required />
+          </div>
+          <div class="mb-4">
+            <label for="message" class="block text-sm font-bold mb-2">Message:</label>
+            <textarea id="message" name="message" rows="4" class="w-full px-3 py-2 bg-gray-800 border border-gray-700 rounded text-white" required></textarea>
+          </div>
+          <div class="text-center">
+            <button type="submit" class="bg-green-500 text-black px-4 py-2 rounded hover:bg-green-600">Submit</button>
+          </div>
+        </form>
+      </div>
+    </section>
+
+    <footer class="bg-gray-900 py-6 text-center">
+      <p>&copy; 2025 International Conference on Data Science and Computational Intelligence. All rights reserved.</p>
+    </footer>
   </body>
 </html>
