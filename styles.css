@@ -229,7 +229,7 @@ h2 {
     margin-right: 500px;
     background-color: #4caf50;
     color: white;
-    
+    border-width: 2px;
 }
 
 .zigzag-item.right {
@@ -265,8 +265,8 @@ h2 {
     margin-top: 10px;
     cursor: pointer;
 }
-button :hover{
-    background-color: #4caf50;
+.button:hover{
+    background-color: #39853c;
 
 }
 
@@ -281,8 +281,16 @@ button :hover{
     margin-bottom: 20px;
     color: black;
     border-radius: 30px;
+    border-width: 20px;
+    box-shadow: #1f1e1e;
+    border-color: #0c0c0c;
 }
 .imgc{
     height: auto;
     width: 600px;
+}
+span{
+    background-color: #4caf50;
+    padding: 5px;
+    border-radius: 5px;
 }
