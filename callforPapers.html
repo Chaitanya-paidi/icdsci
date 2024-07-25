@@ -1,0 +1,243 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>ICDSCI</title>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="">
+    <script src="https://cdn.tailwindcss.com"></script>
+    
+    <style>
+        body {
+            font-family: "Poppins", sans-serif;
+        }
+        .underline-green {
+            text-decoration: underline;
+            text-decoration-color: rgb(34 197 94 / var(--tw-bg-opacity));
+        }
+        .bg-img {
+            background-image: url("PSCMR.jpeg");
+            background-size: cover;
+            background-position: center;
+        }
+        </style>
+   </head>
+
+  <body class="bg-gray-900 text-white">
+    <nav class="fixed w-full bg-gray-800 text-white py-4 z-50">
+      <div class="container mx-auto flex justify-between items-center px-4">
+        <a href="#" class="text-2xl font-bold">
+          <span class="bg-green-500 px-2 py-1 rounded">ICDSCI</span> 2025
+        </a>
+        <ul class="hidden md:flex space-x-6">
+          <li><a href="index.html" class="hover:text-green-400">Home</a></li>
+          <li><a href="callforPapers.html" class="text-green-400">Call for papers</a></li>
+          <li><a href="#committees" class="hover:text-green-400">Committees</a></li>
+          <li><a href="#registration" class="hover:text-green-400">Registration</a></li>
+          <li><a href="#special-sessions" class="hover:text-green-400">Special sessions</a></li>
+          <li><a href="#contact" class="hover:text-green-400">Contact</a></li>
+        </ul>
+        <button class="md:hidden text-green-400 focus:outline-none" id="menu-button">
+          <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"></path>
+          </svg>
+        </button>
+      </div>
+      <ul class="md:hidden flex flex-col space-y-2 px-4 pt-2 pb-4 bg-gray-800 hidden" id="mobile-menu">
+        <li><a href="index.html" class="text-green-400">Home</a></li>
+        <li><a href="callforPapers.html" class="hover:text-green-400">Call for papers</a></li>
+        <li><a href="#committees" class="hover:text-green-400">Committees</a></li>
+        <li><a href="#registration" class="hover:text-green-400">Registration</a></li>
+        <li><a href="#special-sessions" class="hover:text-green-400">Special sessions</a></li>
+        <li><a href="#contact" class="hover:text-green-400">Contact</a></li>
+      </ul>
+    </nav>
+
+    <header class="h-screen text-center">
+      <div class="flex flex-col md:flex-row h-full">
+        <div class="w-full md:w-1/2 px-4 py-24">
+          <div class="w-full md:w-1/2 bg-img"><img src="PSCMR.jpeg" class="md:hidden" alt="">
+          </div>
+          <h1 class="text-4xl font-bold mb-2">International Conference on Data Science and Computational Intelligence (ICDSCI)</h1>
+          <h2 class="text-2xl mb-2">March 20-21, 2025</h2>
+          <h2 class="text-xl underline mb-4">Conference Proceedings</h2>
+          <h3 class="text-lg mb-4">ALL ACCEPTED & PRESENTED papers will be published in SCOPUS indexed SPRINGER PROMS.</h3>
+          <div class="flex justify-center space-x-4 mb-4">
+            <img src="springer.png" alt="Springer" class="h-36 w-36" />
+            <img src="bg2.jpg" alt="Background" class="h-36 w-36" />
+          </div>
+          <button class="bg-black text-white px-4 py-2 rounded hover:bg-green-600 mb-4">Submit Your Paper</button>
+        </div>
+        <div class="w-full md:w-1/2 bg-img"></div>
+      </div>
+    </header>
+
+    <div class="mt-[200px] md:mt-10 mb-2 bg">
+      <marquee behavior="" direction="">A virtual meeting is available for all registered authors who intend to submit their work but are unable to attend the conference.</marquee>
+    </div>
+
+    <section class="text-center bg-gray-800">
+      <div class="flex flex-col md:flex-row justify-around pt-5 pb-5">
+        <div class="mb-4 md:mb-0">
+          <img src="logo.png" alt="pscmr-logo" class="mx-auto mb-4" style="max-width: 100%; height: 200px;">
+          <p>Potti Sriramulu Chalavadi Mallikarjuna Rao <br> College of Engineering and Technology</p>
+        </div>
+        <div>
+          <img src="jslogo.jpg" alt="js-logo" class="mx-auto mb-4" style="max-width: 100%; height: 200px;">
+          <p>Jack Sparrow Publishers <br> Private Limited</p>
+        </div>
+      </div>
+    </section>
+
+    <script>
+      document.getElementById('menu-button').addEventListener('click', function() {
+        document.getElementById('mobile-menu').classList.toggle('hidden');
+      });
+    </script>
+
+    <div class="bg-green-500 text-white text-center p-3">
+        <p class="font-bold text-2xl underline-green">ICDSCI 2025 Call for Papers</p>
+    </div>
+
+    <div class="bg-gray-200 text-center text-black p-5">
+        <p class="underline-green font-bold text-xl mb-2">About Conference</p>
+        <p class="text-left">International Conference on Data Science and Computational Intelligence (ICDSCI) 2025 is a pivotal event that embodies the core elements of the 5th Industrial Revolution. The widespread application of data science is revolutionizing products and services, significantly impacting labor markets, economies, and societies globally.
+        The event aims to gather scientific and technical contributions across a broad spectrum of models, tools, technologies, and applications in modern data science. The conference will cover the full range of concepts from theoretical foundations to practical implementations, including case studies, works-in-progress, and conceptual explorations.</p>
+    </div>
+    <div class="bg-gray-200 text-center text-black p-5">
+        <p class="underline-green font-bold text-xl mb-4">Objectives</p>
+        <div class="text-left mx-auto ">
+            <p class="mb-4">The main objectives of ICAIS-2024 are to:</p>
+            <ul class="list-disc list-inside space-y-2">
+                <li>Facilitate the dissemination of high-quality research findings and innovative ideas in the field of intelligent systems.</li> 
+                <li>Provide a forum for academics and industry professionals to share their insights and experiences.</li> 
+                <li>Encourage collaboration and networking among researchers, practitioners, and policymakers.</li>
+                <li>Highlight the latest advancements and future directions in machine learning, deep learning, IoT, healthcare technologies, computer vision, and optimization techniques.</li>
+            </ul>
+        </div>
+    </div>
+    <div class="bg-gray-200 text-center text-black p-5">
+      <p class="underline-green font-bold text-xl mb-4">Important Dates / Deadlines</p>
+      <div class="text-left mx-auto">
+        <table class="min-w-full border-collapse border border-gray-400">
+          <thead>
+            <tr class="bg-gray-300">
+              <th class="border border-gray-400 p-2">Event</th>
+              <th class="border border-gray-400 p-2">Date</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td class="border border-gray-400 p-2">Manuscript submissions open</td>
+              <td class="border border-gray-400 p-2">September 1, 2024</td>
+            </tr>
+            <tr>
+              <td class="border border-gray-400 p-2">Deadline for Manuscript submissions</td>
+              <td class="border border-gray-400 p-2">December 15, 2024</td>
+            </tr>
+            <tr>
+              <td class="border border-gray-400 p-2">Initial review and feedback</td>
+              <td class="border border-gray-400 p-2">December 15, 2024 - January 31, 2025</td>
+            </tr>
+            <tr>
+              <td class="border border-gray-400 p-2">Notification of acceptance</td>
+              <td class="border border-gray-400 p-2">February 15, 2025</td>
+            </tr>
+            <tr>
+              <td class="border border-gray-400 p-2">Final revised manuscripts due</td>
+              <td class="border border-gray-400 p-2">March 1, 2025</td>
+            </tr>
+            <tr>
+              <td class="border border-gray-400 p-2">Author registration deadline</td>
+              <td class="border border-gray-400 p-2">March 7, 2025</td>
+            </tr>
+            <tr>
+              <td class="border border-gray-400 p-2">Conference program finalized</td>
+              <td class="border border-gray-400 p-2">March 2, 2025</td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+    </div>
+
+    <section class="bg-gray-200 py-12 text-black">
+      <div class="container mx-auto text-center mb-8">
+        <h1 class="text-4xl font-bold">Conference Tracks</h1>
+      </div>
+      <div class="container mx-auto grid grid-cols-1 md:grid-cols-3 gap-6">
+        <div class="bg-white p-6 rounded-lg shadow ml-3 mr-3">
+          <h2 class="text-2xl font-bold mb-2 underline-green">Data Science Foundations:</h2>
+          <p>- Statistical learning theory</p>
+          <p>- Data mining techniques</p>
+          <p>- Big data analytics</p>
+          <p>- Machine learning algorithms</p>
+          <p>- Deep learning techniques</p>
+        </div>
+        <div class="bg-white p-6 rounded-lg shadow ml-3 mr-3">
+          <h2 class="text-2xl font-bold mb-2 underline-green">Computational Intelligence:</h2>
+          <p>- Evolutionary computation</p>
+          <p>- Neural networks</p>
+          <p>- Fuzzy systems</p>
+          <p>- Swarm intelligence</p>
+          <p>- Genetic algorithms</p>
+        </div>
+        <div class="bg-white p-6 rounded-lg shadow ml-3 mr-3">
+          <h2 class="text-2xl font-bold mb-2 underline-green">Applications of Data Science:</h2>
+          <p>- Natural language processing</p>
+          <p>- Image and video analysis</p>
+          <p>- Bioinformatics</p>
+          <p>- Social media analytics</p>
+          <p>- Recommender systems</p>
+        </div>
+        <div class="bg-white p-6 rounded-lg shadow ml-3 mr-3">
+          <h2 class="text-2xl font-bold mb-2 underline-green">Computational intelligence applications:</h2>
+          <p>- Robotics and autonomous systems</p>
+          <p>- Decision support systems</p>
+          <p>- Optimization problems</p>
+          <p>- Computational neuroscience</p>
+          <p>- Intelligent control</p>
+        </div>
+        <div class="bg-white p-6 rounded-lg shadow ml-3 mr-3">
+          <h2 class="text-2xl font-bold mb-2 underline-green">Data Science and Al Ethics:</h2>
+          <p>- Privacy and security in data analytics</p>
+          <p>- Fairness and transparency in Al</p>
+          <p>- Ethical considerations in big data research</p>
+        </div>
+        <div class="bg-white p-6 rounded-lg shadow ml-3 mr-3">
+          <h2 class="text-2xl font-bold mb-2 underline-green">Data Visualization and Interpretation:</h2>
+          <p>- Visual analytics</p>
+          <p>- Interactive data exploration</p>
+          <p>- Interpretability of machine learning models</p>
+        </div>
+        <div class="bg-white p-6 rounded-lg shadow ml-3 mr-3">
+          <h2 class="text-2xl font-bold mb-2 underline-green">Cloud Computing and Virtualization:</h2>
+          <p>- Cloud service models</p>
+          <p>- Containerization technologies</p>
+          <p>- Serverless computing and functions-as-a-service</p>
+        </div>
+        <div class="bg-white p-6 rounded-lg shadow ml-3 mr-3">
+          <h2 class="text-2xl font-bold mb-2 underline-green">Software Engineering Practices:</h2>
+          <p>- Agile methodologies and DevOps practices</p>
+          <p>- Software testing and quality assurance</p>
+          <p>- Software architecture and design pattems</p>
+        </div>
+        <div class="bg-white p-6 rounded-lg shadow ml-3 mr-3">
+          <h2 class="text-2xl font-bold mb-2 underline-green">Emerging Trends:</h2>
+          <p>- Quantum.computing and data science</p>
+          <p>- Edge computing for data analytics</p>
+          <p>- Blockchain and Al</p>
+        </div>
+        <div class="bg-white p-6 rounded-lg shadow ml-3 mr-3">
+          <h2 class="text-2xl font-bold mb-2 underline-green">Industry Applications:</h2>
+          <p>- Financial analytics</p>
+          <p>- Heathcare informatics</p>
+          <p>- Industrial IoT appications</p>
+          <p>- Smart c and arbian analytics</p>
+        </div>
+      </div>
+    </section>
+    
+
+  </body>
+</html>
