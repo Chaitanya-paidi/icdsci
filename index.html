@@ -5,6 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>ICDSCI</title>
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="">
     <script src="https://cdn.tailwindcss.com"></script>
     <style>
       body {
@@ -14,46 +15,89 @@
         text-decoration: underline;
         text-decoration-color: rgb(34 197 94 / var(--tw-bg-opacity));
       }
-      
+      .bg-img{
+        background-image: url('PSCMR.jpeg');
+        background-size: cover;
+        background-position: center;
+      }
 
     </style>
   </head>
   <body class="bg-gray-900 text-white">
     <nav class="fixed w-full bg-gray-800 text-white py-4 z-50">
       <div class="container mx-auto flex justify-between items-center px-4">
-        <a href="#" class="text-2xl font-bold"><span class="bg-green-500 px-2 py-1 rounded">ICDSCI</span> 2025</a>
-        <ul class="flex space-x-6">
-          <li><a href="#home" class="hover:text-green-400">Home</a></li>
-          <!-- <li><a href="#about" class="hover:text-green-400">About</a></li>
-          <li><a href="#services" class="hover:text-green-400">Services</a></li> -->
+        <a href="#" class="text-2xl font-bold">
+          <span class="bg-green-500 px-2 py-1 rounded">ICDSCI</span> 2025
+        </a>
+        <ul class="hidden md:flex space-x-6">
+          <li><a href="index.html" class="text-green-400">Home</a></li>
+          <li><a href="callforPapers.html" class="hover:text-green-400">Call for papers</a></li>
+          <li><a href="#committees" class="hover:text-green-400">Committees</a></li>
+          <li><a href="#registration" class="hover:text-green-400">Registration</a></li>
+          <li><a href="#special-sessions" class="hover:text-green-400">Special sessions</a></li>
           <li><a href="#contact" class="hover:text-green-400">Contact</a></li>
         </ul>
+        <button class="md:hidden text-green-400 focus:outline-none" id="menu-button">
+          <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"></path>
+          </svg>
+        </button>
       </div>
+      <ul class="md:hidden flex flex-col space-y-2 px-4 pt-2 pb-4 bg-gray-800 hidden" id="mobile-menu">
+        <li><a href="index.html" class="text-green-400">Home</a></li>
+        <li><a href="callforPapers.html" class="hover:text-green-400">Call for papers</a></li>
+        <li><a href="#committees" class="hover:text-green-400">Committees</a></li>
+        <li><a href="#registration" class="hover:text-green-400">Registration</a></li>
+        <li><a href="#special-sessions" class="hover:text-green-400">Special sessions</a></li>
+        <li><a href="#contact" class="hover:text-green-400">Contact</a></li>
+      </ul>
     </nav>
-
-    <header id="home" class="bg-gray-800 py-24 text-center">
-      <div class="container mx-auto">
-        <h1 class="text-4xl font-bold mb-2">International Conference on Data Science and Computational Intelligence (ICDSCI)</h1>
-        <h2 class="text-2xl mb-2">March 20-21, 2025</h2>
-        <h2 class="text-xl underline mb-4">Conference Proceedings</h2>
-        <h3 class="text-lg mb-4">ALL ACCEPTED & PRESENTED papers will be published in SCOPUS indexed SPRINGER PROMS.</h3>
-        <div class="flex justify-center space-x-4 mb-4">
-          <img src="springer.png" alt="Springer" class="h-36 w-36" />
-          <img src="bg2.jpg" alt="Background" class="h-36 w-36" />
+    
+    <header class="h-screen text-center">
+      <div class="flex flex-col md:flex-row h-full">
+        <div class="w-full md:w-1/2 px-4 py-24">
+          <div class="w-full md:w-1/2 bg-img"><img src="PSCMR.jpeg" class="md:hidden" alt="">
+          </div>
+          <h1 class="text-4xl font-bold mb-2">International Conference on Data Science and Computational Intelligence (ICDSCI)</h1>
+          <h2 class="text-2xl mb-2">March 20-21, 2025</h2>
+          <h2 class="text-xl underline mb-4">Conference Proceedings</h2>
+          <h3 class="text-lg mb-4">ALL ACCEPTED & PRESENTED papers will be published in SCOPUS indexed SPRINGER PROMS.</h3>
+          <div class="flex justify-center space-x-4 mb-4">
+            <img src="springer.png" alt="Springer" class="h-36 w-36" />
+            <img src="bg2.jpg" alt="Background" class="h-36 w-36" />
+          </div>
+          <button class="bg-black text-white px-4 py-2 rounded hover:bg-green-600 mb-4">Submit Your Paper</button>
         </div>
-        <button class="bg-black text-white px-4 py-2 rounded hover:bg-green-600 mb-4">Submit Your Paper</button>
+        <div class="w-full md:w-1/2 bg-img"></div>
       </div>
-      <img src="pscmr.png" alt="Sample Image" class="mx-auto mb-4" style="max-width: 100%; height: auto;" />
     </header>
-
+    
+    <div class="mt-[200px] md:mt-10 mb-2 bg">
+      <marquee behavior="" direction="">A virtual meeting is available for all registered authors who intend to submit their work but are unable to attend the conference.</marquee>
+    </div>
+    
     <section class="text-center bg-gray-800">
-      <img src="logo.png" alt="pscmr-logo" class="mx-auto mb-4" style="max-width: 100%; height: 200px;">
-      <p>Potti Sriramulu Chalavadi Mallikarjuna Rao <br> College of Engineering and technology</p>
+      <div class="flex flex-col md:flex-row justify-around pt-5 pb-5">
+        <div class="mb-4 md:mb-0">
+          <img src="logo.png" alt="pscmr-logo" class="mx-auto mb-4" style="max-width: 100%; height: 200px;">
+          <p>Potti Sriramulu Chalavadi Mallikarjuna Rao <br> College of Engineering and Technology</p>
+        </div>
+        <div>
+          <img src="jslogo.jpg" alt="js-logo" class="mx-auto mb-4" style="max-width: 100%; height: 200px;">
+          <p>Jack Sparrow Publishers <br> Private Limited</p>
+        </div>
+      </div>
     </section>
+
+    <script>
+      document.getElementById('menu-button').addEventListener('click', function() {
+        document.getElementById('mobile-menu').classList.toggle('hidden');
+      });
+    </script>
 
     <section id="conference" class="container mx-auto py-12 p-3">
       <h2 class="text-3xl font-bold mb-4 underline-green">About the Conference</h2>
-      <p class="mb-4">The International Conference on Data Science and Artificial Intelligence (ICDSAI) 2024 is a pivotal event that embodies the core elements of the 5th Industrial Revolution. The widespread application of data science is revolutionizing products and services, significantly impacting labor markets, economies, and societies globally.</p>
+      <p class="mb-4">International Conference on Data Science and Computational Intelligence (ICDSCI) 2025 is a pivotal event that embodies the core elements of the 5th Industrial Revolution. The widespread application of data science is revolutionizing products and services, significantly impacting labor markets, economies, and societies globally.</p>
       <p>The event aims to gather scientific and technical contributions across a broad spectrum of models, tools, technologies, and applications in modern data science. The conference will cover the full range of concepts from theoretical foundations to practical implementations, including case studies, works-in-progress, and conceptual explorations.</p>
     </section>
 
@@ -149,7 +193,7 @@
       </div>
     </section>
 
-    <section class="bg-gray-200 py-12 text-black">
+    <!-- <section class="bg-gray-200 py-12 text-black">
       <div class="container mx-auto text-center mb-8">
         <h1 class="text-4xl font-bold">Conference Tracks</h1>
       </div>
@@ -191,40 +235,30 @@
           <p>- Privacy and security in data analytics</p>
           <p>- Fairness and transparency in Al</p>
           <p>- Ethical considerations in big data research</p>
-          <!-- <p>- Anonymization techniques</p>
-          <p>- Data breach detection</p> -->
         </div>
         <div class="bg-white p-6 rounded-lg shadow ml-3 mr-3">
           <h2 class="text-2xl font-bold mb-2 underline-green">Data Visualization and Interpretation:</h2>
           <p>- Visual analytics</p>
           <p>- Interactive data exploration</p>
           <p>- Interpretability of machine learning models</p>
-          <!-- <p>- Industrial data science</p>
-          <p>- Smart cities and IoT</p> -->
         </div>
         <div class="bg-white p-6 rounded-lg shadow ml-3 mr-3">
           <h2 class="text-2xl font-bold mb-2 underline-green">Cloud Computing and Virtualization:</h2>
           <p>- Cloud service models</p>
           <p>- Containerization technologies</p>
           <p>- Serverless computing and functions-as-a-service</p>
-          <!-- <p>- Industrial data science</p>
-          <p>- Smart cities and IoT</p> -->
         </div>
         <div class="bg-white p-6 rounded-lg shadow ml-3 mr-3">
           <h2 class="text-2xl font-bold mb-2 underline-green">Software Engineering Practices:</h2>
           <p>- Agile methodologies and DevOps practices</p>
           <p>- Software testing and quality assurance</p>
           <p>- Software architecture and design pattems</p>
-          <!-- <p>- Industrial data science</p>
-          <p>- Smart cities and IoT</p> -->
         </div>
         <div class="bg-white p-6 rounded-lg shadow ml-3 mr-3">
           <h2 class="text-2xl font-bold mb-2 underline-green">Emerging Trends:</h2>
           <p>- Quantum.computing and data science</p>
           <p>- Edge computing for data analytics</p>
           <p>- Blockchain and Al</p>
-          <!-- <p>- Industrial data science</p>
-          <p>- Smart cities and IoT</p> -->
         </div>
         <div class="bg-white p-6 rounded-lg shadow ml-3 mr-3">
           <h2 class="text-2xl font-bold mb-2 underline-green">Industry Applications:</h2>
@@ -232,11 +266,9 @@
           <p>- Heathcare informatics</p>
           <p>- Industrial IoT appications</p>
           <p>- Smart c and arbian analytics</p>
-          <!-- <p>- Industrial data science</p>
-          <p>- Smart cities and IoT</p> -->
         </div>
       </div>
-    </section>
+    </section> -->
 
     <section id="contact" class="py-12 bg-gray-800">
       <div class="container mx-auto">
