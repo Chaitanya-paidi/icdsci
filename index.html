@@ -23,11 +23,11 @@
 
     </style>
   </head>
-  <body class="bg-gray-900 text-white">
-    <nav class="fixed w-full bg-gray-800 text-white py-4 z-50">
+  <body class="bg-gray-100 text-black">
+    <nav class="fixed w-full bg-gray-50 text-black py-3 z-50">
       <div class="container mx-auto flex justify-between items-center px-4">
         <a href="#" class="text-2xl font-bold">
-          <span class="bg-green-700 px-2 py-1 rounded">ICDSCI</span> 2025
+          <span class="bg-green-700 text-white px-2 py-1 rounded">ICDSCI</span> 2025
         </a>
         <ul class="hidden md:flex space-x-6">
           <li><a href="index.html" class="text-green-400">Home</a></li>
@@ -43,7 +43,7 @@
           </svg>
         </button>
       </div>
-      <ul class="md:hidden flex flex-col space-y-2 px-4 pt-2 pb-4 bg-gray-800 hidden" id="mobile-menu">
+      <ul class="md:hidden flex flex-col space-y-2 px-4 pt-2 pb-4 bg-gray-100 hidden" id="mobile-menu">
         <li><a href="index.html" class="text-green-400">Home</a></li>
         <li><a href="callforPapers.html" class="hover:text-green-400">Call for papers</a></li>
         <li><a href="#committees" class="hover:text-green-400">Committees</a></li>
@@ -53,7 +53,7 @@
       </ul>
     </nav>
     
-    <header class="h-screen text-center">
+    <header class="h-[820px] md:h-[583px] text-center text-white bg-green-700">
       <div class="flex flex-col md:flex-row h-full">
         <div class="w-full md:w-1/2 px-4 py-24">
           <div class="w-full md:w-1/2 bg-img"><img src="PSCMR.jpeg" class="md:hidden" alt="">
@@ -66,20 +66,20 @@
             <img src="springer.png" alt="Springer" class="h-36 w-36" />
             <img src="bg2.jpg" alt="Background" class="h-36 w-36" />
           </div>
-          <button class="bg-black text-white px-4 py-2 rounded hover:bg-green-600 mb-4">Submit Your Paper</button>
+          <button class="bg-black text-white px-4 py-2 rounded hover:bg-green-700 mb-5">Submit Your Paper</button>
         </div>
         <div class="w-full md:w-1/2 bg-img"></div>
       </div>
     </header>
     
-    <div class="mt-[200px] md:mt-10 mb-2 bg">
+    <div class="mt-1 bg">
       <marquee behavior="" direction="">A virtual meeting is available for all registered authors who intend to submit their work but are unable to attend the conference.</marquee>
     </div>
     
-    <section class="text-center bg-gray-800">
+    <section class="text-center text-black bg-white">
       <div class="flex flex-col md:flex-row justify-around pt-5 pb-5">
         <div class="mb-4 md:mb-0">
-          <img src="logo.png" alt="pscmr-logo" class="mx-auto mb-4" style="max-width: 100%; height: 200px;">
+          <img src="logo.png" alt="pscmr-logo" class="mx-auto mt-6 mb-4" style="max-width: 100%; height: 170px;">
           <p>Potti Sriramulu Chalavadi Mallikarjuna Rao <br> College of Engineering and Technology</p>
         </div>
         <div>
@@ -101,8 +101,9 @@
       <p>The event aims to gather scientific and technical contributions across a broad spectrum of models, tools, technologies, and applications in modern data science. The conference will cover the full range of concepts from theoretical foundations to practical implementations, including case studies, works-in-progress, and conceptual explorations.</p>
     </section>
 
-    <div class="bg-gray-100 font-sans antialiased">
+    <div class="bg-white font-sans antialiased">
       <section class="py-12">
+        <p class="text-center font-bold text-3xl underline-green mb-3">Key Note Speakers</p>
           <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
               <!-- Image and Content Block -->
               <div class="grid grid-cols-1  md:flex mb-12 bg-gray-200 rounded p-3">
@@ -147,7 +148,7 @@
               <div class="grid grid-cols-1  md:flex mb-12 bg-gray-200 rounded p-3">   
                   <div class="flex flex-col justify-center md:w-2/3 ml-10">
                       <h2 class="text-2xl font-bold text-gray-800">SURYAPRAKASH NALLURI</h2>
-                      <h2 class="text-green-500 mb-4">Senior Vice President - Infromation Security Operations Group Manager</h2>
+                      <h2 class="text-green-500 mb-4">IT & CYBERSECURITY LEADER, AUTHOR, INVENTOR, COACH</h2>
                       <p class="text-gray-600 mb-4">As a distinguished Executive Leader in Cybersecurity, he has achieved exceptional results over his 18-year career, with a focused dedication to cybersecurity for the past decade. His achievements are highlighted by his pioneering of comprehensive security strategies, which have fortified organizations against relentless cyber threats. He has championed DevSecOps practices, ensuring security integration throughout the software development lifecycle, and has adeptly led security transformation initiatives, fostering adaptive security cultures that evolve with emerging threats. His influence extends to digital product strategies, where he has aligned technology innovations with security requirements. Combining a background in both development and design, his leadership in cybersecurity is distinguished by a unique blend of technical acumen and creative insights. He has spearheaded vulnerability assessments and penetration testing (VAPT) for web, mobile, and APIs, providing vital defenses against cyber threats. Additionally, he has effectively managed and optimized resources within his teams, ensuring cost-effective solutions, and has driven innovation through research and development, conceptualizing exploits and utilizing automation to enhance cybersecurity operations.</p>
                       
                   </div>
@@ -161,7 +162,7 @@
   </div>
 
     <section id="new-section" class="py-12 bg-cover" style="background-image: url('img.jpg');">
-      <div class="container grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+      <div class="container grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 text-white">
         <div class="p-6 ml-3 mr-3 bg-gray-800 rounded">
           <h3 class="text-2xl font-bold mb-2 underline-green">FOCUSED NETWORKING</h3>
           <p>Provides a free and open atmosphere where attendees talk and engage in creative ways.</p>
@@ -191,48 +192,48 @@
 
     <section class="py-12 bg-cover" style="background-image: url('progress.jpg');">
       <div class="container mx-auto">
-        <h2 class="text-4xl font-bold text-center mb-8">Deadlines</h2>
+        <h2 class="text-4xl font-bold text-center text-white mb-8 underline-green">Deadlines</h2>
         <div class="flex flex-wrap justify-between">
           <div class="w-full md:w-1/2 p-2">
             <div class="bg-white p-6 rounded-lg text-black">
-              <h3 class="text-xl font-bold">Manuscript submissions open:</h3>
-              <p>September 1, 2024</p>
+              <h3 class="text-xl font-bold ">Manuscript submissions open:</h3>
+              <p class="text-green-500">September 1, 2024</p>
             </div>
           </div>
           <div class="w-full md:w-1/2 p-2">
             <div class="bg-white p-6 rounded-lg text-black">
-              <h3 class="text-xl font-bold">Deadline for Manuscript submissions:</h3>
-              <p>December 15, 2024</p>
+              <h3 class="text-xl font-bold ">Deadline for Manuscript submissions:</h3>
+              <p class="text-green-500">December 15, 2024</p>
             </div>
           </div>
           <div class="w-full md:w-1/2 p-2">
             <div class="bg-white p-6 rounded-lg text-black">
-              <h3 class="text-xl font-bold">Initial review and feedback:</h3>
-              <p>December 15, 2024 - January 31, 2025</p>
+              <h3 class="text-xl font-bold ">Initial review and feedback:</h3>
+              <p class="text-green-500">December 15, 2024 - January 31, 2025</p>
             </div>
           </div>
           <div class="w-full md:w-1/2 p-2">
             <div class="bg-white p-6 rounded-lg text-black">
-              <h3 class="text-xl font-bold">Notification of acceptance:</h3>
-              <p>February 15, 2025</p>
+              <h3 class="text-xl font-bold ">Notification of acceptance:</h3>
+              <p class="text-green-500">February 15, 2025</p>
             </div>
           </div>
           <div class="w-full md:w-1/2 p-2">
             <div class="bg-white p-6 rounded-lg text-black">
-              <h3 class="text-xl font-bold">Final revised manuscripts due:</h3>
-              <p>March 1, 2025</p>
+              <h3 class="text-xl font-bold ">Final revised manuscripts due:</h3>
+              <p class="text-green-500">March 1, 2025</p>
             </div>
           </div>
           <div class="w-full md:w-1/2 p-2">
             <div class="bg-white p-6 rounded-lg text-black">
-              <h3 class="text-xl font-bold">Author registration deadline:</h3>
-              <p>March 7, 2025</p>
+              <h3 class="text-xl font-bold ">Author registration deadline:</h3>
+              <p class="text-green-500">March 7, 2025</p>
             </div>
           </div>
           <div class="w-full md:w-1/2 p-2">
             <div class="bg-white p-6 rounded-lg text-black">
-              <h3 class="text-xl font-bold">Conference program finalized:</h3>
-              <p>March 2, 2025</p>
+              <h3 class="text-xl font-bold ">Conference program finalized:</h3>
+              <p class="text-green-500">March 2, 2025</p>
             </div>
           </div>
         </div>
@@ -252,10 +253,10 @@
       </div>
     </section>
 
-    <section id="contact" class="py-12 bg-gray-800">
-      <div class="container mx-auto">
-        <h2 class="text-4xl font-bold text-center mb-8 underline-green">Contact Us</h2>
-        <form class="max-w-xl mx-auto bg-gray-900 p-8 rounded-lg">
+    <section id="contact" class="py-12 bg-gray-200">
+      <div class="container mx-auto text-white">
+        <h2 class="text-4xl font-bold text-center text-black mb-8 underline-green">Contact Us</h2>
+        <form class="max-w-xl mx-auto bg-gray-600 p-8 rounded-lg">
           <div class="mb-4">
             <label for="name" class="block text-sm font-bold mb-2">Name:</label>
             <input type="text" id="name" name="name" class="w-full px-3 py-2 bg-gray-800 border border-gray-700 rounded text-white" required />
@@ -269,7 +270,7 @@
             <textarea id="message" name="message" rows="4" class="w-full px-3 py-2 bg-gray-800 border border-gray-700 rounded text-white" required></textarea>
           </div>
           <div class="text-center">
-            <button type="submit" class="bg-green-500 text-black px-4 py-2 rounded hover:bg-green-600">Submit</button>
+            <button type="submit" class="bg-green-700 text-black px-4 py-2 rounded hover:bg-green-700">Submit</button>
           </div>
         </form>
       </div>
