@@ -14,6 +14,8 @@
     <style>
       body {
         font-family: "Poppins", sans-serif;
+        text-align: justify;
+        text-justify: inter-word;
       }
       .underline-green {
         text-decoration: underline;
@@ -27,7 +29,7 @@
     </style>
   </head>
 
-  <body class="bg-gray-100 text-black">
+  <body class="bg-gray-100 text-black text-justify">
     <nav class="fixed w-full bg-gray-50 text-black py-3 z-50">
       <div class="container mx-auto flex justify-between items-center px-4">
         <a href="#" class="text-2xl font-bold">
@@ -101,7 +103,7 @@
       </ul>
     </nav>
 
-    <header class="h-[820px] md:h-[583px] text-center text-white bg-gray-800">
+    <header class="h-[900px] md:h-[583px] text-center text-white bg-green-700">
       <div class="flex flex-col md:flex-row h-full">
         <div class="w-full md:w-1/2 px-4 py-24">
           <div class="w-full md:w-1/2 bg-img">
@@ -122,7 +124,7 @@
             <img src="bg2.jpg" alt="Background" class="h-36 w-36" />
           </div>
           <button
-            class="bg-black text-white px-4 py-2 rounded hover:bg-green-700 mb-4"
+            class="bg-gray-50 text-black px-4 py-2 rounded hover:bg-green-900 hover:text-white mb-4"
           >
             Submit Your Paper
           </button>
@@ -154,7 +156,7 @@
         </div>
         <div>
           <img
-            src="jslogo.jpg"
+            src="jslogo.png"
             alt="js-logo"
             class="mx-auto mb-4"
             style="max-width: 100%; height: 200px"
@@ -179,9 +181,9 @@
       <p class="font-bold text-2xl">ICDSCI 2025 Call for Papers</p>
     </div>
 
-    <div class="bg-gray-100 text-center text-black p-10">
+    <div class="bg-gray-100 text-center text-black p-3 md:p-10">
       <p class="underline-green font-bold text-xl mb-2">About Conference</p>
-      <p class="text-left">
+      <p class="text-justify">
         International Conference on Data Science and Computational Intelligence
         (ICDSCI) 2025 is a pivotal event that embodies the core elements of the
         5th Industrial Revolution. The widespread application of data science is
@@ -194,9 +196,9 @@
         works-in-progress, and conceptual explorations.
       </p>
     </div>
-    <div class="bg-gray-100 text-center text-black p-10">
-      <p class="underline-green font-bold text-xl mb-4">Objectives</p>
-      <div class="text-left mx-auto">
+    <div class="bg-gray-100  text-black p-3 md:p-10">
+      <p class="underline-green font-bold text-xl mb-4 text-center">Objectives</p>
+      <div class="text- mx-auto">
         <p class="mb-4">The main objectives of ICAIS-2024 are to:</p>
         <ul class="list-disc list-inside space-y-2">
           <li>
@@ -219,7 +221,7 @@
         </ul>
       </div>
     </div>
-    <div class="bg-gray-100 text-center text-black p-10">
+    <div class="bg-gray-100 text-center text-black p-3 md:p-10">
       <p class="underline-green font-bold text-xl mb-4">
         Important Dates / Deadlines
       </p>
@@ -281,7 +283,7 @@
       </div>
     </div>
 
-    <section class="bg-gray-100 text-black p-10">
+    <section class="bg-gray-100 text-black p-3 md:p-10">
       <p class="underline-green font-bold text-xl mb-4 text-center">Outcomes</p>
       <p>
         ICDSCI-2025 aims to make significant contributions to the field of Data
@@ -363,22 +365,22 @@
     </section>
 
 
-    <section class="bg-gray-100 text-black p-10">
+    <section class="bg-gray-100 text-black p-3 md:p-10">
       <p class="underline-green font-bold text-xl mb-4 text-center">Scope</p>
       <p><b>ICAIS-2024 will cover a wide range of themes, focusing on the following main areas:</b></p>
       <ul class="list-disc list-inside space-y-6 mt-8">
-        <li>Data Science and it's Applications</li>
-        <li>Computational Intelligence and it's Applications</li>
-        <li>Data Science and Al Ethics</li>
-        <li>Data Visualization and Interpretation</li>
-        <li>Cloud Computing and Virtualization</li>
-        <li>Software Engineering Practices</li>
-        <li>Emerging Trends</li>
-        <li>Industry Applications</li>
+        <li class="text-left">Data Science and it's Applications</li>
+        <li class="text-left">Computational Intelligence and it's Applications</li>
+        <li class="text-left">Data Science and Al Ethics</li>
+        <li class="text-left">Data Visualization and Interpretation</li>
+        <li class="text-left">Cloud Computing and Virtualization</li>
+        <li class="text-left">Software Engineering Practices</li>
+        <li class="text-left">Emerging Trends</li>
+        <li class="text-left">Industry Applications</li>
       </ul>
     </section>
 
-    <section class="bg-gray-100 text-black p-10">
+    <section class="bg-gray-100 text-black p-3 md:p-10">
       <p class="underline-green font-bold text-xl mb-4 text-center">Anticipated Impacts</p>
       <p>
         The International Conference on Data Science and Computational Intelligence (ICDSCI) 2025 is poised to make a significant impact on the field of data science and computational intelligence and beyond. ICDSCI 2025 is expected to have a profound and lasting impact on the advancement of data science and computational intelligence, fostering collaboration, innovation, and ethical development in this rapidly evolving field. The anticipated impacts include:
@@ -425,13 +427,13 @@
       </div>
       <div class="container mx-auto grid grid-cols-1 md:grid-cols-3 gap-6">
         <div class="bg-white p-6 rounded-lg shadow ml-3 mr-3">
-          <h2 class="text-2xl font-bold mb-2 underline-green">
+          <h2 class="text-2xl font-bold mb-2 text-left underline-green">
             Data Science Foundations:
           </h2>
           <p>- Statistical learning theory</p>
           <p>- Data mining techniques</p>
           <p>- Big data analytics</p>
-          <p>- Machine learning algorithms</p>
+          <p class="text-left">- Machine learning algorithms</p>
           <p>- Deep learning techniques</p>
         </div>
         <div class="bg-white p-6 rounded-lg shadow ml-3 mr-3">
@@ -445,23 +447,23 @@
           <p>- Genetic algorithms</p>
         </div>
         <div class="bg-white p-6 rounded-lg shadow ml-3 mr-3">
-          <h2 class="text-2xl font-bold mb-2 underline-green">
+          <h2 class="text-2xl text-left font-bold mb-2 underline-green">
             Applications of Data Science:
           </h2>
-          <p>- Natural language processing</p>
+          <p class="text-left">- Natural language processing</p>
           <p>- Image and video analysis</p>
           <p>- Bioinformatics</p>
           <p>- Social media analytics</p>
           <p>- Recommender systems</p>
         </div>
         <div class="bg-white p-6 rounded-lg shadow ml-3 mr-3">
-          <h2 class="text-2xl font-bold mb-2 underline-green">
+          <h2 class="text-2xl font-bold mb-2 underline-green text-left">
             Computational intelligence applications:
           </h2>
           <p>- Robotics and autonomous systems</p>
           <p>- Decision support systems</p>
           <p>- Optimization problems</p>
-          <p>- Computational neuroscience</p>
+          <p class="text-left">- Computational neuroscience</p>
           <p>- Intelligent control</p>
         </div>
         <div class="bg-white p-6 rounded-lg shadow ml-3 mr-3">
@@ -469,31 +471,31 @@
             Data Science and Al Ethics:
           </h2>
           <p>- Privacy and security in data analytics</p>
-          <p>- Fairness and transparency in Al</p>
+          <p class="text-left">- Fairness and transparency in Al</p>
           <p>- Ethical considerations in big data research</p>
         </div>
         <div class="bg-white p-6 rounded-lg shadow ml-3 mr-3">
-          <h2 class="text-2xl font-bold mb-2 underline-green">
+          <h2 class="text-2xl text-left font-bold mb-2 underline-green">
             Data Visualization and Interpretation:
           </h2>
           <p>- Visual analytics</p>
-          <p>- Interactive data exploration</p>
+          <p class="text-left">- Interactive data exploration</p>
           <p>- Interpretability of machine learning models</p>
         </div>
         <div class="bg-white p-6 rounded-lg shadow ml-3 mr-3">
-          <h2 class="text-2xl font-bold mb-2 underline-green">
+          <h2 class="text-2xl font-bold mb-2 underline-green text-left">
             Cloud Computing and Virtualization:
           </h2>
           <p>- Cloud service models</p>
-          <p>- Containerization technologies</p>
+          <p class="text-left">- Containerization technologies</p>
           <p>- Serverless computing and functions-as-a-service</p>
         </div>
         <div class="bg-white p-6 rounded-lg shadow ml-3 mr-3">
-          <h2 class="text-2xl font-bold mb-2 underline-green">
+          <h2 class="text-2xl font-bold mb-2 underline-green text-left">
             Software Engineering Practices:
           </h2>
-          <p>- Agile methodologies and DevOps practices</p>
-          <p>- Software testing and quality assurance</p>
+          <p class="text-left">- Agile methodologies and DevOps practices</p>
+          <p class="text-left">- Software testing and quality assurance</p>
           <p>- Software architecture and design pattems</p>
         </div>
         <div class="bg-white p-6 rounded-lg shadow ml-3 mr-3">
@@ -511,7 +513,7 @@
           <p>- Financial analytics</p>
           <p>- Heathcare informatics</p>
           <p>- Industrial IoT appications</p>
-          <p>- Smart c and arbian analytics</p>
+          <p class="text-left">- Smart c and arbian analytics</p>
         </div>
       </div>
     </section>
