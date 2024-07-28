@@ -22,6 +22,37 @@
         background-size: cover;
         background-position: center;
       }
+      .button-container {
+      margin-top: 2.5rem; /* mt-10 */
+      display: flex;
+      justify-content: space-between;
+    }
+
+    .button-container button {
+      background: linear-gradient(to right, #3cd870, #9af1a5); /* from-green-400 to-emerald-300 */
+      color: white;
+      padding: 0.75rem 1.5rem; /* Custom padding */
+      font-size: 1.125rem; /* text-lg */
+      font-weight: 600; /* font-semibold */
+      border: none;
+      border-radius: 0.375rem; /* rounded-md */
+      box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1), 0 2px 4px rgba(0, 0, 0, 0.06); /* shadow-md */
+      transition: all 0.3s ease-in-out;
+      cursor: pointer;
+    }
+
+    .button-container button:hover {
+      background: linear-gradient(to right, #9af1a5, #3cd870); /* reverse gradient on hover */
+      box-shadow: 0 8px 10px rgba(0, 0, 0, 0.15), 0 4px 6px rgba(0, 0, 0, 0.1);
+      transform: translateY(-2px);
+    }
+
+    .button-container button:focus {
+      outline: none;
+      box-shadow: 0 0 0 3px rgba(110, 231, 183, 0.5); /* focus ring color */
+    }
+
+
 
     </style>
   </head>
@@ -58,7 +89,7 @@
       </ul>
     </nav>
     
-    <header class="h-[900px] md:h-[583px] text-center text-white bg-green-700">
+    <header class="h-[900px] md:h-[600px] text-center text-white bg-green-700">
       <div class="flex flex-col md:flex-row h-full">
         <div class="w-full md:w-1/2 px-4 py-24">
           <div class="w-full md:w-1/2 bg-img"><img src="PSCMR.jpeg" class="md:hidden" alt="">
@@ -69,7 +100,7 @@
           <h3 class="text-lg mb-4">ALL ACCEPTED & PRESENTED papers will be published in SCOPUS indexed SPRINGER PROMS.</h3>
           <div class="flex justify-center space-x-4 mb-4">
             <img src="springer.png" alt="Springer" class="h-36 w-36" />
-            <img src="bg2.jpg" alt="Background" class="h-36 w-36" />
+            <!-- <img src="bg2.jpg" alt="Background" class="h-36 w-36" /> -->
           </div>
           <button class="bg-gray-50 text-black px-4 py-2 rounded hover:bg-green-900 hover:text-white mb-5">Submit Your Paper</button>
         </div>
@@ -81,18 +112,58 @@
       <marquee behavior="" direction="">A virtual meeting is available for all registered authors who intend to submit their work but are unable to attend the conference.</marquee>
     </div>
     
-    <section class="text-center text-black bg-white">
-      <div class="flex flex-col md:flex-row justify-around pb-5">
-        <div class="mb-4 md:mb-0">
-          <img src="logo.png" alt="pscmr-logo" class="mx-auto mt-6 mb-4" style="max-width: 100%; height: 170px;">
-          <p>Potti Sriramulu Chalavadi Mallikarjuna Rao <br> College of Engineering and Technology <br> (Autonomous), Vijayawada</p>
-        </div>
-        <div>
-          <img src="jslogo.png" alt="js-logo" class="mx-auto mb-4" style="max-width: 100%; height: 200px;">
-          <p>Jack Sparrow Publishers <br> Private Limited</p>
+    <section class="text-center bg-white py-12">
+      <div class="container mx-auto">
+        <div class="flex flex-col md:flex-row items-center pb-5">
+          <div class="w-full md:w-1/2 mb-8 md:mb-0 flex flex-col items-center">
+            <img src="logo.png" alt="pscmr-logo" class="mb-4" style="max-width: 100%; height: 170px;">
+            <p class="text-lg text-gray-700">Potti Sriramulu Chalavadi Mallikarjuna Rao <br> College of Engineering and Technology <br> (Autonomous), Vijayawada</p>
+            <img src="jslogo.png" alt="js-logo" class="mt-6 mb-4" style="max-width: 100%; height: 200px;">
+            <p class="text-lg text-gray-700">Jack Sparrow Publishers <br> Private Limited</p>
+          </div>
+          
+          <div class="w-full md:w-1/2">
+            <section class="bg-cover p-8 rounded-lg">
+              <div class="container mx-auto">
+                <h2 class="text-4xl font-bold text-center text-black mb-8 underline-green">Deadlines</h2>
+                <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
+                  <div class="bg-gradient-to-r from-lime-200 to-emerald-200 p-6 rounded-lg shadow-lg transform transition-transform duration-300 hover:-translate-y-2 hover:shadow-2xl hover:bg-gray-700">
+                    <h3 class="text-xl font-bold text-black mb-2">Manuscript submissions open:</h3>
+                    <p class="text-green-500">September 1, 2024</p>
+                  </div>
+                  <div class="bg-gradient-to-r from-lime-200 to-emerald-200 p-6 rounded-lg shadow-lg transform transition-transform duration-300 hover:-translate-y-2 hover:shadow-2xl hover:bg-gray-700">
+                    <h3 class="text-xl font-bold text-black mb-2">Deadline for Manuscript submissions:</h3>
+                    <p class="text-green-500">December 15, 2024</p>
+                  </div>
+                  <div class="bg-gradient-to-r from-lime-200 to-emerald-200 p-6 rounded-lg shadow-lg transform transition-transform duration-300 hover:-translate-y-2 hover:shadow-2xl hover:bg-gray-700">
+                    <h3 class="text-xl font-bold text-black mb-2">Initial review and feedback:</h3>
+                    <p class="text-green-500">December 15, 2024 - January 31, 2025</p>
+                  </div>
+                  <div class="bg-gradient-to-r from-lime-200 to-emerald-200 p-6 rounded-lg shadow-lg transform transition-transform duration-300 hover:-translate-y-2 hover:shadow-2xl hover:bg-gray-700">
+                    <h3 class="text-xl font-bold text-black mb-2">Notification of acceptance:</h3>
+                    <p class="text-green-500">February 15, 2025</p>
+                  </div>
+                  <div class="bg-gradient-to-r from-lime-200 to-emerald-200 p-6 rounded-lg shadow-lg transform transition-transform duration-300 hover:-translate-y-2 hover:shadow-2xl hover:bg-gray-700">
+                    <h3 class="text-xl font-bold text-black mb-2">Final revised manuscripts due:</h3>
+                    <p class="text-green-500">March 1, 2025</p>
+                  </div>
+                  <div class="bg-gradient-to-r from-lime-200 to-emerald-200 p-6 rounded-lg shadow-lg transform transition-transform duration-300 hover:-translate-y-2 hover:shadow-2xl hover:bg-gray-700">
+                    <h3 class="text-xl font-bold text-black mb-2">Author registration deadline:</h3>
+                    <p class="text-green-500">March 7, 2025</p>
+                  </div>
+                  <div class="bg-gradient-to-r from-lime-200 to-emerald-200 p-6 rounded-lg shadow-lg transform transition-transform duration-300 hover:-translate-y-2 hover:shadow-2xl hover:bg-gray-700">
+                    <h3 class="text-xl font-bold text-black mb-2">Conference program finalized:</h3>
+                    <p class="text-green-500">March 2, 2025</p>
+                  </div>
+                </div>
+              </div>
+            </section>
+            
+          </div>
         </div>
       </div>
     </section>
+    
 
     <script>
       document.getElementById('menu-button').addEventListener('click', function() {
@@ -100,10 +171,24 @@
       });
     </script>
 
-    <section id="conference" class="container mx-auto py-12 p-3">
-      <h2 class="text-3xl text-left font-bold mb-4 underline-green">About the Conference</h2>
-      <p class="mb-4">International Conference on Data Science and Computational Intelligence (ICDSCI) 2025 is a pivotal event that embodies the core elements of the 5th Industrial Revolution. The widespread application of data science is revolutionizing products and services, significantly impacting labor markets, economies, and societies globally.</p>
-      <p>The event aims to gather scientific and technical contributions across a broad spectrum of models, tools, technologies, and applications in modern data science. The conference will cover the full range of concepts from theoretical foundations to practical implementations, including case studies, works-in-progress, and conceptual explorations.</p>
+    <section id="conference" class="container py-12 p-3 w-1/2">
+      <div>
+        <div>
+          <h2 class="text-3xl text-left font-bold mb-4 underline-green">About the Conference</h2>
+          <p class="mb-4">International Conference on Data Science and Computational Intelligence (ICDSCI) 2025 is a pivotal event that embodies the core elements of the 5th Industrial Revolution. The widespread application of data science is revolutionizing products and services, significantly impacting labor markets, economies, and societies globally.</p>
+          <p>The event aims to gather scientific and technical contributions across a broad spectrum of models, tools, technologies, and applications in modern data science. The conference will cover the full range of concepts from theoretical foundations to practical implementations, including case studies, works-in-progress, and conceptual explorations.</p>
+        </div>
+        <div class="button-container mt-10 flex justify-between ">
+          <a href="callforPapers.html#objectives"><button>Objectives</button></a>
+          <a href="callforPapers.html#outcomes"><button>Outcomes</button></a>
+          <a href="callforPapers.html#scope"><button>Scope</button></a>
+          <a href="callforPapers.html#impact"><button>Impact</button></a>
+        </div>
+        <div>
+
+        </div>
+      </div>
+
     </section>
 
     <div class="bg-white font-sans antialiased">
@@ -166,94 +251,81 @@
       </section>
   </div>
 
-    <section id="new-section" class="py-12 bg-cover" style="background-image: url('img.jpg');">
-      <div class="container grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 text-white">
-        <div class="p-6 ml-3 mr-3 bg-gray-800 rounded">
+  <section id="new-section" class="py-12 bg-cover bg-black">
+    <div class="flex justify-between">
+      <div class="container grid grid-cols-1 w-1/2 gap-6 text-black">
+        <p class="text-3xl text-white p-2 font-bold bg-green-600 w-[380px] ml-[150px] rounded">CONFERENCE FEATURES</p>
+        <div class="p-6 ml-3 mr-3 bg-white rounded">
           <h3 class="text-2xl font-bold mb-2 underline-green">FOCUSED NETWORKING</h3>
           <p>Provides a free and open atmosphere where attendees talk and engage in creative ways.</p>
         </div>
-        <div class="p-6 ml-3 mr-3 bg-gray-800 rounded">
+        <div class="p-6 ml-3 mr-3 bg-white rounded">
           <h3 class="text-2xl font-bold mb-2 underline-green">EXPERT SPEAKERS</h3>
           <p>Our speakers represent the cream of research and development practitioners worldwide.</p>
         </div>
-        <div class="p-6 ml-3 mr-3 bg-gray-800 rounded">
+        <div class="p-6 ml-3 mr-3 bg-white rounded">
           <h3 class="text-2xl font-bold mb-2 underline-green">BRILLIANT IDEAS</h3>
           <p>High-impact, collaborative and new approaches to some of the world’s toughest problems.</p>
         </div>
-        <div class="p-6 ml-3 mr-3 bg-gray-800 rounded">
+        <div class="p-6 ml-3 mr-3 bg-white rounded">
           <h3 class="text-2xl font-bold mb-2 underline-green">EXCEPTIONAL PROGRAM</h3>
           <p>Includes demonstrations, keynote speeches, plenary panel, breakout sessions as well as the industry program.</p>
         </div>
-        <div class="p-6 ml-3 mr-3 bg-gray-800 rounded">
+        <div class="p-6 ml-3 mr-3 bg-white rounded">
           <h3 class="text-2xl font-bold mb-2 underline-green">GLOBAL PARTICIPATION</h3>
           <p>Anticipating attendees from various countries all over the world.</p>
         </div>
-        <div class="p-6 ml-3 mr-3 bg-gray-800 rounded">
+        <div class="p-6 ml-3 mr-3 bg-white rounded">
           <h3 class="text-2xl font-bold mb-2 underline-green">INSPIRATIONAL LEARNING</h3>
           <p>Bringing together researchers from several fields to collaborate together and create lasting change.</p>
         </div>
       </div>
-    </section>
-
-    <section class="py-12 bg-cover" style="background-image: url('progress.jpg');">
-      <div class="container mx-auto">
-        <h2 class="text-4xl font-bold text-center text-white mb-8 underline-green">Deadlines</h2>
-        <div class="flex flex-wrap justify-between">
-          <div class="w-full md:w-1/2 p-2">
-            <div class="bg-white p-6 rounded-lg text-black">
-              <h3 class="text-xl font-bold ">Manuscript submissions open:</h3>
-              <p class="text-green-500">September 1, 2024</p>
-            </div>
-          </div>
-          <div class="w-full md:w-1/2 p-2">
-            <div class="bg-white p-6 rounded-lg text-black">
-              <h3 class="text-xl font-bold text-left">Deadline for Manuscript submissions:</h3>
-              <p class="text-green-500">December 15, 2024</p>
-            </div>
-          </div>
-          <div class="w-full md:w-1/2 p-2">
-            <div class="bg-white p-6 rounded-lg text-black">
-              <h3 class="text-xl font-bold text-left md:tex">Initial review and feedback:</h3>
-              <p class="text-green-500">December 15, 2024 - January 31, 2025</p>
-            </div>
-          </div>
-          <div class="w-full md:w-1/2 p-2">
-            <div class="bg-white p-6 rounded-lg text-black">
-              <h3 class="text-xl font-bold text-left">Notification of acceptance:</h3>
-              <p class="text-green-500">February 15, 2025</p>
-            </div>
-          </div>
-          <div class="w-full md:w-1/2 p-2">
-            <div class="bg-white p-6 rounded-lg text-black">
-              <h3 class="text-xl font-bold text-left">Final revised manuscripts due:</h3>
-              <p class="text-green-500">March 1, 2025</p>
-            </div>
-          </div>
-          <div class="w-full md:w-1/2 p-2">
-            <div class="bg-white p-6 rounded-lg text-black">
-              <h3 class="text-xl font-bold text-left">Author registration deadline:</h3>
-              <p class="text-green-500">March 7, 2025</p>
-            </div>
-          </div>
-          <div class="w-full md:w-1/2 p-2">
-            <div class="bg-white p-6 rounded-lg text-black">
-              <h3 class="text-xl font-bold text-left">Conference program finalized:</h3>
-              <p class="text-green-500">March 2, 2025</p>
-            </div>
-          </div>
+      <div class="container grid grid-cols-1 w-1/2 gap-6 text-black">
+        <p class="text-3xl text-white p-2 font-bold bg-gradient-to-r from-amber-300 to-green-300 w-[380px] ml-[150px] text-center rounded">HONORS & AWARDS</p>
+        <div class="relative p-6 ml-3 mr-3 bg-gradient-to-r from-amber-300 to-green-300 rounded flex items-center">
+          <img src="trophy.png" alt="Trophy" class="absolute left-0 top-1/2 transform -translate-y-1/2 h-16">
+          <h3 class="text-2xl font-bold mb-2 text-green-700 text-center flex-grow mt-10">BEST PAPER</h3>
+          <img src="trophy.png" alt="Trophy" class="absolute right-0 top-1/2 transform -translate-y-1/2 h-16">
+        </div>
+        <div class="relative p-6 ml-3 mr-3 bg-gradient-to-r from-amber-300 to-green-300 rounded flex items-center">
+          <img src="trophy.png" alt="Trophy" class="absolute left-0 top-1/2 transform -translate-y-1/2 h-16">
+          <h3 class="text-2xl font-bold mb-2 text-green-700 text-center flex-grow mt-10">WOMEN EXCELLENCE</h3>
+          <img src="trophy.png" alt="Trophy" class="absolute right-0 top-1/2 transform -translate-y-1/2 h-16">
+        </div>
+        <div class="relative p-6 ml-3 mr-3 bg-gradient-to-r from-amber-300 to-green-300 rounded flex items-center">
+          <img src="trophy.png" alt="Trophy" class="absolute left-0 top-1/2 transform -translate-y-1/2 h-16">
+          <h3 class="text-2xl font-bold mb-2 text-green-700 text-center flex-grow mt-10">SESSION WINNER</h3>
+          <img src="trophy.png" alt="Trophy" class="absolute right-0 top-1/2 transform -translate-y-1/2 h-16">
+        </div>
+        <div class="relative p-6 ml-3 mr-3 bg-gradient-to-r from-amber-300 to-green-300 rounded flex items-center">
+          <img src="trophy.png" alt="Trophy" class="absolute left-0 top-1/2 transform -translate-y-1/2 h-16">
+          <h3 class="text-2xl font-bold mb-2 text-green-700 text-center flex-grow mt-10">UNIQUE RESEARCH AREA</h3>
+          <img src="trophy.png" alt="Trophy" class="absolute right-0 top-1/2 transform -translate-y-1/2 h-16">
+        </div>
+        <div class="relative p-6 ml-3 mr-3 bg-gradient-to-r from-amber-300 to-green-300 rounded flex items-center">
+          <img src="trophy.png" alt="Trophy" class="absolute left-0 top-1/2 transform -translate-y-1/2 h-16">
+          <h3 class="text-2xl font-bold mb-2 text-green-700 text-center flex-grow mt-10">YOUNGEST AND OLDEST</h3>
+          <img src="trophy.png" alt="Trophy" class="absolute right-0 top-1/2 transform -translate-y-1/2 h-16">
+        </div>
+        <div class="relative p-6 ml-3 mr-3 bg-gradient-to-r from-amber-300 to-green-300 rounded flex items-center">
+          <img src="trophy.png" alt="Trophy" class="absolute left-0 top-1/2 transform -translate-y-1/2 h-16">
+          <h3 class="text-2xl font-bold mb-2 text-green-700 text-center flex-grow mt-10">BEST PRESENTATION</h3>
+          <img src="trophy.png" alt="Trophy" class="absolute right-0 top-1/2 transform -translate-y-1/2 h-16">
         </div>
       </div>
-    </section>
+    </div>
+  </section>
+  
     
     <section class="py-12 p-5">
       <div class="container mx-auto text-center mb-8">
         <h1 class="text-4xl font-bold underline-green">Indexing</h1> <br>
         <p class="text-justify">Post-conference, proceedings will be made available to the following indexing services for possible inclusion:</p>
       </div>
-      <div class="container mx-auto grid grid-cols-2 md:grid-cols-4 gap-6">
+      <div class="container mx-auto grid grid-cols-2 md:grid-cols-3 gap-6">
         <img src="scopus.png" alt="Scopus" class="w-48 h-auto mx-auto" />
         <img src="dblp.png" alt="dblp" class="w-48 h-auto mx-auto" />
-        <img src="clarivate-analytics.png" alt="clarivate-analytics" class="w-48 h-auto mx-auto" />
+        <!-- <img src="clarivate-analytics.png" alt="clarivate-analytics" class="w-48 h-auto mx-auto" /> -->
         <img src="google-scholar.png" alt="google-scholar" class="w-48 h-auto mx-auto" />
       </div>
     </section>
