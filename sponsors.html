@@ -1,0 +1,184 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>ICDSCI</title>
+    <link
+      href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="" />
+    <script src="https://cdn.tailwindcss.com"></script>
+
+    <style>
+      body {
+        font-family: "Poppins", sans-serif;
+        text-align: justify;
+        text-justify: inter-word;
+      }
+      .underline-green {
+        text-decoration: underline;
+        text-decoration-color: green;
+      }
+      .bg-img {
+        background-image: url("PSCMR.jpeg");
+        background-size: cover;
+        background-position: center;
+      }
+    </style>
+  </head>
+  <body>
+    <nav class="fixed w-full bg-gray-50 text-black py-3 z-50">
+      <div class="container mx-auto flex justify-between items-center px-4">
+        <div class="flex items-center">
+          <img src="springer.png" alt="Springer Logo" class="h-10 mr-2" />
+          <a href="#" class="text-2xl font-bold">
+            <span class="bg-green-700 text-white px-2 py-1 rounded"
+              >ICDSCI</span
+            >
+            2025
+          </a>
+        </div>
+        <ul class="hidden md:flex space-x-6">
+          <li><a href="index.html" class="hover:text-green-400">Home</a></li>
+          <li>
+            <a href="callforPapers.html" class="hover:text-green-400"
+              >Call for papers</a
+            >
+          </li>
+          <li>
+            <a href="#committees" class="hover:text-green-400">Committees</a>
+          </li>
+          <li>
+            <a href="registration.html" class="hover:text-green-400"
+              >Registration</a
+            >
+          </li>
+          <li>
+            <a href="sponsors.html" class="text-green-400">Sponsors</a>
+          </li>
+          <li>
+            <a href="specialSessions.html" class="hover:text-green-400"
+              >Special sessions</a
+            >
+          </li>
+          <li><a href="index.html#contact" class="hover:text-green-400">Contact</a></li>
+        </ul>
+        <button
+          class="md:hidden text-green-400 focus:outline-none"
+          id="menu-button"
+        >
+          <svg
+            class="w-6 h-6"
+            fill="none"
+            stroke="currentColor"
+            viewBox="0 0 24 24"
+            xmlns="http://www.w3.org/2000/svg"
+          >
+            <path
+              stroke-linecap="round"
+              stroke-linejoin="round"
+              stroke-width="2"
+              d="M4 6h16M4 12h16M4 18h16"
+            ></path>
+          </svg>
+        </button>
+      </div>
+      <ul
+        class="md:hidden flex flex-col space-y-2 px-4 pt-2 pb-4 bg-gray-100 hidden"
+        id="mobile-menu"
+      >
+        <li><a href="index.html" class="hover:text-green-400">Home</a></li>
+        <li>
+          <a href="callforPapers.html" class="hover:text-green-400"
+            >Call for papers</a
+          >
+        </li>
+        <li>
+          <a href="#committees" class="hover:text-green-400">Committees</a>
+        </li>
+        <li>
+          <a href="registration.html" class="hover:text-green-400"
+            >Registration</a
+          >
+        </li>
+        <li>
+          <a href="sponsors.html" class="text-green-400">Sponsors</a>
+        </li>
+        <li>
+          <a href="specialSessions.html" class="hover:text-green-400"
+            >Special sessions</a
+          >
+        </li>
+        <li><a href="index.html#contact" class="hover:text-green-400">Contact</a></li>
+      </ul>
+    </nav>
+    
+    <script>
+      document
+        .getElementById("menu-button")
+        .addEventListener("click", function () {
+          document.getElementById("mobile-menu").classList.toggle("hidden");
+        });
+    </script>
+
+    <header class="h-[900px] md:h-[600px] text-center text-white bg-green-700">
+      <div class="flex flex-col md:flex-row h-full">
+        <div class="w-full md:w-1/2 px-4 py-24">
+          <div class="w-full md:w-1/2 bg-img">
+            <img src="PSCMR.jpeg" class="md:hidden" alt="" />
+          </div>
+          <h1 class="text-4xl font-bold mb-2">
+            International Conference on Data Science and Computational
+            Intelligence (ICDSCI)
+          </h1>
+          <h2 class="text-2xl mb-2">March 20-21, 2025</h2>
+          <h2 class="text-xl underline mb-4">Conference Proceedings</h2>
+          <h3 class="text-lg mb-4">
+            ALL ACCEPTED & PRESENTED papers will be published in SCOPUS indexed
+            SPRINGER PROMS.
+          </h3>
+          <div class="flex justify-center space-x-4 mb-4">
+            <img src="springer.png" alt="Springer" class="h-36 w-36" />
+            <!-- <img src="bg2.jpg" alt="Background" class="h-36 w-36" /> -->
+          </div>
+          <button
+            class="bg-gray-50 text-black px-4 py-2 rounded hover:bg-green-900 hover:text-white mb-4"
+          >
+            Submit Your Paper
+          </button>
+        </div>
+        <div class="w-full md:w-1/2 bg-img"></div>
+      </div>
+    </header>
+
+    <div class="mt-1 bg">
+      <marquee behavior="" direction=""
+        >A virtual meeting is available for all registered authors who intend to
+        submit their work but are unable to attend the conference.</marquee
+      >
+    </div>
+    <div class="bg-green-700 text-white text-center p-3">
+      <p class="font-bold text-2xl">Sponsorship Opportunities</p>
+    </div>
+    <div class="p-[80px]">
+      <p>ICDSCI 2024 is technically and finacially sponsored/promoted by:</p>
+      <img class="mt-5" src="springer.png" alt="" />
+      <p>
+        As a sponsor of the ICDSCI 2025 you will have numerous opportunities to
+        reach a variety of organizations. <br />
+        <br />
+        This is a very important event to showcase not only your interest and
+        commitment to defending against Internet of Things, but your expertise
+        as well. Additionally, you will have the capability to collaborate with
+        vendors on finding out the interests and challenges of our attendees in
+        order to provide them with IoT solutions.
+        <br /><br />
+
+        We thank you in advance for your commitment and support and look forward
+        to seeing you there!
+      </p>
+    </div>
+  </body>
+</html>
