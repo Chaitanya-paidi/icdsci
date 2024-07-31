@@ -19,7 +19,7 @@
       }
       .underline-green {
         text-decoration: underline;
-        text-decoration-color: rgb(34 197 94 / var(--tw-bg-opacity));
+        text-decoration-color: green;
       }
       .bg-img {
         background-image: url("PSCMR.jpeg");
@@ -33,12 +33,14 @@
     <nav class="fixed w-full bg-gray-50 text-black py-3 z-50">
       <div class="container mx-auto flex justify-between items-center px-4">
         <div class="flex items-center">
-        <img src="springer.png" alt="Springer Logo" class="h-10 mr-2">
-        <a href="#" class="text-2xl font-bold">
-          <span class="bg-green-700 text-white px-2 py-1 rounded">ICDSCI</span>
-          2025
-        </a>
-      </div>
+          <img src="springer.png" alt="Springer Logo" class="h-10 mr-2" />
+          <a href="#" class="text-2xl font-bold">
+            <span class="bg-green-700 text-white px-2 py-1 rounded"
+              >ICDSCI</span
+            >
+            2025
+          </a>
+        </div>
         <ul class="hidden md:flex space-x-6">
           <li><a href="index.html" class="hover:text-green-400">Home</a></li>
           <li>
@@ -50,16 +52,19 @@
             <a href="#committees" class="hover:text-green-400">Committees</a>
           </li>
           <li>
-            <a href="#registration" class="hover:text-green-400"
+            <a href="registration.html" class="hover:text-green-400"
               >Registration</a
             >
           </li>
           <li>
-            <a href="#special-sessions" class="hover:text-green-400"
+            <a href="sponsors.html" class="hover:text-green-400">Sponsors</a>
+          </li>
+          <li>
+            <a href="specialSessions.html" class="hover:text-green-400"
               >Special sessions</a
             >
           </li>
-          <li><a href="#contact" class="hover:text-green-400">Contact</a></li>
+          <li><a href="index.html#contact" class="hover:text-green-400">Contact</a></li>
         </ul>
         <button
           class="md:hidden text-green-400 focus:outline-none"
@@ -95,18 +100,23 @@
           <a href="#committees" class="hover:text-green-400">Committees</a>
         </li>
         <li>
-          <a href="#registration" class="hover:text-green-400">Registration</a>
+          <a href="registration.html" class="hover:text-green-400"
+            >Registration</a
+          >
         </li>
         <li>
-          <a href="#special-sessions" class="hover:text-green-400"
+          <a href="sponsors.html" class="hover:text-green-400">Registration</a>
+        </li>
+        <li>
+          <a href="specialSessions.html" class="hover:text-green-400"
             >Special sessions</a
           >
         </li>
-        <li><a href="#contact" class="hover:text-green-400">Contact</a></li>
+        <li><a href="index.html#contact" class="hover:text-green-400">Contact</a></li>
       </ul>
     </nav>
 
-    <header class="h-[900px] md:h-[583px] text-center text-white bg-green-700">
+    <header class="h-[900px] md:h-[600px] text-center text-white bg-green-700">
       <div class="flex flex-col md:flex-row h-full">
         <div class="w-full md:w-1/2 px-4 py-24">
           <div class="w-full md:w-1/2 bg-img">
@@ -124,7 +134,7 @@
           </h3>
           <div class="flex justify-center space-x-4 mb-4">
             <img src="springer.png" alt="Springer" class="h-36 w-36" />
-            <img src="bg2.jpg" alt="Background" class="h-36 w-36" />
+            <!-- <img src="bg2.jpg" alt="Background" class="h-36 w-36" /> -->
           </div>
           <button
             class="bg-gray-50 text-black px-4 py-2 rounded hover:bg-green-900 hover:text-white mb-4"
@@ -200,8 +210,10 @@
       </p>
     </div>
 
-    <section class="bg-gray-100  text-black p-3 md:p-10" id="objectives">
-      <p class="underline-green font-bold text-xl mb-4 text-center">Objectives</p>
+    <section class="bg-gray-100 text-black p-3 md:p-10" id="objectives">
+      <p class="underline-green font-bold text-xl mb-4 text-center">
+        Objectives
+      </p>
       <div class="text- mx-auto">
         <p class="mb-4">The main objectives of ICAIS-2024 are to:</p>
         <ul class="list-disc list-inside space-y-2">
@@ -225,7 +237,6 @@
         </ul>
       </div>
     </section>
-
 
     <div class="bg-gray-100 text-center text-black p-3 md:p-10">
       <p class="underline-green font-bold text-xl mb-4">
@@ -297,86 +308,94 @@
         development and application of advanced technologies
       </p>
       <ul class="list-disc list-inside space-y-6 mt-8">
-        <li >
-          <b>Enhanced Knowledge and Skills:</b> <br> Participants will gain a deeper
-          understanding of the latest advancements and trends in data science,
-          big data analytics, computational technologies, and related fields.
-          Attendees will acquire new skills through workshops, tutorials, and
-          training sessions.
+        <li>
+          <b>Enhanced Knowledge and Skills:</b> <br />
+          Participants will gain a deeper understanding of the latest
+          advancements and trends in data science, big data analytics,
+          computational technologies, and related fields. Attendees will acquire
+          new skills through workshops, tutorials, and training sessions.
         </li>
 
         <li>
-          <b>Increased Collaboration: </b> <br>The conference will foster collaborations
-          between academia, industry, and government agencies, leading to joint
-          research projects and innovative solutions to complex problems.
-          Networking opportunities will help participants establish new
-          connections and partnerships.
+          <b>Increased Collaboration: </b> <br />The conference will foster
+          collaborations between academia, industry, and government agencies,
+          leading to joint research projects and innovative solutions to complex
+          problems. Networking opportunities will help participants establish
+          new connections and partnerships.
         </li>
 
         <li>
-          <b>Publication of High-Quality Research:</b> <br> The conference will serve as a
-          platform for publishing high-quality research papers, enhancing the
-          body of knowledge in data science and computational technologies.
-          Selected papers will be featured in reputed journals and conference
-          proceedings.
+          <b>Publication of High-Quality Research:</b> <br />
+          The conference will serve as a platform for publishing high-quality
+          research papers, enhancing the body of knowledge in data science and
+          computational technologies. Selected papers will be featured in
+          reputed journals and conference proceedings.
         </li>
 
         <li>
-          <b>Showcasing Innovations: </b> <br>The latest innovations, products, and
-          technologies in data science and computational technologies will be
-          showcased, providing attendees with insights into cutting-edge
-          developments and industry trends. Participants will be exposed to
-          successful case studies and real-world implementations.
+          <b>Showcasing Innovations: </b> <br />The latest innovations,
+          products, and technologies in data science and computational
+          technologies will be showcased, providing attendees with insights into
+          cutting-edge developments and industry trends. Participants will be
+          exposed to successful case studies and real-world implementations.
         </li>
 
         <li>
-          <b>Policy and Ethical Insights: </b> <br>Discussions on policy and ethical
-          considerations will provide valuable insights into the responsible and
-          sustainable development of data science and computational
-          technologies. Recommendations for policymakers will be formulated to
-          address the challenges and opportunities in the field.
+          <b>Policy and Ethical Insights: </b> <br />Discussions on policy and
+          ethical considerations will provide valuable insights into the
+          responsible and sustainable development of data science and
+          computational technologies. Recommendations for policymakers will be
+          formulated to address the challenges and opportunities in the field.
         </li>
 
         <li>
-          <b>Problem-Solving and Thought Leadership: </b> <br>The conference will provide a
-          platform for addressing pressing challenges in the field, leading to
-          new ideas and solutions. Thought leaders and experts will share their
-          perspectives, driving forward-thinking discussions and inspiring
-          future research.
+          <b>Problem-Solving and Thought Leadership: </b> <br />The conference
+          will provide a platform for addressing pressing challenges in the
+          field, leading to new ideas and solutions. Thought leaders and experts
+          will share their perspectives, driving forward-thinking discussions
+          and inspiring future research.
         </li>
 
         <li>
-          <b>Support for Early-Career Researchers:</b><br> Opportunities for students and
-          early-career professionals to present their work and receive feedback
-          from established experts. Mentoring and guidance to nurture the next
-          generation of innovators and researchers.
+          <b>Support for Early-Career Researchers:</b><br />
+          Opportunities for students and early-career professionals to present
+          their work and receive feedback from established experts. Mentoring
+          and guidance to nurture the next generation of innovators and
+          researchers.
         </li>
 
         <li>
-          <b>Enhanced Institutional Reputation:</b> <br> Hosting the conference will enhance
-          the reputation of the organizing institution as a leading entity in
-          the field of data science and computational technologies. The
-          conference will highlight the institution's commitment to fostering
-          innovation and research excellence.
+          <b>Enhanced Institutional Reputation:</b> <br />
+          Hosting the conference will enhance the reputation of the organizing
+          institution as a leading entity in the field of data science and
+          computational technologies. The conference will highlight the
+          institution's commitment to fostering innovation and research
+          excellence.
         </li>
 
         <li>
-          <b>Comprehensive Proceedings Book:</b> <br> A comprehensive book of abstract
-          proceedings will be published, serving as a valuable resource for
-          researchers and practitioners in the field. The proceedings will
-          document the key findings and discussions from the conference,
-          ensuring long-term impact.
+          <b>Comprehensive Proceedings Book:</b> <br />
+          A comprehensive book of abstract proceedings will be published,
+          serving as a valuable resource for researchers and practitioners in
+          the field. The proceedings will document the key findings and
+          discussions from the conference, ensuring long-term impact.
         </li>
       </ul>
     </section>
 
-
     <section class="bg-gray-100 text-black p-3 md:p-10" id="scope">
       <p class="underline-green font-bold text-xl mb-4 text-center">Scope</p>
-      <p><b>ICAIS-2024 will cover a wide range of themes, focusing on the following main areas:</b></p>
+      <p>
+        <b
+          >ICAIS-2024 will cover a wide range of themes, focusing on the
+          following main areas:</b
+        >
+      </p>
       <ul class="list-disc list-inside space-y-6 mt-8">
         <li class="text-left">Data Science and it's Applications</li>
-        <li class="text-left">Computational Intelligence and it's Applications</li>
+        <li class="text-left">
+          Computational Intelligence and it's Applications
+        </li>
         <li class="text-left">Data Science and Al Ethics</li>
         <li class="text-left">Data Visualization and Interpretation</li>
         <li class="text-left">Cloud Computing and Virtualization</li>
@@ -387,141 +406,97 @@
     </section>
 
     <section class="bg-gray-100 text-black p-3 md:p-10" id="impact">
-      <p class="underline-green font-bold text-xl mb-4 text-center">Anticipated Impacts</p>
+      <p class="underline-green font-bold text-xl mb-4 text-center">
+        Anticipated Impacts
+      </p>
       <p>
-        The International Conference on Data Science and Computational Intelligence (ICDSCI) 2025 is poised to make a significant impact on the field of data science and computational intelligence and beyond. ICDSCI 2025 is expected to have a profound and lasting impact on the advancement of data science and computational intelligence, fostering collaboration, innovation, and ethical development in this rapidly evolving field. The anticipated impacts include:
+        The International Conference on Data Science and Computational
+        Intelligence (ICDSCI) 2025 is poised to make a significant impact on the
+        field of data science and computational intelligence and beyond. ICDSCI
+        2025 is expected to have a profound and lasting impact on the
+        advancement of data science and computational intelligence, fostering
+        collaboration, innovation, and ethical development in this rapidly
+        evolving field. The anticipated impacts include:
       </p>
       <ul class="list-disc list-inside space-y-6 mt-8">
         <li>
-          <b>Advancement of Research and Innovation:</b> <br> ICDSCI 2025 will catalyze the development of new research ideas and innovative solutions by providing a platform for the dissemination of cutting-edge research and technological advancements. The conference will drive forward the frontiers of knowledge in data analytics, machine learning, big data, computational modeling, healthcare applications, and optimization techniques.
+          <b>Advancement of Research and Innovation:</b> <br />
+          ICDSCI 2025 will catalyze the development of new research ideas and
+          innovative solutions by providing a platform for the dissemination of
+          cutting-edge research and technological advancements. The conference
+          will drive forward the frontiers of knowledge in data analytics,
+          machine learning, big data, computational modeling, healthcare
+          applications, and optimization techniques.
         </li>
-        
+
         <li>
-          <b>Strengthened Academic-Industry Collaboration:</b> <br> The conference will foster stronger ties between academia and industry, facilitating the translation of research into practical applications. By bringing together researchers, practitioners, and industry experts, ICDSCI 2025 will encourage collaborative projects and partnerships that address real-world challenges and promote technological advancements.
+          <b>Strengthened Academic-Industry Collaboration:</b> <br />
+          The conference will foster stronger ties between academia and
+          industry, facilitating the translation of research into practical
+          applications. By bringing together researchers, practitioners, and
+          industry experts, ICDSCI 2025 will encourage collaborative projects
+          and partnerships that address real-world challenges and promote
+          technological advancements.
         </li>
-        
+
         <li>
-          <b>Global Networking and Collaboration:</b> <br> ICDSCI 2025 will serve as a global networking hub, connecting professionals from diverse backgrounds and regions. This will enhance international collaboration and exchange of ideas, leading to a more integrated and collaborative global research community in the field of data science and computational intelligence.
+          <b>Global Networking and Collaboration:</b> <br />
+          ICDSCI 2025 will serve as a global networking hub, connecting
+          professionals from diverse backgrounds and regions. This will enhance
+          international collaboration and exchange of ideas, leading to a more
+          integrated and collaborative global research community in the field of
+          data science and computational intelligence.
         </li>
-        
+
         <li>
-          <b>Enhanced Educational Opportunities:</b> <br> Through workshops, tutorials, and training sessions, ICDSCI 2025 will provide valuable educational opportunities for participants. Students, early-career researchers, and professionals will benefit from the knowledge and expertise shared by leading experts, contributing to their professional growth and skill development.
+          <b>Enhanced Educational Opportunities:</b> <br />
+          Through workshops, tutorials, and training sessions, ICDSCI 2025 will
+          provide valuable educational opportunities for participants. Students,
+          early-career researchers, and professionals will benefit from the
+          knowledge and expertise shared by leading experts, contributing to
+          their professional growth and skill development.
         </li>
-        
+
         <li>
-          <b>Policy and Ethical Guidance:</b> <br> The conference will address critical policy and ethical issues related to the adoption and development of data science and computational technologies. By highlighting these considerations, ICDSCI 2025 will contribute to the formulation of guidelines and policies that ensure the responsible and ethical use of advanced technologies.
+          <b>Policy and Ethical Guidance:</b> <br />
+          The conference will address critical policy and ethical issues related
+          to the adoption and development of data science and computational
+          technologies. By highlighting these considerations, ICDSCI 2025 will
+          contribute to the formulation of guidelines and policies that ensure
+          the responsible and ethical use of advanced technologies.
         </li>
-        
+
         <li>
-          <b>Increased Visibility and Prestige for the Organizing Institution:</b> <br> Hosting ICDSCI 2025 will elevate the profile and prestige of the organizing institution as a leading entity in the field of data science and computational intelligence. The conference will showcase the institution's commitment to academic excellence, research, and innovation, attracting future collaborations and partnerships.
+          <b
+            >Increased Visibility and Prestige for the Organizing
+            Institution:</b
+          >
+          <br />
+          Hosting ICDSCI 2025 will elevate the profile and prestige of the
+          organizing institution as a leading entity in the field of data
+          science and computational intelligence. The conference will showcase
+          the institution's commitment to academic excellence, research, and
+          innovation, attracting future collaborations and partnerships.
         </li>
-        
+
         <li>
-          <b>Long-Term Knowledge Repository:</b> <br> The publication of the conference proceedings will create a long-term repository of knowledge, documenting the latest research findings and discussions. This will serve as a valuable resource for researchers, practitioners, and policymakers, ensuring the sustained impact of ICDSCI 2025 on the field.
+          <b>Long-Term Knowledge Repository:</b> <br />
+          The publication of the conference proceedings will create a long-term
+          repository of knowledge, documenting the latest research findings and
+          discussions. This will serve as a valuable resource for researchers,
+          practitioners, and policymakers, ensuring the sustained impact of
+          ICDSCI 2025 on the field.
         </li>
-        
+
         <li>
-          <b>Inspiration for Future Research:</b> <br> The insights and discussions at ICDSCI 2025 will inspire future research directions and projects. By highlighting emerging trends and challenges, the conference will set the agenda for future investigations and developments in data science and computational intelligence.
+          <b>Inspiration for Future Research:</b> <br />
+          The insights and discussions at ICDSCI 2025 will inspire future
+          research directions and projects. By highlighting emerging trends and
+          challenges, the conference will set the agenda for future
+          investigations and developments in data science and computational
+          intelligence.
         </li>
       </ul>
-    </section>
-    
-
-    <section class="bg-gray-200 py-12 text-black">
-      <div class="container mx-auto text-center mb-8">
-        <h1 class="text-4xl font-bold">Conference Tracks</h1>
-      </div>
-      <div class="container mx-auto grid grid-cols-1 md:grid-cols-3 gap-6">
-        <div class="bg-white p-6 rounded-lg shadow ml-3 mr-3">
-          <h2 class="text-2xl font-bold mb-2 text-left underline-green">
-            Data Science Foundations:
-          </h2>
-          <p>- Statistical learning theory</p>
-          <p>- Data mining techniques</p>
-          <p>- Big data analytics</p>
-          <p class="text-left">- Machine learning algorithms</p>
-          <p>- Deep learning techniques</p>
-        </div>
-        <div class="bg-white p-6 rounded-lg shadow ml-3 mr-3">
-          <h2 class="text-2xl font-bold mb-2 underline-green">
-            Computational Intelligence:
-          </h2>
-          <p>- Evolutionary computation</p>
-          <p>- Neural networks</p>
-          <p>- Fuzzy systems</p>
-          <p>- Swarm intelligence</p>
-          <p>- Genetic algorithms</p>
-        </div>
-        <div class="bg-white p-6 rounded-lg shadow ml-3 mr-3">
-          <h2 class="text-2xl text-left font-bold mb-2 underline-green">
-            Applications of Data Science:
-          </h2>
-          <p class="text-left">- Natural language processing</p>
-          <p>- Image and video analysis</p>
-          <p>- Bioinformatics</p>
-          <p>- Social media analytics</p>
-          <p>- Recommender systems</p>
-        </div>
-        <div class="bg-white p-6 rounded-lg shadow ml-3 mr-3">
-          <h2 class="text-2xl font-bold mb-2 underline-green text-left">
-            Computational intelligence applications:
-          </h2>
-          <p>- Robotics and autonomous systems</p>
-          <p>- Decision support systems</p>
-          <p>- Optimization problems</p>
-          <p class="text-left">- Computational neuroscience</p>
-          <p>- Intelligent control</p>
-        </div>
-        <div class="bg-white p-6 rounded-lg shadow ml-3 mr-3">
-          <h2 class="text-2xl font-bold mb-2 underline-green">
-            Data Science and Al Ethics:
-          </h2>
-          <p>- Privacy and security in data analytics</p>
-          <p class="text-left">- Fairness and transparency in Al</p>
-          <p>- Ethical considerations in big data research</p>
-        </div>
-        <div class="bg-white p-6 rounded-lg shadow ml-3 mr-3">
-          <h2 class="text-2xl text-left font-bold mb-2 underline-green">
-            Data Visualization and Interpretation:
-          </h2>
-          <p>- Visual analytics</p>
-          <p class="text-left">- Interactive data exploration</p>
-          <p>- Interpretability of machine learning models</p>
-        </div>
-        <div class="bg-white p-6 rounded-lg shadow ml-3 mr-3">
-          <h2 class="text-2xl font-bold mb-2 underline-green text-left">
-            Cloud Computing and Virtualization:
-          </h2>
-          <p>- Cloud service models</p>
-          <p class="text-left">- Containerization technologies</p>
-          <p>- Serverless computing and functions-as-a-service</p>
-        </div>
-        <div class="bg-white p-6 rounded-lg shadow ml-3 mr-3">
-          <h2 class="text-2xl font-bold mb-2 underline-green text-left">
-            Software Engineering Practices:
-          </h2>
-          <p class="text-left">- Agile methodologies and DevOps practices</p>
-          <p class="text-left">- Software testing and quality assurance</p>
-          <p>- Software architecture and design pattems</p>
-        </div>
-        <div class="bg-white p-6 rounded-lg shadow ml-3 mr-3">
-          <h2 class="text-2xl font-bold mb-2 underline-green">
-            Emerging Trends:
-          </h2>
-          <p>- Quantum.computing and data science</p>
-          <p>- Edge computing for data analytics</p>
-          <p>- Blockchain and Al</p>
-        </div>
-        <div class="bg-white p-6 rounded-lg shadow ml-3 mr-3">
-          <h2 class="text-2xl font-bold mb-2 underline-green">
-            Industry Applications:
-          </h2>
-          <p>- Financial analytics</p>
-          <p>- Heathcare informatics</p>
-          <p>- Industrial IoT appications</p>
-          <p class="text-left">- Smart c and arbian analytics</p>
-        </div>
-      </div>
     </section>
   </body>
 </html>
