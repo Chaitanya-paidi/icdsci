@@ -33,20 +33,19 @@
 
       .button-container button {
         /* background: linear-gradient(to right, #3cd870, #9af1a5);  */
-        background-color: #4caf50;
+        background-color: rgb(21 128 61 / var(--tw-bg-opacity));
         color: white;
-        padding: 0.75rem 1.5rem; /* Custom padding */
-        font-size: 1.125rem; /* text-lg */
-        font-weight: 600; /* font-semibold */
+        padding: 0.75rem 1.5rem;
+        font-size: 1.125rem;
+        font-weight: 600;
         border: none;
-        border-radius: 0.375rem; /* rounded-md */
-        box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1), 0 2px 4px rgba(0, 0, 0, 0.06); /* shadow-md */
+        border-radius: 0.375rem;
+        box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1), 0 2px 4px rgba(0, 0, 0, 0.06);
         transition: all 0.3s ease-in-out;
         cursor: pointer;
       }
 
       .button-container button:hover {
-        /* background: linear-gradient(to right, #9af1a5, #3cd870);  */
         background-color: gray;
         box-shadow: 0 8px 10px rgba(0, 0, 0, 0.15), 0 4px 6px rgba(0, 0, 0, 0.1);
         transform: translateY(-2px);
@@ -54,52 +53,60 @@
 
       .button-container button:focus {
         outline: none;
-        box-shadow: 0 0 0 3px rgba(110, 231, 183, 0.5); /* focus ring color */
+        box-shadow: 0 0 0 3px rgba(110, 231, 183, 0.5);
       }
       .tab {
-      overflow: hidden;
-      
-      display: flex;
-      justify-content: space-evenly;
-    }
+        overflow: hidden;
 
-    /* Style the buttons inside the tab */
-    .tab button {
-      background-color: gray;
-      border: none;
-      outline: none;
-      cursor: pointer;
-      padding: 14px 16px;
-      margin: 0 5px; /* Add space between the buttons */
-      transition: 0.3s;
-      font-size: 17px;
-      flex: 1;
-    }
+        display: flex;
+        justify-content: space-evenly;
+      }
 
-    /* Change background color of buttons on hover */
-    .tab button:hover {
-      background-color: #ddd;
-    }
+      .tab button {
+        background-color: gray;
+        border: none;
+        outline: none;
+        cursor: pointer;
+        padding: 14px 16px;
+        margin: 0 5px;
+        transition: 0.3s;
+        font-size: 17px;
+        flex: 1;
+      }
 
-    /* Create an active/current tablink class */
-    .tab button.active {
-      background-color: #4caf50;
-      color: white;
-    }
+      .tab button:hover {
+        background-color: #ddd;
+      }
 
-    /* Style the tab content */
-    .tabcontent {
-      display: none;
-      padding: 6px 12px;
-      border-top: none;
-    }
-    /* #more {display: none;}
-    .btn {
-      @apply px-4 py-2 bg-green-600 text-white font-bold rounded-lg;
-      @apply hover:bg-green-700 transition-all;
-    } */
+      .tab button.active {
+        background-color: rgb(21 128 61 / var(--tw-bg-opacity));
+        color: white;
+      }
 
+      .tabcontent {
+        display: none;
+        padding: 6px 12px;
+        border-top: none;
+      }
+      .underline-green {
+        text-decoration: underline;
+        text-decoration-color: green;
+      }
 
+      @keyframes fadeIn {
+        from {
+          opacity: 0;
+          transform: translateY(20px);
+        }
+        to {
+          opacity: 1;
+          transform: translateY(0);
+        }
+      }
+
+      .animate-fadeIn {
+        animation: fadeIn 0.6s ease-out forwards;
+      }
     </style>
   </head>
   <body class="bg-gray-100 text-black text-justify">
@@ -125,13 +132,16 @@
             <a href="#committees" class="hover:text-green-400">Committees</a>
           </li>
           <li>
-            <a href="#registration" class="hover:text-green-400"
+            <a href="registration.html" class="hover:text-green-400"
               >Registration</a
             >
           </li>
           <li>
-            <a href="#special-sessions" class="hover:text-green-400"
-              >Special sessions</a
+            <a href="sponsors.html" class="hover:text-green-400">Sponsors</a>
+          </li>
+          <li>
+            <a href="specialSessions.html" class="hover:text-green-400"
+              >Special Sessions</a
             >
           </li>
           <li><a href="#contact" class="hover:text-green-400">Contact</a></li>
@@ -170,10 +180,15 @@
           <a href="#committees" class="hover:text-green-400">Committees</a>
         </li>
         <li>
-          <a href="#registration" class="hover:text-green-400">Registration</a>
+          <a href="registration.html" class="hover:text-green-400"
+            >Registration</a
+          >
         </li>
         <li>
-          <a href="#special-sessions" class="hover:text-green-400"
+          <a href="sponsors.html" class="hover:text-green-400">Sponsors</a>
+        </li>
+        <li>
+          <a href="specialSessions.html" class="hover:text-green-400"
             >Special sessions</a
           >
         </li>
@@ -329,156 +344,282 @@
         });
     </script>
 
-<section id="conference" class="container mx-auto py-12 px-4">
-  <div class="grid grid-cols-1 lg:grid-cols-2 gap-8">
-    <div>
-      <h2 class="text-3xl text-left font-bold mb-4 underline-green">About the Conference</h2>
-      <p class="mb-4">International Conference on Data Science and Computational Intelligence (ICDSCI) 2025 is a pivotal event that embodies the core elements of the 5th Industrial Revolution. The widespread application of data science is revolutionizing products and services, significantly impacting labor markets, economies, and societies globally.</p>
-      <p>The event aims to gather scientific and technical contributions across a broad spectrum of models, tools, technologies, and applications in modern data science. The conference will cover the full range of concepts from theoretical foundations to practical implementations, including case studies, works-in-progress, and conceptual explorations.</p>
-    
-      <div class="button-container mt-10 flex flex-col lg:flex-row justify-between space-y-4 lg:space-y-0 lg:space-x-4">
-        <a href="callforPapers.html#objectives"><button class="btn">Objectives</button></a>
-        <a href="callforPapers.html#outcomes"><button class="btn">Outcomes</button></a>
-        <a href="callforPapers.html#scope"><button class="btn">Scope</button></a>
-        <a href="callforPapers.html#impact"><button class="btn">Impact</button></a>
+    <section id="conference" class="container mx-auto py-12 px-4">
+      <div class="grid grid-cols-1 lg:grid-cols-2 gap-8">
+        <div>
+          <h2 class="text-3xl text-left font-bold mb-4 underline-green">
+            About the Conference
+          </h2>
+          <p class="mb-4">
+            International Conference on Data Science and Computational
+            Intelligence (ICDSCI) 2025 is a pivotal event that embodies the core
+            elements of the 5th Industrial Revolution. The widespread
+            application of data science is revolutionizing products and
+            services, significantly impacting labor markets, economies, and
+            societies globally.
+          </p>
+          <p>
+            The event aims to gather scientific and technical contributions
+            across a broad spectrum of models, tools, technologies, and
+            applications in modern data science. The conference will cover the
+            full range of concepts from theoretical foundations to practical
+            implementations, including case studies, works-in-progress, and
+            conceptual explorations.
+          </p>
+
+          <div
+            class="button-container mt-10 flex flex-col lg:flex-row justify-between space-y-4 lg:space-y-0 lg:space-x-4"
+          >
+            <a href="callforPapers.html#objectives"
+              ><button>Objectives</button></a
+            >
+            <a href="callforPapers.html#outcomes"><button>Outcomes</button></a>
+            <a href="callforPapers.html#scope"><button>Scope</button></a>
+            <a href="callforPapers.html#impact"><button>Impact</button></a>
+          </div>
+        </div>
+        <div>
+          <div
+            class="tab flex flex-col lg:flex-row space-y-4 lg:space-y-0 lg:space-x-4 mb-4"
+          >
+            <button
+              class="tablinks btn"
+              onclick="openTab(event, 'about-pscmr')"
+            >
+              About PSCMR
+            </button>
+            <button class="tablinks btn" onclick="openTab(event, 'about-ds')">
+              About DS
+            </button>
+            <button class="tablinks btn" onclick="openTab(event, 'about-mca')">
+              About MCA
+            </button>
+          </div>
+          <div id="about-pscmr" class="tabcontent">
+            <p>
+              Potti Sriramulu Chalavadi Mallikarjuna Rao College of Engineering
+              and Technology (PSCMRCET) was started in the year 2008, under the
+              aegis of, more than hundred years old, Sri Kanyaka Parameswari
+              Vissamsetti Venkataratnam Hindu High Schools Committee (SKPVVHHSC
+              – Established in 1906), by a group of philanthropists belonging to
+              Vijayawada. PSCMR College of Engineering and Technology offers B.
+              Tech, MBA, M Tech, and MCA programmes. PSCMRCET aims to impart
+              quality education supported by societal responsiveness fostering
+              holistic development of its students. The mission of the college
+              is to impart quality and value-based technology and management
+              education relevant to contemporary corporate and societal needs
+              through continuous learning, societal responsiveness supported by
+              strategic partnerships with industry and academia. At PSCMRCET
+              education
+              <span class="dots">...</span>
+              <span class="more">
+                around providing a multidimensional development programme to its
+                students ameliorating their interpersonal skills and corporate
+                etiquette thereby resulting in accelerated professional growth.
+                The college aspires to promote leadership through societal
+                responsiveness and excellence in technology and management
+                education. With a Governing Body consisting of Three Former Vice
+                Chancellors and representatives from I.T. and Core industries –
+                The TCS, Infosys, H-Bots, Eurth Techtronics, Galaxe Solutions
+                Inc., Efftronics, Govt. Water Resource Dept., Athena power,
+                Price Water, Sesha Sai Knittings, Minerva Group of Hotels,
+                PSCMRCET continues to be rated as one of the leading technical
+                colleges in the capital region of Andhra Pradesh. The academic
+                programmes that are offered in both Engineering and Management
+                are highly regarded. The institute is known for imparting a
+                high-quality professional education and training in an
+                atmosphere of discipline. All the stakeholders work towards
+                fulfilling this mission, shaping our students into people who
+                can play an effective role in the development of a knowledge
+                society. The college has been committed to the vision of making
+                a significant contribution to a highly advanced technological
+                society with profound human values by sending forth students as
+                people of unparalleled expertise and a high sense of ethical
+                values. Beyond curriculum topics on niche technologies are being
+                taken care of by inviting established expert resource persons
+                from industry and academia. A.P. State Skill Development Council
+                has conducted more than 151 such training programs in the last
+                three years. That the college is committed to providing
+                internships to all the students is evident from the fact the
+                college received an award from the AICTE for the maximum number
+                of internships in the southern region through Internshala. With
+                an ardent commitment to helping the student become a perfect
+                wholesome personality, the College envisages a campus that
+                promotes healthy interaction between faculty and students and
+                among the students. We have a well-structured student counseling
+                system to meet the noble objective of team spirit and
+                cooperative learning. Extra and co-curricular activities are
+                sincerely encouraged through different on-campus clubs and
+                committees. There is a PSCMR Toastmasters club, Chess Club,
+                Roteract club, Music Club in addition to the student chapters of
+                esteemed professional bodies like the Institution of Engineers,
+                Computer Society of India, Institution of Electronics and
+                Telecommunication Engineers. Participation of students in
+                Project expos, Hackathons, Research paper Submission, sports and
+                games at inter and intra-college level is highly appreciated and
+                encouraged. Students are reimbursed with travel expenses and
+                registration fees. All the activities on the campus are
+                meticulously planned and executed by only the students under the
+                mentorship of the experienced faculty. Teaching staff are
+                sponsored to FDPs and Seminars and non-teaching staff too are
+                sent to attend skill up-gradation programmes with financial aid.
+                PSCMR College of Engineering and Technology has become
+                synonymous with ultra-modern learning and the best placements.
+                In a short span of time, the college has emerged as one of the
+                prestigious educational institutions in this locality. Students
+                from all parts of the state are ambitious to see themselves in
+                this institution. That more than 67% of our students are girls
+                is a testimony to the faith and trust of the parents in the
+                institution’s strict and no compromise attitude in discipline
+                matters.
+              </span>
+            </p>
+            <button class="text-green-700 read-more-btn">Read more</button>
+          </div>
+          <div id="about-ds" class="tabcontent">
+            <p>
+              With the advent of IoT (Internet of Things) and Industry 4.0, the
+              volume of data is growing at an exponential rate. Given the
+              massive amount of data that is produced, it has led to the matured
+              discipline of Data Science that involves collection,
+              visualization, processing, and modeling of large and complex data
+              sets from different domains and sources. Data science is an
+              essential part of many industries today, and Its popularity has
+              grown over the years. Companies have started implementing data
+              science techniques to grow their business and increase customer
+              satisfaction. Its immense popularity has increased the demanding
+              interest among the students to choose it as a career option. Data
+              Science is an emerging area of Computer Science and Engineering
+              (CSE).The Department of CSE-Data Science was established in the
+              year 2022 with an annual intake of 60 students. P.G program in
+              Data science
+              <span class="dots">...</span>
+              <span class="more">
+                was established in the year 2022 with an annual intake of 18
+                students. BTech CSE(Data Science) is a 4-year undergraduate
+                level course designed for you to build a distinctive career in
+                analytical and leadership roles in various sectors. The course
+                is new and trending and with a perfect blend of machine
+                learning, big data analytics, and statistics, helps students
+                gain experience in solving problems with real-world data. This
+                course also gives importance to areas like big data analytics,
+                fuzzy technologies, and artificial neural networks. It helps
+                students in getting ready with skills to perform decisions that
+                are based on data analysis. Throughout the duration of the
+                programme, the students are taught how to amalgamate business
+                knowledge, tools, and statistics to generate business value in
+                creative ways. It is one of the high-demanding subjects in
+                today’s world as it has very good career opportunities in
+                various sectors. Students can choose this course as it makes
+                them fit for the industry and start their careers as data
+                scientists, and data analysts. The B.Tech Program in CSE has
+                been accredited by the National Board of Accreditation (NBA)
+                successively two times i.e. in 2019, and 2022. CAREER
+                PROSPECTIVE FOR DATA SCIENCE STUDENTS: Data Analyst Data
+                Specialist Data Scientist Data Engineer Data Architect Data
+                Consultant TOP 10 DATA SCIENCE COMPANIES: Accenture Databricks
+                OpenText Splunk Unified Teradata Oracle Sisense NVIDIA Sumo
+                Logic Highlights: Campus Recruitment by ORACLE and other reputed
+                companies. Well Equipped Computer Labs with Latest Technologies.
+                MOU With IIT-Bombay for Spoken Tutorial: To Impart Training on
+                Open Source Technologies for all Engineering Streams. The
+                department encourages Entrepreneur Skill Development among
+                students in Collaboration with ESDA-New Delhi. Internships with
+                Internshala.com Association with International Professional
+                Bodies: IEEE, CSI, CII, ACM, ISTE, IETE, IAENG, IASA & IEI. Soft
+                Skills & CRT(Campus Recruitment Training) Programs from IInd
+                Year B.Tech Onwards. Training Students & Faculty on Latest
+                Technologies by Workshops & Seminars from Industry People and
+                IIT Faculty. Industrial Visits to students to introduce
+                forthcoming Technologies. Strong ALUMNI Network of PAW[PSCMRCET-
+                Alumni Wing].
+              </span>
+            </p>
+            <button class="read-more-btn text-green-700">Read more</button>
+          </div>
+          <div id="about-mca" class="tabcontent">
+            <p>
+              Master of Computer Applications (MCA) is a two-year professional
+              post-graduate course for candidates wanting to delve deeper into
+              the world of Computer Application development with the help of
+              learning modern programming language. The programme is a blend of
+              both theoretical and practical knowledge proving in-depth
+              knowledge of the various computer languages and IT applications.
+              The Department has excellent learning facilities which include
+              Seminar Hall, Department Library and a dedicated Computer Lab.
+              Faculty members are given various opportunities to attend
+              workshops, short-term courses, seminars, and conferences for
+              updating knowledge, to cope with the continuous changes and
+              challenges in the field of Computer Science and its applications.
+              Why MCA in PSCMRCET? Hands-on Curriculum designed by experts from
+              academia and industry and taught by Quality Faculty
+              <span class="dots">...</span>
+              <span class="more">
+                Members More emphasis on the latest programming languages and
+                tools to develop better and faster applications. Enhancing
+                students’ capabilities as per the career requirements and giving
+                them necessary placement assistance Specially organized
+                Workshops, Webinars and Guest Lectures by Industry experts to
+                provide the latest Industry insights Professional enhancement
+                Program focusing on aptitude, reasoning, soft skills and
+                interviewing skills of the student.
+              </span>
+            </p>
+            <button class="read-more-btn text-green-700">Read more</button>
+          </div>
+        </div>
       </div>
-    </div>
-    <div>
-      <div class="tab flex flex-col lg:flex-row space-y-4 lg:space-y-0 lg:space-x-4 mb-4">
-        <button class="tablinks btn" onclick="openTab(event, 'about-pscmr')">About PSCMR</button>
-        <button class="tablinks btn" onclick="openTab(event, 'about-ds')">About DS</button>
-        <button class="tablinks btn" onclick="openTab(event, 'about-mca')">About MCA</button>
-      </div>
-      <div id="about-pscmr" class="tabcontent">
-        <p>
-          Potti Sriramulu Chalavadi Mallikarjuna Rao College of Engineering and Technology (PSCMRCET) was started in the year 2008, under the aegis of, more than hundred years old, Sri Kanyaka Parameswari Vissamsetti Venkataratnam Hindu High Schools Committee (SKPVVHHSC – Established in 1906), by a group of philanthropists belonging to Vijayawada. PSCMR College of Engineering and Technology offers B. Tech, MBA, M Tech, and MCA programmes.
-          PSCMRCET aims to impart quality education supported by societal responsiveness fostering holistic development of its students. The mission of the college is to impart quality and value-based technology and management education relevant to contemporary corporate and societal needs through continuous learning, societal responsiveness supported by strategic partnerships with industry and academia. At PSCMRCET education 
-          <span class="dots">...</span>
-          <span class="more">
-            around providing a multidimensional development programme to its students ameliorating their interpersonal skills and corporate etiquette thereby resulting in accelerated professional growth. The college aspires to promote leadership through societal responsiveness and excellence in technology and management education.
-            With a Governing Body consisting of Three Former Vice Chancellors and representatives from I.T. and Core industries – The TCS, Infosys, H-Bots, Eurth Techtronics, Galaxe Solutions Inc., Efftronics, Govt. Water Resource Dept., Athena power, Price Water, Sesha Sai Knittings, Minerva Group of Hotels, PSCMRCET continues to be rated as one of the leading technical colleges in the capital region of Andhra Pradesh. The academic programmes that are offered in both Engineering and Management are highly regarded. The institute is known for imparting a high-quality professional education and training in an atmosphere of discipline. All the stakeholders work towards fulfilling this mission, shaping our students into people who can play an effective role in the development of a knowledge society. The college has been committed to the vision of making a significant contribution to a highly advanced technological society with profound human values by sending forth students as people of unparalleled expertise and a high sense of ethical values.
-            Beyond curriculum topics on niche technologies are being taken care of by inviting established expert resource persons from industry and academia. A.P. State Skill Development Council has conducted more than 151 such training programs in the last three years. That the college is committed to providing internships to all the students is evident from the fact the college received an award from the AICTE for the maximum number of internships in the southern region through Internshala.
-            With an ardent commitment to helping the student become a perfect wholesome personality, the College envisages a campus that promotes healthy interaction between faculty and students and among the students. We have a well-structured student counseling system to meet the noble objective of team spirit and cooperative learning. Extra and co-curricular activities are sincerely encouraged through different on-campus clubs and committees. There is a PSCMR Toastmasters club, Chess Club, Roteract club, Music Club in addition to the student chapters of esteemed professional bodies like the Institution of Engineers, Computer Society of India, Institution of Electronics and Telecommunication Engineers. Participation of students in Project expos, Hackathons, Research paper Submission, sports and games at inter and intra-college level is highly appreciated and encouraged. Students are reimbursed with travel expenses and registration fees. All the activities on the campus are meticulously planned and executed by only the students under the mentorship of the experienced faculty. Teaching staff are sponsored to FDPs and Seminars and non-teaching staff too are sent to attend skill up-gradation programmes with financial aid.
-            PSCMR College of Engineering and Technology has become synonymous with ultra-modern learning and the best placements. In a short span of time, the college has emerged as one of the prestigious educational institutions in this locality. Students from all parts of the state are ambitious to see themselves in this institution. That more than 67% of our students are girls is a testimony to the faith and trust of the parents in the institution’s strict and no compromise attitude in discipline matters.
-          </span>
-        </p>
-        <button class="text-green-700 read-more-btn">Read more</button>
-      </div>
-      <div id="about-ds" class="tabcontent">
-        <p>
-          With the advent of IoT (Internet of Things) and Industry 4.0, the volume of data is growing at an exponential rate. Given the massive amount of data that is produced, it has led to the matured discipline of Data Science that involves collection, visualization, processing, and modeling of large and complex data sets from different domains and sources. Data science is an essential part of many industries today, and Its popularity has grown over the years. Companies have started implementing data science techniques to grow their business and increase customer satisfaction. Its immense popularity has increased the demanding interest among the students to choose it as a career option.
-          Data Science is an emerging area of Computer Science and Engineering (CSE).The Department of CSE-Data Science was established in the year 2022 with an annual intake of 60 students. P.G program in Data science 
-          <span class="dots">...</span>
-          <span class="more">
-            was established in the year 2022 with an annual intake of 18 students.
-            BTech CSE(Data Science) is a 4-year undergraduate level course designed for you to build a distinctive career in analytical and leadership roles in various sectors. The course is new and trending and with a perfect blend of machine learning, big data analytics, and statistics, helps students gain experience in solving problems with real-world data. This course also gives importance to areas like big data analytics, fuzzy technologies, and artificial neural networks. It helps students in getting ready with skills to perform decisions that are based on data analysis.
-            Throughout the duration of the programme, the students are taught how to amalgamate business knowledge, tools, and statistics to generate business value in creative ways. It is one of the high-demanding subjects in today’s world as it has very good career opportunities in various sectors. Students can choose this course as it makes them fit for the industry and start their careers as data scientists, and data analysts.
-            The B.Tech Program in CSE has been accredited by the National Board of Accreditation (NBA) successively two times i.e. in 2019, and 2022.
-            CAREER PROSPECTIVE FOR DATA SCIENCE STUDENTS:
-            Data Analyst
-            Data Specialist
-            Data Scientist
-            Data Engineer
-            Data Architect
-            Data Consultant
-            TOP 10 DATA SCIENCE COMPANIES:
-            Accenture
-            Databricks
-            OpenText
-            Splunk
-            Unified
-            Teradata
-            Oracle
-            Sisense
-            NVIDIA
-            Sumo Logic
-            Highlights:
-            Campus Recruitment by ORACLE and other reputed companies.
-            Well Equipped Computer Labs with Latest Technologies.
-            MOU With IIT-Bombay for Spoken Tutorial: To Impart Training on Open Source Technologies for all Engineering Streams.
-            The department encourages Entrepreneur Skill Development among students in Collaboration with ESDA-New Delhi.
-            Internships with Internshala.com
-            Association with International Professional Bodies: IEEE, CSI, CII, ACM, ISTE, IETE, IAENG, IASA & IEI.
-            Soft Skills & CRT(Campus Recruitment Training) Programs from IInd Year B.Tech Onwards.
-            Training Students & Faculty on Latest Technologies by Workshops & Seminars from Industry People and IIT Faculty.
-            Industrial Visits to students to introduce forthcoming Technologies.
-            Strong ALUMNI Network of PAW[PSCMRCET- Alumni Wing]. 
-          </span>
-        </p>
-        <button class="read-more-btn text-green-700">Read more</button>
-      </div>
-      <div id="about-mca" class="tabcontent">
-        <p>
-          Master of Computer Applications (MCA) is a two-year professional post-graduate course for candidates wanting to delve deeper into the world of Computer Application development with the help of learning modern programming language. The programme is a blend of both theoretical and practical knowledge proving in-depth knowledge of the various computer languages and IT applications. The Department has excellent learning facilities which include Seminar Hall, Department Library and a dedicated Computer Lab. Faculty members are given various opportunities to attend workshops, short-term courses, seminars, and conferences for updating knowledge, to cope with the continuous changes and challenges in the field of Computer Science and its applications.
-          Why MCA in PSCMRCET?
-          Hands-on Curriculum designed by experts from academia and industry and taught by Quality Faculty 
-          <span class="dots">...</span>
-          <span class="more">
-            Members
-            More emphasis on the latest programming languages and tools to develop better and faster applications.
-            Enhancing students’ capabilities as per the career requirements and giving them necessary placement assistance
-            Specially organized Workshops, Webinars and Guest Lectures by Industry experts to provide the latest Industry insights
-            Professional enhancement Program focusing on aptitude, reasoning, soft skills and interviewing skills of the student.
-          </span>
-        </p>
-        <button class="read-more-btn text-green-700">Read more</button>
-      </div>
-    </div>
-  </div>
-</section>
+    </section>
 
-
-<script>
-  function openTab(evt, tabName) {
-  var i, tabcontent, tablinks;
-  tabcontent = document.getElementsByClassName("tabcontent");
-  for (i = 0; i < tabcontent.length; i++) {
-    tabcontent[i].style.display = "none";
-  }
-  tablinks = document.getElementsByClassName("tablinks");
-  for (i = 0; i < tablinks.length; i++) {
-    tablinks[i].className = tablinks[i].className.replace(" active", "");
-  }
-  document.getElementById(tabName).style.display = "block";
-  evt.currentTarget.className += " active";
-}
-
-// Display the first tab by default
-document.addEventListener('DOMContentLoaded', (event) => {
-  document.querySelector('.tab button').click();
-});
-
-document.addEventListener('DOMContentLoaded', function() {
-  const readMoreButtons = document.querySelectorAll('.read-more-btn');
-  const allDots = document.querySelectorAll('.dots');
-  const allMoreTexts = document.querySelectorAll('.more');
-
-  // Hide all the extended content initially
-  allDots.forEach(dot => dot.style.display = 'inline');
-  allMoreTexts.forEach(moreText => moreText.style.display = 'none');
-
-  readMoreButtons.forEach(button => {
-    button.addEventListener('click', function() {
-      const parent = this.parentElement;
-      const dots = parent.querySelector('.dots');
-      const moreText = parent.querySelector('.more');
-      const btnText = this;
-
-      if (dots.style.display === "none") {
-        dots.style.display = "inline";
-        btnText.innerHTML = "Read more"; 
-        moreText.style.display = "none";
-      } else {
-        dots.style.display = "none";
-        btnText.innerHTML = "Read less"; 
-        moreText.style.display = "inline";
+    <script>
+      function openTab(evt, tabName) {
+        var i, tabcontent, tablinks;
+        tabcontent = document.getElementsByClassName("tabcontent");
+        for (i = 0; i < tabcontent.length; i++) {
+          tabcontent[i].style.display = "none";
+        }
+        tablinks = document.getElementsByClassName("tablinks");
+        for (i = 0; i < tablinks.length; i++) {
+          tablinks[i].className = tablinks[i].className.replace(" active", "");
+        }
+        document.getElementById(tabName).style.display = "block";
+        evt.currentTarget.className += " active";
       }
-    });
-  });
-});
 
+      // Display the first tab by default
+      document.addEventListener("DOMContentLoaded", (event) => {
+        document.querySelector(".tab button").click();
+      });
 
-</script>
+      document.addEventListener("DOMContentLoaded", function () {
+        const readMoreButtons = document.querySelectorAll(".read-more-btn");
+        const allDots = document.querySelectorAll(".dots");
+        const allMoreTexts = document.querySelectorAll(".more");
+
+        // Hide all the extended content initially
+        allDots.forEach((dot) => (dot.style.display = "inline"));
+        allMoreTexts.forEach((moreText) => (moreText.style.display = "none"));
+
+        readMoreButtons.forEach((button) => {
+          button.addEventListener("click", function () {
+            const parent = this.parentElement;
+            const dots = parent.querySelector(".dots");
+            const moreText = parent.querySelector(".more");
+            const btnText = this;
+
+            if (dots.style.display === "none") {
+              dots.style.display = "inline";
+              btnText.innerHTML = "Read more";
+              moreText.style.display = "none";
+            } else {
+              dots.style.display = "none";
+              btnText.innerHTML = "Read less";
+              moreText.style.display = "inline";
+            }
+          });
+        });
+      });
+    </script>
 
     <div class="bg-white font-sans antialiased">
       <section class="py-12">
@@ -698,15 +839,19 @@ document.addEventListener('DOMContentLoaded', function() {
       </section>
     </div>
 
-    <section id="new-section" class="py-12 bg-cover bg-black">
+    <section id="new-section" class="py-12 bg-cover bg-gray-100">
       <div class="md:flex justify-between">
-        <div class="container grid grid-cols-1 w-full md:w-1/2 gap-6 text-black">
+        <div
+          class="container grid grid-cols-1 w-full md:w-1/2 gap-6 text-black"
+        >
           <p
-            class="text-3xl text-white p-2 font-bold bg-green-600 w-[380px] ml-[50px] md:ml-[150px] rounded"
+            class="text-3xl text-white p-2 font-bold bg-green-600 w-[280px] md:w-[380px] ml-3 md:ml-[150px] rounded animate-fadeIn"
           >
             CONFERENCE FEATURES
           </p>
-          <div class="p-6 ml-3 mr-3 bg-white rounded">
+          <div
+            class="p-6 ml-3 mr-3 bg-white rounded shadow-lg hover:shadow-2xl transition-shadow duration-300"
+          >
             <h3 class="text-2xl font-bold mb-2 underline-green">
               FOCUSED NETWORKING
             </h3>
@@ -715,7 +860,9 @@ document.addEventListener('DOMContentLoaded', function() {
               engage in creative ways.
             </p>
           </div>
-          <div class="p-6 ml-3 mr-3 bg-white rounded">
+          <div
+            class="p-6 ml-3 mr-3 bg-white rounded shadow-lg hover:shadow-2xl transition-shadow duration-300"
+          >
             <h3 class="text-2xl font-bold mb-2 underline-green">
               EXPERT SPEAKERS
             </h3>
@@ -724,7 +871,9 @@ document.addEventListener('DOMContentLoaded', function() {
               practitioners worldwide.
             </p>
           </div>
-          <div class="p-6 ml-3 mr-3 bg-white rounded">
+          <div
+            class="p-6 ml-3 mr-3 bg-white rounded shadow-lg hover:shadow-2xl transition-shadow duration-300"
+          >
             <h3 class="text-2xl font-bold mb-2 underline-green">
               BRILLIANT IDEAS
             </h3>
@@ -733,7 +882,9 @@ document.addEventListener('DOMContentLoaded', function() {
               world’s toughest problems.
             </p>
           </div>
-          <div class="p-6 ml-3 mr-3 bg-white rounded">
+          <div
+            class="p-6 ml-3 mr-3 bg-white rounded shadow-lg hover:shadow-2xl transition-shadow duration-300"
+          >
             <h3 class="text-2xl font-bold mb-2 underline-green">
               EXCEPTIONAL PROGRAM
             </h3>
@@ -742,7 +893,9 @@ document.addEventListener('DOMContentLoaded', function() {
               sessions as well as the industry program.
             </p>
           </div>
-          <div class="p-6 ml-3 mr-3 bg-white rounded">
+          <div
+            class="p-6 ml-3 mr-3 bg-white rounded shadow-lg hover:shadow-2xl transition-shadow duration-300"
+          >
             <h3 class="text-2xl font-bold mb-2 underline-green">
               GLOBAL PARTICIPATION
             </h3>
@@ -750,7 +903,9 @@ document.addEventListener('DOMContentLoaded', function() {
               Anticipating attendees from various countries all over the world.
             </p>
           </div>
-          <div class="p-6 ml-3 mr-3 bg-white rounded">
+          <div
+            class="p-6 ml-3 mr-3 bg-white rounded shadow-lg hover:shadow-2xl transition-shadow duration-300"
+          >
             <h3 class="text-2xl font-bold mb-2 underline-green">
               INSPIRATIONAL LEARNING
             </h3>
@@ -760,19 +915,21 @@ document.addEventListener('DOMContentLoaded', function() {
             </p>
           </div>
         </div>
-        <div class="container grid grid-cols-1 w-full md:w-1/2 gap-6 text-black">
+        <div
+          class="container grid grid-cols-1 w-full md:w-1/2 gap-6 text-black"
+        >
           <p
-            class="text-3xl text-white p-2 font-bold bg-gradient-to-r from-amber-300 to-green-300 w-[380px] ml-[50px] mt-5 md:mt-0 md:ml-[150px] text-center rounded"
+            class="text-3xl text-white p-2 font-bold bg-gradient-to-r from-amber-300 to-green-300 w-[280px] md:w-[380px] mt-2 md:mt-0 ml-3 md:ml-[150px] text-center rounded animate-fadeIn"
           >
             HONORS & AWARDS
           </p>
           <div
-            class="relative p-6 ml-3 mr-3 bg-gradient-to-r from-amber-300 to-green-300 rounded flex items-center"
+            class="relative p-6 ml-3 mr-3 bg-gradient-to-r from-amber-300 to-green-300 rounded flex items-center shadow-lg hover:shadow-2xl transition-shadow duration-300 animate-fadeIn"
           >
             <img
               src="trophy.png"
               alt="Trophy"
-              class="absolute left-0 top-1/2 transform -translate-y-1/2 h-16"
+              class="absolute left-0 top-1/2 transform -translate-y-1/2 h-16 hidden md:block"
             />
             <h3
               class="text-2xl font-bold mb-2 text-green-700 text-center flex-grow mt-10"
@@ -782,16 +939,16 @@ document.addEventListener('DOMContentLoaded', function() {
             <img
               src="trophy.png"
               alt="Trophy"
-              class="absolute right-0 top-1/2 transform -translate-y-1/2 h-16"
+              class="absolute right-0 top-1/2 transform -translate-y-1/2 h-16 hidden md:block"
             />
           </div>
           <div
-            class="relative p-6 ml-3 mr-3 bg-gradient-to-r from-amber-300 to-green-300 rounded flex items-center"
+            class="relative p-6 ml-3 mr-3 bg-gradient-to-r from-amber-300 to-green-300 rounded flex items-center shadow-lg hover:shadow-2xl transition-shadow duration-300 animate-fadeIn"
           >
             <img
               src="trophy.png"
               alt="Trophy"
-              class="absolute left-0 top-1/2 transform -translate-y-1/2 h-16"
+              class="absolute left-0 top-1/2 transform -translate-y-1/2 h-16 hidden md:block"
             />
             <h3
               class="text-2xl font-bold mb-2 text-green-700 text-center flex-grow mt-10"
@@ -801,16 +958,16 @@ document.addEventListener('DOMContentLoaded', function() {
             <img
               src="trophy.png"
               alt="Trophy"
-              class="absolute right-0 top-1/2 transform -translate-y-1/2 h-16"
+              class="absolute right-0 top-1/2 transform -translate-y-1/2 h-16 hidden md:block"
             />
           </div>
           <div
-            class="relative p-6 ml-3 mr-3 bg-gradient-to-r from-amber-300 to-green-300 rounded flex items-center"
+            class="relative p-6 ml-3 mr-3 bg-gradient-to-r from-amber-300 to-green-300 rounded flex items-center shadow-lg hover:shadow-2xl transition-shadow duration-300 animate-fadeIn"
           >
             <img
               src="trophy.png"
               alt="Trophy"
-              class="absolute left-0 top-1/2 transform -translate-y-1/2 h-16"
+              class="absolute left-0 top-1/2 transform -translate-y-1/2 h-16 hidden md:block"
             />
             <h3
               class="text-2xl font-bold mb-2 text-green-700 text-center flex-grow mt-10"
@@ -820,16 +977,16 @@ document.addEventListener('DOMContentLoaded', function() {
             <img
               src="trophy.png"
               alt="Trophy"
-              class="absolute right-0 top-1/2 transform -translate-y-1/2 h-16"
+              class="absolute right-0 top-1/2 transform -translate-y-1/2 h-16 hidden md:block"
             />
           </div>
           <div
-            class="relative p-6 ml-3 mr-3 bg-gradient-to-r from-amber-300 to-green-300 rounded flex items-center"
+            class="relative p-6 ml-3 mr-3 bg-gradient-to-r from-amber-300 to-green-300 rounded flex items-center shadow-lg hover:shadow-2xl transition-shadow duration-300 animate-fadeIn"
           >
             <img
               src="trophy.png"
               alt="Trophy"
-              class="absolute left-0 top-1/2 transform -translate-y-1/2 h-16"
+              class="absolute left-0 top-1/2 transform -translate-y-1/2 h-16 hidden md:block"
             />
             <h3
               class="text-2xl font-bold mb-2 text-green-700 text-center flex-grow mt-10"
@@ -839,16 +996,16 @@ document.addEventListener('DOMContentLoaded', function() {
             <img
               src="trophy.png"
               alt="Trophy"
-              class="absolute right-0 top-1/2 transform -translate-y-1/2 h-16"
+              class="absolute right-0 top-1/2 transform -translate-y-1/2 h-16 hidden md:block"
             />
           </div>
           <div
-            class="relative p-6 ml-3 mr-3 bg-gradient-to-r from-amber-300 to-green-300 rounded flex items-center"
+            class="relative p-6 ml-3 mr-3 bg-gradient-to-r from-amber-300 to-green-300 rounded flex items-center shadow-lg hover:shadow-2xl transition-shadow duration-300 animate-fadeIn"
           >
             <img
               src="trophy.png"
               alt="Trophy"
-              class="absolute left-0 top-1/2 transform -translate-y-1/2 h-16"
+              class="absolute left-0 top-1/2 transform -translate-y-1/2 h-16 hidden md:block"
             />
             <h3
               class="text-2xl font-bold mb-2 text-green-700 text-center flex-grow mt-10"
@@ -858,16 +1015,16 @@ document.addEventListener('DOMContentLoaded', function() {
             <img
               src="trophy.png"
               alt="Trophy"
-              class="absolute right-0 top-1/2 transform -translate-y-1/2 h-16"
+              class="absolute right-0 top-1/2 transform -translate-y-1/2 h-16 hidden md:block"
             />
           </div>
           <div
-            class="relative p-6 ml-3 mr-3 bg-gradient-to-r from-amber-300 to-green-300 rounded flex items-center"
+            class="relative p-6 ml-3 mr-3 bg-gradient-to-r from-amber-300 to-green-300 rounded flex items-center shadow-lg hover:shadow-2xl transition-shadow duration-300 animate-fadeIn"
           >
             <img
               src="trophy.png"
               alt="Trophy"
-              class="absolute left-0 top-1/2 transform -translate-y-1/2 h-16"
+              class="absolute left-0 top-1/2 transform -translate-y-1/2 h-16 hidden md:block"
             />
             <h3
               class="text-2xl font-bold mb-2 text-green-700 text-center flex-grow mt-10"
@@ -877,7 +1034,7 @@ document.addEventListener('DOMContentLoaded', function() {
             <img
               src="trophy.png"
               alt="Trophy"
-              class="absolute right-0 top-1/2 transform -translate-y-1/2 h-16"
+              class="absolute right-0 top-1/2 transform -translate-y-1/2 h-16 hidden md:block"
             />
           </div>
         </div>
