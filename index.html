@@ -20,19 +20,48 @@
         text-decoration: underline;
         text-decoration-color: rgb(34 197 94 / var(--tw-bg-opacity));
       }
-      .bg-img {
-        background-image: url("PSCMR.jpeg");
+      .slideshow {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+      }
+      .slide {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
         background-size: cover;
         background-position: center;
+        opacity: 0;
+        animation: slideShow 9s infinite;
       }
+      .slide:nth-child(1) {
+        animation-delay: 0s;
+      }
+      .slide:nth-child(2) {
+        animation-delay: 3s;
+      }
+      .slide:nth-child(3) {
+        animation-delay: 6s;
+      }
+    
+      @keyframes slideShow {
+        0% { opacity: 1; }
+        33% { opacity: 1; }
+        33.33% { opacity: 0; }
+        100% { opacity: 0; }
+      }
+    
       .button-container {
         margin-top: 2.5rem; /* mt-10 */
         display: flex;
         justify-content: space-between;
       }
-
+    
       .button-container button {
-        /* background: linear-gradient(to right, #3cd870, #9af1a5);  */
         background-color: rgb(21 128 61 / var(--tw-bg-opacity));
         color: white;
         padding: 0.75rem 1.5rem;
@@ -44,24 +73,23 @@
         transition: all 0.3s ease-in-out;
         cursor: pointer;
       }
-
+    
       .button-container button:hover {
         background-color: gray;
         box-shadow: 0 8px 10px rgba(0, 0, 0, 0.15), 0 4px 6px rgba(0, 0, 0, 0.1);
         transform: translateY(-2px);
       }
-
+    
       .button-container button:focus {
         outline: none;
         box-shadow: 0 0 0 3px rgba(110, 231, 183, 0.5);
       }
       .tab {
         overflow: hidden;
-
         display: flex;
         justify-content: space-evenly;
       }
-
+    
       .tab button {
         background-color: gray;
         border: none;
@@ -73,26 +101,31 @@
         font-size: 17px;
         flex: 1;
       }
-
+    
       .tab button:hover {
         background-color: #ddd;
       }
-
+    
       .tab button.active {
         background-color: rgb(21 128 61 / var(--tw-bg-opacity));
         color: white;
       }
-
+    
       .tabcontent {
         display: none;
         padding: 6px 12px;
         border-top: none;
       }
+    
       .underline-green {
         text-decoration: underline;
         text-decoration-color: green;
       }
 
+      .map-container {
+          height: 100%;
+      }
+    
       @keyframes fadeIn {
         from {
           opacity: 0;
@@ -103,7 +136,7 @@
           transform: translateY(0);
         }
       }
-
+    
       .animate-fadeIn {
         animation: fadeIn 0.6s ease-out forwards;
       }
@@ -196,34 +229,35 @@
       </ul>
     </nav>
 
-    <header class="h-[900px] md:h-[600px] text-center text-white bg-green-700">
-      <div class="flex flex-col md:flex-row h-full">
+    <header class="h-[900px] md:h-[600px] text-center text-white bg-green-700 relative">
+      <div class="flex flex-col md:flex-row h-full relative z-10">
         <div class="w-full md:w-1/2 px-4 py-24">
-          <div class="w-full md:w-1/2 bg-img">
+          <div class="w-full md:w-1/2">
             <img src="PSCMR.jpeg" class="md:hidden" alt="" />
           </div>
           <h1 class="text-4xl font-bold mb-2">
-            International Conference on Data Science and Computational
-            Intelligence (ICDSCI)
+            International Conference on Data Science and Computational Intelligence (ICDSCI)
           </h1>
           <h2 class="text-2xl mb-2">March 20-21, 2025</h2>
           <h2 class="text-xl underline mb-4">Conference Proceedings</h2>
           <h3 class="text-lg mb-4">
-            ALL ACCEPTED & PRESENTED papers will be published in SCOPUS indexed
-            SPRINGER PROMS.
+            ALL ACCEPTED & PRESENTED papers will be published in SCOPUS indexed SPRINGER PROMS.
           </h3>
           <div class="flex justify-center space-x-4 mb-4">
             <img src="springer.png" alt="Springer" class="h-36 w-36" />
-            <!-- <img src="bg2.jpg" alt="Background" class="h-36 w-36" /> -->
           </div>
           <div class="button-container2"></div>
-          <button
-            class="bg-gray-50 text-black px-4 py-2 rounded hover:bg-green-900 hover:text-white mb-5"
-          >
+          <button class="bg-gray-50 text-black px-4 py-2 rounded hover:bg-green-900 hover:text-white mb-5">
             Submit Your Paper
           </button>
         </div>
-        <div class="w-full md:w-1/2 bg-img"></div>
+        <div class="w-full md:w-1/2 relative overflow-hidden">
+          <div class="slideshow">
+            <div class="slide" style="background-image: url('PSCMR.jpeg');"></div>
+            <div class="slide" style="background-image: url('pbarrage.jpg');"></div>
+            <div class="slide" style="background-image: url('DurgaTemple.jpg');"></div>
+          </div>
+        </div>
       </div>
     </header>
 
@@ -234,107 +268,68 @@
       >
     </div>
 
-    <section class="text-center bg-white py-12">
-      <div class="container mx-auto">
-        <div class="flex flex-col md:flex-row items-center pb-5">
-          <div class="w-full md:w-1/2 mb-8 md:mb-0 flex flex-col items-center">
-            <img
-              src="logo.png"
-              alt="pscmr-logo"
-              class="mb-4"
-              style="max-width: 100%; height: 170px"
-            />
-            <p class="text-lg text-gray-700">
-              Potti Sriramulu Chalavadi Mallikarjuna Rao <br />
-              College of Engineering and Technology <br />
-              (Autonomous), Vijayawada
-            </p>
-            <img
-              src="jslogo.png"
-              alt="js-logo"
-              class="mt-6 mb-4"
-              style="max-width: 100%; height: 200px"
-            />
-            <p class="text-lg text-gray-700">
-              Jack Sparrow Publishers <br />
-              Private Limited
-            </p>
-          </div>
-
-          <div class="w-full md:w-1/2">
-            <section class="bg-cover p-8 rounded-lg">
-              <div class="container mx-auto">
-                <h2
-                  class="text-4xl font-bold text-center text-black mb-8 underline-green"
-                >
-                  Deadlines
-                </h2>
-                <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
-                  <div
-                    class="bg-gradient-to-r from-lime-200 to-emerald-200 p-6 rounded-lg shadow-lg transform transition-transform duration-300 hover:-translate-y-2 hover:shadow-2xl hover:bg-gray-700"
-                  >
-                    <h3 class="text-xl font-bold text-black mb-2">
-                      Manuscript submissions open:
-                    </h3>
-                    <p class="text-green-500">September 1, 2024</p>
-                  </div>
-                  <div
-                    class="bg-gradient-to-r from-lime-200 to-emerald-200 p-6 rounded-lg shadow-lg transform transition-transform duration-300 hover:-translate-y-2 hover:shadow-2xl hover:bg-gray-700"
-                  >
-                    <h3 class="text-xl font-bold text-black mb-2">
-                      Deadline for Manuscript submissions:
-                    </h3>
-                    <p class="text-green-500">December 15, 2024</p>
-                  </div>
-                  <div
-                    class="bg-gradient-to-r from-lime-200 to-emerald-200 p-6 rounded-lg shadow-lg transform transition-transform duration-300 hover:-translate-y-2 hover:shadow-2xl hover:bg-gray-700"
-                  >
-                    <h3 class="text-xl font-bold text-black mb-2">
-                      Initial review and feedback:
-                    </h3>
-                    <p class="text-green-500">
-                      December 15, 2024 - January 31, 2025
-                    </p>
-                  </div>
-                  <div
-                    class="bg-gradient-to-r from-lime-200 to-emerald-200 p-6 rounded-lg shadow-lg transform transition-transform duration-300 hover:-translate-y-2 hover:shadow-2xl hover:bg-gray-700"
-                  >
-                    <h3 class="text-xl font-bold text-black mb-2">
-                      Notification of acceptance:
-                    </h3>
-                    <p class="text-green-500">February 15, 2025</p>
-                  </div>
-                  <div
-                    class="bg-gradient-to-r from-lime-200 to-emerald-200 p-6 rounded-lg shadow-lg transform transition-transform duration-300 hover:-translate-y-2 hover:shadow-2xl hover:bg-gray-700"
-                  >
-                    <h3 class="text-xl font-bold text-black mb-2">
-                      Final revised manuscripts due:
-                    </h3>
-                    <p class="text-green-500">March 1, 2025</p>
-                  </div>
-                  <div
-                    class="bg-gradient-to-r from-lime-200 to-emerald-200 p-6 rounded-lg shadow-lg transform transition-transform duration-300 hover:-translate-y-2 hover:shadow-2xl hover:bg-gray-700"
-                  >
-                    <h3 class="text-xl font-bold text-black mb-2">
-                      Author registration deadline:
-                    </h3>
-                    <p class="text-green-500">March 7, 2025</p>
-                  </div>
-                  <div
-                    class="bg-gradient-to-r from-lime-200 to-emerald-200 p-6 rounded-lg shadow-lg transform transition-transform duration-300 hover:-translate-y-2 hover:shadow-2xl hover:bg-gray-700"
-                  >
-                    <h3 class="text-xl font-bold text-black mb-2">
-                      Conference program finalized:
-                    </h3>
-                    <p class="text-green-500">March 2, 2025</p>
-                  </div>
-                </div>
-              </div>
-            </section>
+    <section>
+      <div class="flex flex-wrap">
+        <div class="mt-5 ml-2">
+          <img
+            src="logo.png"
+            alt="pscmr-logo"
+            class="mb-4 ml-20"
+            style="max-width: 100%; height: 170px"
+          />
+          <p class="text-lg text-gray-700">
+            Potti Sriramulu Chalavadi Mallikarjuna Rao <br />
+            College of Engineering and Technology <br />
+            (Autonomous), Vijayawada
+          </p>
+        </div>
+        <div class="ml-2 md:ml-20">
+          <img
+            src="jslogo.png"
+            alt="js-logo"
+            class="mb-4"
+            style="max-width: 100%; height: 200px"
+          />
+          <p class="text-lg text-gray-700">
+            Jack Sparrow Publishers <br />
+            Private Limited
+          </p>
+        </div>
+        <div class=" m-2 md:ml-20 mt-5">
+          <div class="bg-gray-300 p-5 rounded-lg shadow-lg">
+            <h3 class="text-3xl font-bold mb-3">Important Dates</h3>
+            <ul class="list-disc list-inside text-gray-700 space-y-2">
+              <h1 class="text-xl font-bold text-green-700">Submission Date - </h1>
+              <li>
+                <strong>Manuscript submissions open:</strong> September 1, 2024
+              </li>
+              <li>
+                <strong>Deadline for manuscript submissions:</strong> December 15, 2024
+              </li>
+              <h1 class="text-xl font-bold text-green-700">Review Process - </h1>
+              <li>
+                <strong>Under review timeline:</strong> December 15, 2024 - January 31, 2025
+              </li>
+              <li>
+                <strong>Notification of acceptance:</strong> February 05, 2025
+              </li>
+              <li>
+                <strong>Author registration deadline:</strong> February 06th to March 07th, 2025
+              </li>
+              <h1 class="text-xl font-bold text-green-700">Deadline for Final Papers - </h1>
+              
+              <li>
+                <strong>Conference program scheduled:</strong> March 20, 21st, 2025
+              </li>
+              <li>
+                <strong>Final revised manuscript:</strong> April 5, 2025
+              </li>
+            </ul>
           </div>
         </div>
       </div>
     </section>
+  
 
     <script>
       document
@@ -1063,56 +1058,33 @@
     </section>
 
     <section id="contact" class="py-12 bg-gray-200 p-5">
-      <div class="container mx-auto text-white">
-        <h2
-          class="text-4xl font-bold text-center text-black mb-8 underline-green"
-        >
-          Contact Us
-        </h2>
-        <form class="max-w-xl mx-auto bg-gray-600 p-8 rounded-lg">
-          <div class="mb-4">
-            <label for="name" class="block text-sm font-bold mb-2">Name:</label>
-            <input
-              type="text"
-              id="name"
-              name="name"
-              class="w-full px-3 py-2 bg-gray-800 border border-gray-700 rounded text-white"
-              required
-            />
+      <div class="container mx-auto text-white flex flex-col md:flex-row">
+        <div class="w-full md:w-1/2 mb-8 md:mb-0 mt-[100px]">
+          <div class="map-container">
+            <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3825.0441850491925!2d80.61101557418971!3d16.52386682710849!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3a35f01e63539d21%3A0x71a2c954de88ca67!2sPSCMR%20College%20of%20Engineering%20and%20Technology!5e0!3m2!1sen!2sin!4v1722761562664!5m2!1sen!2sin" width="100%" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
           </div>
-          <div class="mb-4">
-            <label for="email" class="block text-sm font-bold mb-2"
-              >Email:</label
-            >
-            <input
-              type="email"
-              id="email"
-              name="email"
-              class="w-full px-3 py-2 bg-gray-800 border border-gray-700 rounded text-white"
-              required
-            />
+        </div>
+        <div class="w-full md:w-1/2 space-y-8 md:ml-5">
+          <p class="text-black font-bold text-3xl underline-green text-center">Contact Us</p>
+          <div class="bg-white text-black p-6 rounded-lg shadow-lg flex items-center">
+            <img src="drakbar.png" alt="Person 1" class="w-48 h-48 rounded-full mr-4 hidden md:block">
+            <div>
+              <h3 class="text-xl font-bold">Dr.Sk Akbar</h3>
+              <p>Professor & HOD</p>
+              <p> <strong>Email:</strong> viceprincipal@pscmr.ac.in</p>
+              <p> <strong>Phone: </strong>+91 99480 33466</p>
+            </div>
           </div>
-          <div class="mb-4">
-            <label for="message" class="block text-sm font-bold mb-2"
-              >Message:</label
-            >
-            <textarea
-              id="message"
-              name="message"
-              rows="4"
-              class="w-full px-3 py-2 bg-gray-800 border border-gray-700 rounded text-white"
-              required
-            ></textarea>
+          <div class="bg-white text-black p-6 rounded-lg shadow-lg flex items-center">
+            <img src="Pathanjali-Sastri.jpg" alt="Person 2" class="w-48 h-48 rounded-full mr-4 hidden md:block">
+            <div>
+              <h3 class="text-xl font-bold">Prof.A. Pathanjali Sastri</h3>
+                <p>Professor & Vice-Principal</p>
+              <p><strong>Email: </strong> dr.akbar@pscmr.ac.in</p>
+              <p> <strong>Phone: </strong>+91 98484 09689</p>
+            </div>
           </div>
-          <div class="text-center">
-            <button
-              type="submit"
-              class="bg-green-700 text-black px-4 py-2 rounded hover:bg-green-700"
-            >
-              Submit
-            </button>
-          </div>
-        </form>
+        </div>
       </div>
     </section>
 
