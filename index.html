@@ -140,6 +140,72 @@
       .animate-fadeIn {
         animation: fadeIn 0.6s ease-out forwards;
       }
+
+      /* Slideshow container */
+      .slideshow-container {
+  max-width: 1000px;
+  position: relative;
+  margin: auto;
+}
+
+/* Remove Next & Previous buttons */
+.prev, .next {
+  display: none;
+}
+
+/* Caption text */
+.text {
+  color: #f2f2f2;
+  font-size: 15px;
+  padding: 8px 12px;
+  position: absolute;
+  bottom: 8px;
+  width: 100%;
+  text-align: center;
+}
+
+/* Number text (1/3 etc) */
+.numbertext {
+  color: #f2f2f2;
+  font-size: 12px;
+  padding: 8px 12px;
+  position: absolute;
+  top: 0;
+}
+
+/* The dots/bullets/indicators */
+.dot {
+  cursor: pointer;
+  height: 15px;
+  width: 15px;
+  margin: 0 2px;
+  background-color: #bbb;
+  border-radius: 50%;
+  display: inline-block;
+  transition: background-color 0.6s ease;
+}
+
+.active, .dot:hover {
+  background-color: #717171;
+}
+
+/* Fading animation */
+.fade {
+  animation-name: fade;
+  animation-duration: 1.5s;
+}
+
+@keyframes fade {
+  from {opacity: .4} 
+  to {opacity: 1}
+}
+
+/* On smaller screens, decrease text size */
+@media only screen and (max-width: 300px) {
+  .text {font-size: 11px}
+}
+
+
     </style>
   </head>
   <body class="bg-gray-100 text-black text-justify">
@@ -233,8 +299,54 @@
       <div class="flex flex-col md:flex-row h-full relative z-10">
         <div class="w-full md:w-1/2 px-4 py-24">
           <div class="w-full md:w-1/2">
-            <img src="PSCMR.jpeg" class="md:hidden" alt="" />
+            <div class="slideshow-container md:hidden">
+              <div class="mySlides fade">
+                <div class="numbertext">1 / 3</div>
+                <img src="PSCMR.jpeg" style="width:100%">
+              </div>
+              
+              <div class="mySlides fade">
+                <div class="numbertext">2 / 3</div>
+                <img src="pbarrage.jpg" style="width:100%">
+              </div>
+              
+              <div class="mySlides fade">
+                <div class="numbertext">3 / 3</div>
+                <img src="DurgaTemple.jpg" style="width:100%">
+              </div>
+              
+              <div style="text-align:center" class="md:hidden">
+                <span class="dot" onclick="currentSlide(1)"></span> 
+                <span class="dot" onclick="currentSlide(2)"></span> 
+                <span class="dot" onclick="currentSlide(3)"></span> 
+              </div>
+            </div>
           </div>
+
+          <script>
+            let slideIndex = 0;
+            showSlides();
+            
+            function showSlides() {
+              let i;
+              let slides = document.getElementsByClassName("mySlides");
+              let dots = document.getElementsByClassName("dot");
+            
+              for (i = 0; i < slides.length; i++) {
+                slides[i].style.display = "none";  
+              }
+              slideIndex++;
+              if (slideIndex > slides.length) {slideIndex = 1}    
+              for (i = 0; i < dots.length; i++) {
+                dots[i].className = dots[i].className.replace(" active", "");
+              }
+              slides[slideIndex-1].style.display = "block";  
+              dots[slideIndex-1].className += " active";
+              setTimeout(showSlides, 2000); // Change image every 2 seconds
+            }
+            </script>
+            
+
           <h1 class="text-4xl font-bold mb-2">
             International Conference on Data Science and Computational Intelligence (ICDSCI)
           </h1>
@@ -254,8 +366,8 @@
         <div class="w-full md:w-1/2 relative overflow-hidden">
           <div class="slideshow">
             <div class="slide" style="background-image: url('PSCMR.jpeg');"></div>
-            <div class="slide" style="background-image: url('pbarrage.jpg');"></div>
-            <div class="slide" style="background-image: url('DurgaTemple.jpg');"></div>
+            <div class="slide" style="background-image: url('st.jpg');"></div>
+            <div class="slide" style="background-image: url('temple.jpg');"></div>
           </div>
         </div>
       </div>
@@ -268,7 +380,7 @@
       >
     </div>
 
-<section>
+    <section>
       <div class="flex flex-wrap">
         <div class="mt-5 ml-2">
           <a href="https://www.pscmr.ac.in/" target="_blank">
@@ -1074,21 +1186,21 @@
         </div>
         <div class="w-full md:w-1/2 space-y-8 md:ml-5">
           <p class="text-black font-bold text-3xl underline-green text-center">Contact Us</p>
-          <div class="bg-white text-black p-6 rounded-lg shadow-lg flex items-center">
-            <img src="drakbar.png" alt="Person 1" class="w-48 h-48 rounded-full mr-4 hidden md:block">
+          <div class="bg-white text-black p-6 rounded-lg shadow-lg md:flex items-center">
+            <img src="drakbar.png" alt="Person 1" class="w-48 h-48 rounded-full mr-4 ">
             <div>
               <h3 class="text-xl font-bold">Dr.Sk Akbar</h3>
-              <p>Professor & HOD</p>
-              <p> <strong>Email:</strong> viceprincipal@pscmr.ac.in</p>
+              <p class="text-green-700 font-bold">Professor & HOD of CSE-DATA SCIENCE Dept</p>
+              <p> <strong>Email:</strong>dr.akbar@pscmr.ac.in</p>
               <p> <strong>Phone: </strong>+91 99480 33466</p>
             </div>
           </div>
-          <div class="bg-white text-black p-6 rounded-lg shadow-lg flex items-center">
-            <img src="Pathanjali-Sastri.jpg" alt="Person 2" class="w-48 h-48 rounded-full mr-4 hidden md:block">
+          <div class="bg-white text-black p-6 rounded-lg shadow-lg md:flex items-center">
+            <img src="Pathanjali-Sastri.jpg" alt="Person 2" class="w-48 h-48 rounded-full mr-4 ">
             <div>
               <h3 class="text-xl font-bold">Prof.A. Pathanjali Sastri</h3>
-                <p>Professor & Vice-Principal</p>
-              <p><strong>Email: </strong> dr.akbar@pscmr.ac.in</p>
+                <p class="text-green-700 font-bold">Professor and HOD of MCA dept & Vice-Principal</p>
+              <p><strong>Email: </strong> viceprincipal@pscmr.ac.in</p>
               <p> <strong>Phone: </strong>+91 98484 09689</p>
             </div>
           </div>
