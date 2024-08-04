@@ -21,10 +21,53 @@
         text-decoration: underline;
         text-decoration-color: green;
       }
-      .bg-img {
-        background-image: url("PSCMR.jpeg");
+      .slideshow {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+      }
+      .slide {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
         background-size: cover;
         background-position: center;
+        opacity: 0;
+        animation: slideShow 9s infinite;
+      }
+      .slide:nth-child(1) {
+        animation-delay: 0s;
+      }
+      .slide:nth-child(2) {
+        animation-delay: 3s;
+      }
+      .slide:nth-child(3) {
+        animation-delay: 6s;
+      }
+    
+      @keyframes slideShow {
+        0% { opacity: 1; }
+        33% { opacity: 1; }
+        33.33% { opacity: 0; }
+        100% { opacity: 0; }
+      }
+      @keyframes fadeIn {
+        from {
+          opacity: 0;
+          transform: translateY(20px);
+        }
+        to {
+          opacity: 1;
+          transform: translateY(0);
+        }
+      }
+    
+      .animate-fadeIn {
+        animation: fadeIn 0.6s ease-out forwards;
       }
     </style>
   </head>
@@ -105,7 +148,7 @@
           >
         </li>
         <li>
-          <a href="sponsors.html" class="hover:text-green-400">Registration</a>
+          <a href="sponsors.html" class="hover:text-green-400">Sponsors</a>
         </li>
         <li>
           <a href="specialSessions.html" class="hover:text-green-400"
@@ -116,33 +159,35 @@
       </ul>
     </nav>
 
-    <header class="h-[900px] md:h-[600px] text-center text-white bg-green-700">
-      <div class="flex flex-col md:flex-row h-full">
+    <header class="h-[900px] md:h-[600px] text-center text-white bg-green-700 relative">
+      <div class="flex flex-col md:flex-row h-full relative z-10">
         <div class="w-full md:w-1/2 px-4 py-24">
-          <div class="w-full md:w-1/2 bg-img">
+          <div class="w-full md:w-1/2">
             <img src="PSCMR.jpeg" class="md:hidden" alt="" />
           </div>
           <h1 class="text-4xl font-bold mb-2">
-            International Conference on Data Science and Computational
-            Intelligence (ICDSCI)
+            International Conference on Data Science and Computational Intelligence (ICDSCI)
           </h1>
           <h2 class="text-2xl mb-2">March 20-21, 2025</h2>
           <h2 class="text-xl underline mb-4">Conference Proceedings</h2>
           <h3 class="text-lg mb-4">
-            ALL ACCEPTED & PRESENTED papers will be published in SCOPUS indexed
-            SPRINGER PROMS.
+            ALL ACCEPTED & PRESENTED papers will be published in SCOPUS indexed SPRINGER PROMS.
           </h3>
           <div class="flex justify-center space-x-4 mb-4">
             <img src="springer.png" alt="Springer" class="h-36 w-36" />
-            <!-- <img src="bg2.jpg" alt="Background" class="h-36 w-36" /> -->
           </div>
-          <button
-            class="bg-gray-50 text-black px-4 py-2 rounded hover:bg-green-900 hover:text-white mb-4"
-          >
+          <div class="button-container2"></div>
+          <button class="bg-gray-50 text-black px-4 py-2 rounded hover:bg-green-900 hover:text-white mb-5">
             Submit Your Paper
           </button>
         </div>
-        <div class="w-full md:w-1/2 bg-img"></div>
+        <div class="w-full md:w-1/2 relative overflow-hidden">
+          <div class="slideshow">
+            <div class="slide" style="background-image: url('PSCMR.jpeg');"></div>
+            <div class="slide" style="background-image: url('pbarrage.jpg');"></div>
+            <div class="slide" style="background-image: url('DurgaTemple.jpg');"></div>
+          </div>
+        </div>
       </div>
     </header>
 
@@ -153,31 +198,64 @@
       >
     </div>
 
-    <section class="text-center text-black bg-white">
-      <div class="flex flex-col md:flex-row justify-around pt-5 pb-5">
-        <div class="mb-4 md:mb-0">
+    <section>
+      <div class="flex flex-wrap">
+        <div class="mt-5 ml-2">
           <img
             src="logo.png"
             alt="pscmr-logo"
-            class="mx-auto mt-6 mb-4"
+            class="mb-4 ml-20"
             style="max-width: 100%; height: 170px"
           />
-          <p>
+          <p class="text-lg text-gray-700">
             Potti Sriramulu Chalavadi Mallikarjuna Rao <br />
-            College of Engineering and Technology
+            College of Engineering and Technology <br />
+            (Autonomous), Vijayawada
           </p>
         </div>
-        <div>
+        <div class="ml-2 md:ml-20">
           <img
             src="jslogo.png"
             alt="js-logo"
-            class="mx-auto mb-4"
+            class="mb-4"
             style="max-width: 100%; height: 200px"
           />
-          <p>
+          <p class="text-lg text-gray-700">
             Jack Sparrow Publishers <br />
             Private Limited
           </p>
+        </div>
+        <div class=" m-2 md:ml-20 mt-5">
+          <div class="bg-gray-300 p-5 rounded-lg shadow-lg">
+            <h3 class="text-3xl font-bold mb-3">Important Dates</h3>
+            <ul class="list-disc list-inside text-gray-700 space-y-2">
+              <h1 class="text-xl font-bold text-green-700">Submission Date - </h1>
+              <li>
+                <strong>Manuscript submissions open:</strong> September 1, 2024
+              </li>
+              <li>
+                <strong>Deadline for manuscript submissions:</strong> December 15, 2024
+              </li>
+              <h1 class="text-xl font-bold text-green-700">Review Process - </h1>
+              <li>
+                <strong>Under review timeline:</strong> December 15, 2024 - January 31, 2025
+              </li>
+              <li>
+                <strong>Notification of acceptance:</strong> February 05, 2025
+              </li>
+              <li>
+                <strong>Author registration deadline:</strong> February 06th to March 07th, 2025
+              </li>
+              <h1 class="text-xl font-bold text-green-700">Deadline for Final Papers - </h1>
+              
+              <li>
+                <strong>Conference program scheduled:</strong> March 20, 21st, 2025
+              </li>
+              <li>
+                <strong>Final revised manuscript:</strong> April 5, 2025
+              </li>
+            </ul>
+          </div>
         </div>
       </div>
     </section>
