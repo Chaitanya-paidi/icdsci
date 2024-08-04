@@ -231,82 +231,82 @@
     </script>
 
 <header class="h-[900px] md:h-[600px] text-center text-white bg-green-700 relative">
-  <div class="flex flex-col md:flex-row h-full relative z-10">
-    <div class="w-full md:w-1/2 px-4 py-24">
-      <div class="w-full md:w-1/2">
-        <div class="slideshow-container md:hidden">
-          <div class="mySlides fade">
-            <div class="numbertext">1 / 3</div>
-            <img src="PSCMR.jpeg" style="width:100%">
+      <div class="flex flex-col md:flex-row h-full relative z-10">
+        <div class="w-full md:w-1/2 px-4 py-24">
+          <div class="w-full md:w-1/2">
+            <div class="slideshow-container md:hidden">
+              <div class="mySlides fade">
+                <div class="numbertext">1 / 3</div>
+                <img src="PSCMR.jpeg" style="width:100%">
+              </div>
+              
+              <div class="mySlides fade">
+                <div class="numbertext">2 / 3</div>
+                <img src="pbarrage.jpg" style="width:100%">
+              </div>
+              
+              <div class="mySlides fade">
+                <div class="numbertext">3 / 3</div>
+                <img src="DurgaTemple.jpg" style="width:100%">
+              </div>
+              
+              <div style="text-align:center" class="md:hidden">
+                <span class="dot" onclick="currentSlide(1)"></span> 
+                <span class="dot" onclick="currentSlide(2)"></span> 
+                <span class="dot" onclick="currentSlide(3)"></span> 
+              </div>
+            </div>
           </div>
-          
-          <div class="mySlides fade">
-            <div class="numbertext">2 / 3</div>
-            <img src="pbarrage.jpg" style="width:100%">
+
+          <script>
+            let slideIndex = 0;
+            showSlides();
+            
+            function showSlides() {
+              let i;
+              let slides = document.getElementsByClassName("mySlides");
+              let dots = document.getElementsByClassName("dot");
+            
+              for (i = 0; i < slides.length; i++) {
+                slides[i].style.display = "none";  
+              }
+              slideIndex++;
+              if (slideIndex > slides.length) {slideIndex = 1}    
+              for (i = 0; i < dots.length; i++) {
+                dots[i].className = dots[i].className.replace(" active", "");
+              }
+              slides[slideIndex-1].style.display = "block";  
+              dots[slideIndex-1].className += " active";
+              setTimeout(showSlides, 2000); // Change image every 2 seconds
+            }
+            </script>
+            
+
+          <h1 class="text-4xl font-bold mb-2">
+            International Conference on Data Science and Computational Intelligence (ICDSCI)
+          </h1>
+          <h2 class="text-2xl mb-2">March 20-21, 2025</h2>
+          <h2 class="text-xl underline mb-4">Conference Proceedings</h2>
+          <h3 class="text-lg mb-4">
+            ALL ACCEPTED & PRESENTED papers will be published in SCOPUS indexed SPRINGER PROMS.
+          </h3>
+          <div class="flex justify-center space-x-4 mb-4">
+            <img src="springer.png" alt="Springer" class="h-36 w-36" />
           </div>
-          
-          <div class="mySlides fade">
-            <div class="numbertext">3 / 3</div>
-            <img src="DurgaTemple.jpg" style="width:100%">
-          </div>
-          
-          <div style="text-align:center" class="md:hidden">
-            <span class="dot" onclick="currentSlide(1)"></span> 
-            <span class="dot" onclick="currentSlide(2)"></span> 
-            <span class="dot" onclick="currentSlide(3)"></span> 
+          <div class="button-container2"></div>
+          <button class="bg-gray-50 text-black px-4 py-2 rounded hover:bg-green-900 hover:text-white mb-5">
+            Submit Your Paper
+          </button>
+        </div>
+        <div class="w-full md:w-1/2 relative overflow-hidden">
+          <div class="slideshow">
+            <div class="slide" style="background-image: url('PSCMR.jpeg');"></div>
+            <div class="slide" style="background-image: url('pbarrage.jpg');"></div>
+            <div class="slide" style="background-image: url('DurgaTemple.jpg');"></div>
           </div>
         </div>
       </div>
-
-      <script>
-        let slideIndex = 0;
-        showSlides();
-        
-        function showSlides() {
-          let i;
-          let slides = document.getElementsByClassName("mySlides");
-          let dots = document.getElementsByClassName("dot");
-        
-          for (i = 0; i < slides.length; i++) {
-            slides[i].style.display = "none";  
-          }
-          slideIndex++;
-          if (slideIndex > slides.length) {slideIndex = 1}    
-          for (i = 0; i < dots.length; i++) {
-            dots[i].className = dots[i].className.replace(" active", "");
-          }
-          slides[slideIndex-1].style.display = "block";  
-          dots[slideIndex-1].className += " active";
-          setTimeout(showSlides, 2000); // Change image every 2 seconds
-        }
-        </script>
-        
-
-      <h1 class="text-4xl font-bold mb-2">
-        International Conference on Data Science and Computational Intelligence (ICDSCI)
-      </h1>
-      <h2 class="text-2xl mb-2">March 20-21, 2025</h2>
-      <h2 class="text-xl underline mb-4">Conference Proceedings</h2>
-      <h3 class="text-lg mb-4">
-        ALL ACCEPTED & PRESENTED papers will be published in SCOPUS indexed SPRINGER PROMS.
-      </h3>
-      <div class="flex justify-center space-x-4 mb-4">
-        <img src="springer.png" alt="Springer" class="h-36 w-36" />
-      </div>
-      <div class="button-container2"></div>
-      <button class="bg-gray-50 text-black px-4 py-2 rounded hover:bg-green-900 hover:text-white mb-5">
-        Submit Your Paper
-      </button>
-    </div>
-    <div class="w-full md:w-1/2 relative overflow-hidden">
-      <div class="slideshow">
-        <div class="slide" style="background-image: url('PSCMR.jpeg');"></div>
-        <div class="slide" style="background-image: url('st.jpg');"></div>
-        <div class="slide" style="background-image: url('temple.jpg');"></div>
-      </div>
-    </div>
-  </div>
-</header>
+    </header>
 
     <div class="mt-1 bg">
       <marquee behavior="" direction=""
