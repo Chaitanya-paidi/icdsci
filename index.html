@@ -17,7 +17,7 @@
         text-align: justify;
         text-justify: inter-word;
       }
-      .underline-green {
+      .underline-blue {
         text-decoration: underline;
         text-decoration-color: rgb(34 197 94 / var(--tw-bg-opacity));
       }
@@ -29,32 +29,32 @@
         height: 100%;
       }
       .slide {
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  background-size: cover;
-  background-position: center;
-  opacity: 0;
-  animation: slideShow 12s infinite;
-}
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        background-size: cover;
+        background-position: center;
+        opacity: 0;
+        animation: slideShow 12s infinite;
+      }
 
-.slide:nth-child(1) {
-  animation-delay: 0s;
-}
+      .slide:nth-child(1) {
+        animation-delay: 0s;
+      }
 
-.slide:nth-child(2) {
-  animation-delay: 3s;
-}
+      .slide:nth-child(2) {
+        animation-delay: 3s;
+      }
 
-.slide:nth-child(3) {
-  animation-delay: 6s;
-}
+      .slide:nth-child(3) {
+        animation-delay: 6s;
+      }
 
-.slide:nth-child(4) {
-  animation-delay: 9s;
-}
+      .slide:nth-child(4) {
+        animation-delay: 9s;
+      }
 
     
       @keyframes slideShow {
@@ -71,7 +71,7 @@
       }
     
       .button-container button {
-        background-color: rgb(21 128 61 / var(--tw-bg-opacity));
+        background-color: rgb(30 58 138 / var(--tw-bg-opacity));
         color: white;
         /* padding: 0.75rem 1.5rem; */
         padding: 15px;
@@ -117,7 +117,7 @@
       }
     
       .tab button.active {
-        background-color: rgb(21 128 61 / var(--tw-bg-opacity));
+        background-color: rgb(30 58 138 / var(--tw-bg-opacity));
         color: white;
       }
     
@@ -127,9 +127,9 @@
         border-top: none;
       }
     
-      .underline-green {
+      .underline-blue {
         text-decoration: underline;
-        text-decoration-color: green;
+        text-decoration-color: blue;
       }
 
       .map-container {
@@ -156,108 +156,106 @@
   max-width: 1000px;
   position: relative;
   margin: auto;
-}
+      }
 
-/* Remove Next & Previous buttons */
-.prev, .next {
-  display: none;
-}
+      /* Remove Next & Previous buttons */
+      .prev, .next {
+        display: none;
+      }
 
-/* Caption text */
-.text {
-  color: #f2f2f2;
-  font-size: 15px;
-  padding: 8px 12px;
-  position: absolute;
-  bottom: 8px;
-  width: 100%;
-  text-align: center;
-}
+      /* Caption text */
+      .text {
+        color: #f2f2f2;
+        font-size: 15px;
+        padding: 8px 12px;
+        position: absolute;
+        bottom: 8px;
+        width: 100%;
+        text-align: center;
+      }
 
-/* Number text (1/3 etc) */
-.numbertext {
-  color: #f2f2f2;
-  font-size: 12px;
-  padding: 8px 12px;
-  position: absolute;
-  top: 0;
-}
+      /* Number text (1/3 etc) */
+      .numbertext {
+        color: #f2f2f2;
+        font-size: 12px;
+        padding: 8px 12px;
+        position: absolute;
+        top: 0;
+      }
 
-/* The dots/bullets/indicators */
-.dot {
-  cursor: pointer;
-  height: 15px;
-  width: 15px;
-  margin: 0 2px;
-  background-color: #bbb;
-  border-radius: 50%;
-  display: inline-block;
-  transition: background-color 0.6s ease;
-}
+      /* The dots/bullets/indicators */
+      .dot {
+        cursor: pointer;
+        height: 15px;
+        width: 15px;
+        margin: 0 2px;
+        background-color: #bbb;
+        border-radius: 50%;
+        display: inline-block;
+        transition: background-color 0.6s ease;
+      }
 
-.active, .dot:hover {
-  background-color: #717171;
-}
+      .active, .dot:hover {
+        background-color: #717171;
+      }
 
-/* Fading animation */
-.fade {
-  animation-name: fade;
-  animation-duration: 1.5s;
-}
+      /* Fading animation */
+      .fade {
+        animation-name: fade;
+        animation-duration: 1.5s;
+      }
 
-@keyframes fade {
-  from {opacity: .4} 
-  to {opacity: 1}
-}
+      @keyframes fade {
+        from {opacity: .4} 
+        to {opacity: 1}
+      }
 
-/* On smaller screens, decrease text size */
-@media only screen and (max-width: 300px) {
-  .text {font-size: 11px}
-}
-
-
+      /* On smaller screens, decrease text size */
+      @media only screen and (max-width: 300px) {
+        .text {font-size: 11px}
+      }
     </style>
-
   </head>
+  
   <body class="bg-gray-100 text-black text-justify">
     <nav class="fixed w-full bg-gray-50 text-black py-3 z-50">
       <div class="container mx-auto flex justify-between items-center px-4">
         <div class="flex items-center">
           <img src="springer.png" alt="Springer Logo" class="h-10 mr-2" />
           <a href="#" class="text-2xl font-bold">
-            <span class="bg-green-700 text-white px-2 py-1 rounded"
+            <span class="bg-blue-900 text-white px-2 py-1 rounded"
               >ICDSCI</span
             >
             2025
           </a>
         </div>
         <ul class="hidden md:flex space-x-6">
-          <li><a href="index.html" class="text-green-400">Home</a></li>
+          <li><a href="index.html" class="text-blue-400">Home</a></li>
           <li>
-            <a href="callforPapers.html" class="hover:text-green-400"
+            <a href="callforPapers.html" class="hover:text-blue-400"
               >Call for papers</a
             >
           </li>
           <li>
-            <a href="committees.html" class="hover:text-green-400">Committees</a>
+            <a href="committees.html" class="hover:text-blue-400">Committees</a>
           </li>
           <li>
-            <a href="registration.html" class="hover:text-green-400"
+            <a href="registration.html" class="hover:text-blue-400"
               >Registration</a
             >
           </li>
           <li>
-            <a href="sponsors.html" class="hover:text-green-400">Sponsors</a>
+            <a href="sponsors.html" class="hover:text-blue-400">Sponsors</a>
           </li>
           <li>
-            <a href="specialSessions.html" class="hover:text-green-400"
+            <a href="specialSessions.html" class="hover:text-blue-400"
               >Special Sessions</a
             >
           </li>
-          <li><a href="contactus.html" class="hover:text-green-400">Contact</a></li>
+          <li><a href="contactus.html" class="hover:text-blue-400">Contact</a></li>
         </ul>
         <button
-          class="md:hidden text-green-400 focus:outline-none"
+          class="md:hidden text-blue-400 focus:outline-none"
           id="menu-button"
         >
           <svg
@@ -280,33 +278,33 @@
         class="md:hidden flex flex-col space-y-2 px-4 pt-2 pb-4 bg-gray-100 hidden"
         id="mobile-menu"
       >
-        <li><a href="index.html" class="text-green-400">Home</a></li>
+        <li><a href="index.html" class="text-blue-400">Home</a></li>
         <li>
-          <a href="callforPapers.html" class="hover:text-green-400"
+          <a href="callforPapers.html" class="hover:text-blue-400"
             >Call for papers</a
           >
         </li>
         <li>
-          <a href="committees.html" class="hover:text-green-400">Committees</a>
+          <a href="committees.html" class="hover:text-blue-400">Committees</a>
         </li>
         <li>
-          <a href="registration.html" class="hover:text-green-400"
+          <a href="registration.html" class="hover:text-blue-400"
             >Registration</a
           >
         </li>
         <li>
-          <a href="sponsors.html" class="hover:text-green-400">Sponsors</a>
+          <a href="sponsors.html" class="hover:text-blue-400">Sponsors</a>
         </li>
         <li>
-          <a href="specialSessions.html" class="hover:text-green-400"
+          <a href="specialSessions.html" class="hover:text-blue-400"
             >Special sessions</a
           >
         </li>
-        <li><a href="contactus.html" class="hover:text-green-400">Contact</a></li>
+        <li><a href="contactus.html" class="hover:text-blue-400">Contact</a></li>
       </ul>
     </nav>
 
-    <header class="h-[1150px] md:h-[700px] text-center text-white bg-green-700 relative">
+    <header class="h-[1020px] md:h-[625px] text-center text-white bg-blue-900 relative">
       <div class="flex flex-col md:flex-row h-full relative z-10">
         <div class="w-full md:w-1/2 px-4 py-24">
           <div class="w-full md:w-1/2">
@@ -350,7 +348,8 @@
             ALL ACCEPTED & PRESENTED papers will be published in <br> <b>SCOPUS indexed SPRINGER PROMS</b>.
           </h3>
           <div class="flex justify-center space-x-4 mb-4">
-            <img src="springer.png" alt="Springer" class="h-36 w-36" />
+            <img src="springer.png" alt="Springer" class="h-20 w-20" />
+            <img src="bg2.jpg" alt="" class="h-20 w-20">
           </div>
           <p class="mb-2">Submission is now open: Till December 15, 2024.</p>
           <div class="button-container2"></div>
@@ -404,20 +403,20 @@
     <section class="bg-white pt-[20px] md:pt-0">
       <div class="flex flex-wrap ">
 
-        <div class="w-[680px] md:mt-3 bg-gray-50 md:bg-white">
+        <div class="w-[500px] md:mt-3 bg-gray-50 md:bg-white">
           <div
             class="tab flex flex-col lg:flex-row space-y-4 lg:space-y-0 lg:space-x-4 mb-4"
           >
             <button
-              class="tablinks btn mt-[20px] md:mt-0 font-bold"
+              class="tablinks btn mt-[20px] md:mt-0 font-bold text-white"
               onclick="openTab(event, 'about-pscmr')"
             >
               About PSCMR
             </button>
-            <button class="tablinks btn font-bold" onclick="openTab(event, 'about-ds')">
+            <button class="tablinks btn font-bold text-white" onclick="openTab(event, 'about-ds')">
               About DS
             </button>
-            <button class="tablinks btn font-bold" onclick="openTab(event, 'about-mca')">
+            <button class="tablinks btn font-bold text-white" onclick="openTab(event, 'about-mca')">
               About MCA
             </button>
           </div>
@@ -438,7 +437,7 @@
               strategic partnerships with industry and academia. At PSCMRCET education around providing a multidimensional development
               <span class="dots">...</span>
             </p>
-            <a href="about.html#about-pscmr"><button class="text-green-700 font-bold">Read more</button></a>
+            <a href="about.html#about-pscmr"><button class="text-blue-900 font-bold">Read more</button></a>
           </div>
           <div id="about-ds" class="tabcontent">
             <p>
@@ -458,7 +457,7 @@
               year 2022 with an annual intake of 60 students.
               <span class="dots">...</span>
             </p>
-            <a href="about.html#about-ds"><button class="text-green-700 font-bold">Read more</button></a>
+            <a href="about.html#about-ds"><button class="text-blue-900 font-bold">Read more</button></a>
           </div>
           <div id="about-mca" class="tabcontent">
             <p>
@@ -477,18 +476,8 @@
               Why MCA in PSCMRCET? Hands-on Curriculum designed by experts from
               academia and industry
               <span class="dots">...</span>
-              <span class="more">
-                <!-- and taught by Quality Faculty Members More emphasis on the latest programming languages and
-                tools to develop better and faster applications. Enhancing
-                students’ capabilities as per the career requirements and giving
-                them necessary placement assistance Specially organized
-                Workshops, Webinars and Guest Lectures by Industry experts to
-                provide the latest Industry insights Professional enhancement
-                Program focusing on aptitude, reasoning, soft skills and
-                interviewing skills of the student. -->
-              </span>
             </p>
-            <a href="about.html#about-mca"><button class="text-green-700 font-bold">Read more</button></a>
+            <a href="about.html#about-mca"><button class="text-blue-900 font-bold">Read more</button></a>
           </div>
         </div>
 
@@ -509,7 +498,22 @@
               (Autonomous), Vijayawada
             </p>
           </div>
-          <div class="ml-10 md:ml-10 mr-4 md:mt-[60px]">
+          <div class="md:ml-2 md:mt-[60px]">
+            <a href="https://www.cardiffmet.ac.uk/Pages/default.aspx" target="_blank">
+              <img
+              src="CardiffMet_logo-1.png"
+              alt="js-logo"
+              class="mb-4 ml-10 md:ml-0"
+              style="max-width: 100%; height: 190px"
+            />
+            </a>
+            
+            <p class="text-md text-center text-gray-700 ml-3 md:ml-0 font-bold">
+              Cardiff Metropolitan University <br />
+              Prifysgol Metropolitan caerdydd
+            </p>
+          </div>
+          <div class="ml-7 md:ml-3 md:mt-[60px]">
             <a href="https://jacksparrowpublishers.com/" target="_blank">
               <img
               src="jslogo.png"
@@ -519,11 +523,13 @@
             />
             </a>
             
-            <p class="text-md text-center text-gray-700 m-3 md:m-0 font-bold">
+            <p class="text-md text-center text-gray-700 m-3 md:m-0 font-bold ml-7 md:ml-0">
               Jack Sparrow Publishers <br />
               Private Limited
             </p>
           </div>
+          
+          
       </div>
     </section>
   
@@ -539,7 +545,7 @@
     <section id="conference" class="container mx-auto py-12 px-4 mt-4 mb-4">
       <div class="grid grid-cols-1 lg:grid-cols-2 gap-8">
         <div>
-          <h2 class="text-3xl text-left font-bold mb-4 underline-green">
+          <h2 class="text-3xl text-left font-bold mb-4 underline-blue">
             About the Conference
           </h2>
           <p class="mb-4">
@@ -561,44 +567,44 @@
         </div>
 
         <div class="md:w-[600px] mx-auto md:ml-[50px] hidden md:block">
-          <h2 class="text-3xl text-left font-bold mb-4 underline-green">
+          <h2 class="text-3xl text-left font-bold mb-4 underline-blue">
             Important Dates / Deadlines
           </h2>
         <table class="md:min-w-full bg-white shadow-md rounded-lg overflow-hidden">
             <thead>
                 <tr>
-                    <th class="bg-green-700 text-white px-6 py-4 text-left">Event</th>
-                    <th class="bg-green-700 text-white px-6 py-4 text-left">Date</th>
+                    <th class="bg-blue-900 text-white px-6 py-4 text-left">Event</th>
+                    <th class="bg-blue-900 text-white px-6 py-4 text-left">Date</th>
                 </tr>
             </thead>
             <tbody>
                 <tr class="bg-gray-50">
-                    <td class="border-b border-gray-300 pr-8 px-6 py-4">Manuscript submissions open</td>
-                    <td class="border-b border-gray-300 pl-8 px-6 py-4">September 1, 2024</td>
+                    <td class="border-b border-gray-300 pr-8 px-6 py-4 text-left">Manuscript submissions open</td>
+                    <td class="border-b border-gray-300 pl-8 px-6 py-4 text-left">September 1, 2024</td>
                 </tr>
                 <tr class="bg-white">
-                    <td class="border-b border-gray-300 pr-8 px-6 py-4">Deadline for manuscript submissions</td>
-                    <td class="border-b border-gray-300 pl-8 px-6 py-4">December 15, 2024</td>
+                    <td class="border-b border-gray-300 pr-8 px-6 py-4 text-left">Deadline for manuscript submissions</td>
+                    <td class="border-b border-gray-300 pl-8 px-6 py-4 text-left">December 15, 2024</td>
                 </tr>
                 <tr class="bg-gray-50">
-                    <td class="border-b border-gray-300 pr-8 px-6 py-4">Under review timeline</td>
-                    <td class="border-b border-gray-300 pl-8 px-6 py-4">December 15, 2024 - January 31, 2025</td>
+                    <td class="border-b border-gray-300 pr-8 px-6 py-4 text-left">Under review timeline</td>
+                    <td class="border-b border-gray-300 pl-8 px-6 py-4 text-left">December 15, 2024 - January 31, 2025</td>
                 </tr>
                 <tr class="bg-white">
-                    <td class="border-b border-gray-300 pr-8 px-6 py-4">Notification of acceptance</td>
-                    <td class="border-b border-gray-300 pl-8 px-6 py-4">February 05, 2025</td>
+                    <td class="border-b border-gray-300 pr-8 px-6 py-4 text-left">Notification of acceptance</td>
+                    <td class="border-b border-gray-300 pl-8 px-6 py-4 text-left">February 05, 2025</td>
                 </tr>
                 <tr class="bg-gray-50">
-                    <td class="border-b border-gray-300 pr-8 px-6 py-4">Author registration deadline</td>
-                    <td class="border-b border-gray-300 pl-8 px-6 py-4">February 06th to March 07th, 2025</td>
+                    <td class="border-b border-gray-300 pr-8 px-6 py-4 text-left">Author registration deadline</td>
+                    <td class="border-b border-gray-300 pl-8 px-6 py-4 text-left">February 06th to March 07th, 2025</td>
                 </tr>
                 <tr class="bg-gray-50">
                     <td class="border-b border-gray-300 pr-8 px-6 py-4 text-left">Conference Program scheduled</td>
-                    <td class="border-b border-gray-300 pl-8 px-6 py-4">March 20th, 21st, 2025</td>
+                    <td class="border-b border-gray-300 pl-8 px-6 py-4 text-left">March 20th, 21st, 2025</td>
                 </tr>
                 <tr class="bg-gray-50">
-                    <td class="border-b border-gray-300 pr-8 px-6 py-4">Final revised manuscript</td>
-                    <td class="border-b border-gray-300 pl-8 px-6 py-4">April 5th, 2025</td>
+                    <td class="border-b border-gray-300 pr-8 px-6 py-4 text-left">Final revised manuscript</td>
+                    <td class="border-b border-gray-300 pl-8 px-6 py-4 text-left">April 5th, 2025</td>
                 </tr>
             </tbody>
         </table>
@@ -610,7 +616,7 @@
         </div>
 
         <div class="md:w-[600px] w-full mx-auto md:p-4 md:hidden">
-          <h2 class="text-3xl text-left font-bold mb-4 underline-green">
+          <h2 class="text-3xl text-left font-bold mb-4 underline-blue">
               Important Dates / Deadlines
           </h2>
           
@@ -618,13 +624,13 @@
           <table class="w-full bg-white shadow-md rounded-lg mb-6">
               <thead>
                   <tr>
-                      <th class="bg-green-700 text-white px-6 py-4 text-left">Event</th>
+                      <th class="bg-blue-900 text-white px-6 py-4 text-left">Event</th>
                       <td class="border-b border-gray-300 pr-8 px-6 py-4 text-left">Manuscript submissions open</td>
                   </tr>
               </thead>
               <tbody>
                   <tr>
-                      <th class="bg-green-700 text-white px-6 py-4 text-left">Date</th>
+                      <th class="bg-blue-900 text-white px-6 py-4 text-left">Date</th>
                       <td class="border-b border-gray-300 pl-8 px-6 py-4">September 1, 2024</td>
                   </tr>
               </tbody>
@@ -634,13 +640,13 @@
           <table class="w-full bg-white shadow-md rounded-lg mb-6">
               <thead>
                   <tr>
-                      <th class="bg-green-700 text-white px-6 py-4 text-left">Event</th>
+                      <th class="bg-blue-900 text-white px-6 py-4 text-left">Event</th>
                       <td class="border-b border-gray-300 pr-8 px-6 py-4 text-left">Deadline for manuscript submissions</td>
                   </tr>
               </thead>
               <tbody>
                   <tr>
-                      <th class="bg-green-700 text-white px-6 py-4 text-left">Date</th>
+                      <th class="bg-blue-900 text-white px-6 py-4 text-left">Date</th>
                       <td class="border-b border-gray-300 pl-8 px-6 py-4">December 15, 2024</td>
                   </tr>
               </tbody>
@@ -650,13 +656,13 @@
           <table class="w-full bg-white shadow-md rounded-lg mb-6">
               <thead>
                   <tr>
-                      <th class="bg-green-700 text-white px-6 py-4 text-left">Event</th>
+                      <th class="bg-blue-900 text-white px-6 py-4 text-left">Event</th>
                       <td class="border-b border-gray-300 pr-8 px-6 py-4 text-left">Under review timeline</td>
                   </tr>
               </thead>
               <tbody>
                   <tr>
-                      <th class="bg-green-700 text-white px-6 py-4 text-left">Date</th>
+                      <th class="bg-blue-900 text-white px-6 py-4 text-left">Date</th>
                       <td class="border-b border-gray-300 pl-8 px-6 py-4">December 15, 2024 - January 31, 2025</td>
                   </tr>
               </tbody>
@@ -666,13 +672,13 @@
           <table class="w-full bg-white shadow-md rounded-lg mb-6">
               <thead>
                   <tr>
-                      <th class="bg-green-700 text-white px-6 py-4 text-left">Event</th>
+                      <th class="bg-blue-900 text-white px-6 py-4 text-left">Event</th>
                       <td class="border-b border-gray-300 pr-8 px-6 py-4 text-left">Notification of acceptance</td>
                   </tr>
               </thead>
               <tbody>
                   <tr>
-                      <th class="bg-green-700 text-white px-6 py-4 text-left">Date</th>
+                      <th class="bg-blue-900 text-white px-6 py-4 text-left">Date</th>
                       <td class="border-b border-gray-300 pl-8 px-6 py-4">February 05, 2025</td>
                   </tr>
               </tbody>
@@ -682,13 +688,13 @@
           <table class="w-full bg-white shadow-md rounded-lg mb-6">
               <thead>
                   <tr>
-                      <th class="bg-green-700 text-white px-6 py-4 text-left">Event</th>
+                      <th class="bg-blue-900 text-white px-6 py-4 text-left">Event</th>
                       <td class="border-b border-gray-300 pr-8 px-6 py-4 text-left">Author registration deadline</td>
                   </tr>
               </thead>
               <tbody>
                   <tr>
-                      <th class="bg-green-700 text-white px-6 py-4 text-left">Date</th>
+                      <th class="bg-blue-900 text-white px-6 py-4 text-left">Date</th>
                       <td class="border-b border-gray-300 pl-8 px-6 py-4">February 06th to March 07th, 2025</td>
                   </tr>
               </tbody>
@@ -698,13 +704,13 @@
           <table class="w-full bg-white shadow-md rounded-lg mb-6">
               <thead>
                   <tr>
-                      <th class="bg-green-700 text-white px-6 py-4 text-left">Event</th>
+                      <th class="bg-blue-900 text-white px-6 py-4 text-left">Event</th>
                       <td class="border-b border-gray-300 pr-8 px-6 py-4 text-left">Conference program scheduled</td>
                   </tr>
               </thead>
               <tbody>
                   <tr>
-                      <th class="bg-green-700 text-white px-6 py-4 text-left">Date</th>
+                      <th class="bg-blue-900 text-white px-6 py-4 text-left">Date</th>
                       <td class="border-b border-gray-300 pl-8 px-6 py-4">March 20th, 21st, 2025</td>
                   </tr>
               </tbody>
@@ -714,13 +720,13 @@
           <table class="w-full bg-white shadow-md rounded-lg mb-6">
               <thead>
                   <tr>
-                      <th class="bg-green-700 text-white px-6 py-4 text-left">Event</th>
+                      <th class="bg-blue-900 text-white px-6 py-4 text-left">Event</th>
                       <td class="border-b border-gray-300 pr-8 px-6 py-4 text-left">Final revised manuscript</td>
                   </tr>
               </thead>
               <tbody>
                   <tr>
-                      <th class="bg-green-700 text-white px-6 py-4 text-left">Date</th>
+                      <th class="bg-blue-900 text-white px-6 py-4 text-left">Date</th>
                       <td class="border-b border-gray-300 pl-8 px-6 py-4">April 5th, 2025</td>
                   </tr>
               </tbody>
@@ -733,16 +739,16 @@
             class="mt-10 flex flex-col lg:flex-row justify-between space-y-4 lg:space-y-0 lg:space-x-[60px]"
           >
             <a href="callforPapers.html#conf"
-              ><button class="bg-green-700 p-3 w-full md:w-[200px] text-white rounded-lg">About Conference</button></a
+              ><button class="bg-blue-900 p-3 w-full md:w-[200px] text-white rounded-lg">About Conference</button></a
             >
             <a href="callforPapers.html#objectives"
-              ><button class="bg-green-700 p-3 w-full md:w-[110px] text-white rounded-lg">Objectives</button></a
+              ><button class="bg-blue-900 p-3 w-full md:w-[110px] text-white rounded-lg">Objectives</button></a
             >
-            <a href="callforPapers.html#outcomes"><button class="bg-green-700 p-3 w-full md:w-[110px] text-white rounded-lg">Outcomes</button></a>
-            <a href="callforPapers.html#scope"><button class="bg-green-700 p-3 w-full md:w-[100px] text-white rounded-lg">Scope</button></a>
-            <a href="callforPapers.html#impact"><button class="bg-green-700 p-3 w-full md:w-[100px] text-white rounded-lg">Impact</button></a>
-            <a href="specialSessions.html#conference-tracks"><button class="bg-green-700 p-3 w-full md:w-[180px] text-white rounded-lg">Conference Tracks</button></a>
-            <a href="#indexing"><button class="bg-green-700 p-3 w-full md:w-[100px] text-white rounded-lg">Indexing</button></a>
+            <a href="callforPapers.html#outcomes"><button class="bg-blue-900 p-3 w-full md:w-[110px] text-white rounded-lg">Outcomes</button></a>
+            <a href="callforPapers.html#scope"><button class="bg-blue-900 p-3 w-full md:w-[100px] text-white rounded-lg">Scope</button></a>
+            <a href="callforPapers.html#impact"><button class="bg-blue-900 p-3 w-full md:w-[100px] text-white rounded-lg">Impact</button></a>
+            <a href="specialSessions.html#conference-tracks"><button class="bg-blue-900 p-3 w-full md:w-[180px] text-white rounded-lg">Conference Tracks</button></a>
+            <a href="#indexing"><button class="bg-blue-900 p-3 w-full md:w-[100px] text-white rounded-lg">Indexing</button></a>
           </div>
 
       </div>
@@ -800,7 +806,7 @@
 
     <div class="bg-white font-sans antialiased">
       <section class="py-12">
-        <p class="text-center font-bold text-3xl underline-green mb-3">
+        <p class="text-center font-bold text-3xl underline-blue mb-3">
           Key Note Speakers
         </p>
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
@@ -817,7 +823,7 @@
               <h2 class="text-2xl font-bold text-gray-800 text-left">
                 Dr Elochukwu UKWANDU
               </h2>
-              <p class="text-green-700 font-bold mb-4">
+              <p class="text-blue-900 font-bold mb-4">
                 Lecturer, Cardiff Schol of Technologies, Cardiff Metropolitan
                 University, Wales, United Kingdom
               </p>
@@ -850,7 +856,7 @@
               <h2 class="text-2xl font-bold text-gray-800 text-left">
                 Prof. Dr. Iyyanki V. Muralikrishna
               </h2>
-              <h2 class="text-green-700 font-bold mb-4">
+              <h2 class="text-blue-900 font-bold mb-4">
                 Director, Academic Programs, Haas Institute for Business
                 Innovation, University of California Berkeley, USA
               </h2>
@@ -896,7 +902,7 @@
               <h2 class="text-2xl font-bold text-gray-800 text-left">
                 Sukanya Konatam
               </h2>
-              <h2 class="text-green-700 font-bold mb-4">
+              <h2 class="text-blue-900 font-bold mb-4">
                 Senior Manager of Enterprise Data Governance and Data Science, Vialto Partners Texas, USA
               </h2>
               <p class="text-gray-600 mb-4">
@@ -934,7 +940,7 @@
               <h2 class="text-2xl font-bold text-gray-800 text-left">
                 Suryapraksh Nalluri
               </h2>
-              <h2 class="text-green-700 font-bold mb-4">
+              <h2 class="text-blue-900 font-bold mb-4">
                 Senior Vice President - Information Security Operations Group
                 Manager, City group, Texas, USA
               </h2>
@@ -984,7 +990,7 @@
               <h2 class="text-2xl font-bold text-gray-800 text-left">
                 Dr. Ghanapriya Singh
               </h2>
-              <h2 class="text-green-700 font-bold mb-4">
+              <h2 class="text-blue-900 font-bold mb-4">
                 Asst. Professor (Grade I) in Department of Electronics and
                 Communication Engineering at National Institute of Technology,
                 Kurukshetra
@@ -1022,14 +1028,14 @@
           class="container grid grid-cols-1 w-full md:w-1/2 gap-6 text-black"
         >
           <p
-            class="text-3xl text-white p-2 font-bold bg-green-600 w-[280px] md:w-[380px] ml-3 md:ml-[150px] rounded animate-fadeIn"
+            class="text-3xl text-center text-white p-2 font-bold bg-blue-900 w-full md:w-[380px] md:ml-[150px] rounded animate-fadeIn"
           >
             CONFERENCE FEATURES
           </p>
           <div
             class="p-6 ml-3 mr-3 bg-white rounded shadow-lg hover:shadow-2xl transition-shadow duration-300"
           >
-            <h3 class="text-2xl font-bold mb-2 underline-green">
+            <h3 class="text-2xl font-bold mb-2 underline-blue">
               FOCUSED NETWORKING
             </h3>
             <p>
@@ -1040,7 +1046,7 @@
           <div
             class="p-6 ml-3 mr-3 bg-white rounded shadow-lg hover:shadow-2xl transition-shadow duration-300"
           >
-            <h3 class="text-2xl font-bold mb-2 underline-green">
+            <h3 class="text-2xl font-bold mb-2 underline-blue">
               EXPERT SPEAKERS
             </h3>
             <p>
@@ -1051,7 +1057,7 @@
           <div
             class="p-6 ml-3 mr-3 bg-white rounded shadow-lg hover:shadow-2xl transition-shadow duration-300"
           >
-            <h3 class="text-2xl font-bold mb-2 underline-green">
+            <h3 class="text-2xl font-bold mb-2 underline-blue">
               BRILLIANT IDEAS
             </h3>
             <p>
@@ -1062,7 +1068,7 @@
           <div
             class="p-6 ml-3 mr-3 bg-white rounded shadow-lg hover:shadow-2xl transition-shadow duration-300"
           >
-            <h3 class="text-2xl font-bold mb-2 underline-green">
+            <h3 class="text-2xl font-bold mb-2 underline-blue">
               EXCEPTIONAL PROGRAM
             </h3>
             <p>
@@ -1073,7 +1079,7 @@
           <div
             class="p-6 ml-3 mr-3 bg-white rounded shadow-lg hover:shadow-2xl transition-shadow duration-300"
           >
-            <h3 class="text-2xl font-bold mb-2 underline-green">
+            <h3 class="text-2xl font-bold mb-2 underline-blue">
               GLOBAL PARTICIPATION
             </h3>
             <p>
@@ -1083,7 +1089,7 @@
           <div
             class="p-6 ml-3 mr-3 bg-white rounded shadow-lg hover:shadow-2xl transition-shadow duration-300"
           >
-            <h3 class="text-2xl font-bold mb-2 underline-green">
+            <h3 class="text-2xl font-bold mb-2 underline-blue">
               INSPIRATIONAL LEARNING
             </h3>
             <p>
@@ -1096,71 +1102,72 @@
           class="container grid grid-cols-1 w-full md:w-1/2 gap-6 text-black"
         >
           <p
-            class="text-3xl text-white p-2 font-bold bg-gradient-to-r from-amber-300 to-green-300 w-[280px] md:w-[380px] mt-2 md:mt-0 ml-3 md:ml-[150px] text-center rounded animate-fadeIn"
+            class="text-3xl text-center text-black p-2 font-bold bg-gradient-to-r from-amber-300 to-yellow-400 w-full md:w-[380px] mt-2 md:mt-0 md:ml-[150px] text-center rounded animate-fadeIn"
           >
             HONORS & AWARDS
           </p>
+          
           <div
-            class="relative p-6 ml-3 mr-3 bg-gradient-to-r from-amber-300 to-green-300 rounded flex items-center shadow-lg hover:shadow-2xl transition-shadow duration-300 animate-fadeIn"
+            class="relative p-6 ml-3 mr-3 bg-gradient-to-r from-amber-300 to-yellow-400 rounded flex items-center shadow-lg hover:shadow-2xl transition-shadow duration-300 animate-fadeIn"
           >
             
             <h3
-              class="text-2xl font-bold mb-2 text-green-700 text-center flex-grow mt-10"
+              class="text-2xl font-bold mb-2 text-black text-center flex-grow mt-10"
             >
               BEST PAPER
             </h3>
-            
           </div>
+          
           <div
-            class="relative p-6 ml-3 mr-3 bg-gradient-to-r from-amber-300 to-green-300 rounded flex items-center shadow-lg hover:shadow-2xl transition-shadow duration-300 animate-fadeIn"
+            class="relative p-6 ml-3 mr-3 bg-gradient-to-r from-amber-300 to-yellow-400 rounded flex items-center shadow-lg hover:shadow-2xl transition-shadow duration-300 animate-fadeIn"
           >
             
             <h3
-              class="text-2xl font-bold mb-2 text-green-700 text-center flex-grow mt-10"
+              class="text-2xl font-bold mb-2 text-black text-center flex-grow mt-10"
             >
               WOMEN EXCELLENCE
             </h3>
             
           </div>
           <div
-            class="relative p-6 ml-3 mr-3 bg-gradient-to-r from-amber-300 to-green-300 rounded flex items-center shadow-lg hover:shadow-2xl transition-shadow duration-300 animate-fadeIn"
+            class="relative p-6 ml-3 mr-3 bg-gradient-to-r from-amber-300 to-yellow-400 rounded flex items-center shadow-lg hover:shadow-2xl transition-shadow duration-300 animate-fadeIn"
           >
             
             <h3
-              class="text-2xl font-bold mb-2 text-green-700 text-center flex-grow mt-10"
+              class="text-2xl font-bold mb-2 text-black text-center flex-grow mt-10"
             >
               SESSION WINNER
             </h3>
             
           </div>
           <div
-            class="relative p-6 ml-3 mr-3 bg-gradient-to-r from-amber-300 to-green-300 rounded flex items-center shadow-lg hover:shadow-2xl transition-shadow duration-300 animate-fadeIn"
+            class="relative p-6 ml-3 mr-3 bg-gradient-to-r from-amber-300 to-yellow-400 rounded flex items-center shadow-lg hover:shadow-2xl transition-shadow duration-300 animate-fadeIn"
           >
             
             <h3
-              class="text-2xl font-bold mb-2 text-green-700 text-center flex-grow mt-10"
+              class="text-2xl font-bold mb-2 text-black text-center flex-grow mt-10"
             >
               UNIQUE RESEARCH AREA
             </h3>
             
           </div>
           <div
-            class="relative p-6 ml-3 mr-3 bg-gradient-to-r from-amber-300 to-green-300 rounded flex items-center shadow-lg hover:shadow-2xl transition-shadow duration-300 animate-fadeIn"
+            class="relative p-6 ml-3 mr-3 bg-gradient-to-r from-amber-300 to-yellow-400 rounded flex items-center shadow-lg hover:shadow-2xl transition-shadow duration-300 animate-fadeIn"
           >
             
             <h3
-              class="text-2xl font-bold mb-2 text-green-700 text-center flex-grow mt-10"
+              class="text-2xl font-bold mb-2 text-black text-center flex-grow mt-10"
             >
               YOUNGEST AND OLDEST
             </h3>
             
           </div>
           <div
-            class="relative p-6 ml-3 mr-3 bg-gradient-to-r from-amber-300 to-green-300 rounded flex items-center shadow-lg hover:shadow-2xl transition-shadow duration-300 animate-fadeIn"
+            class="relative p-6 ml-3 mr-3 bg-gradient-to-r from-amber-300 to-yellow-400 rounded flex items-center shadow-lg hover:shadow-2xl transition-shadow duration-300 animate-fadeIn"
           >
             
             <h3
-              class="text-2xl font-bold mb-2 text-green-700 text-center flex-grow mt-10"
+              class="text-2xl font-bold mb-2 text-black text-center flex-grow mt-10"
             >
               BEST PRESENTATION
             </h3>
@@ -1172,7 +1179,7 @@
 
     <section class="py-12 p-5">
       <div class="container mx-auto text-center mb-8">
-        <h1 class="text-4xl font-bold underline-green" id="indexing">Indexing</h1>
+        <h1 class="text-4xl font-bold underline-blue" id="indexing">Indexing</h1>
         <br />
         <p class="text-justify">
           Post-conference, proceedings will be made available to the following
@@ -1197,7 +1204,7 @@
 
 
 
-    <footer class="bg-green-700 py-6 text-center">
+    <footer class="bg-blue-900 py-6 text-center text-white">
       <p>
         &copy; 2025 International Conference on Data Science and Computational
         Intelligence. All rights reserved.
