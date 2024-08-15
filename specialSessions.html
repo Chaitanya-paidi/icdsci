@@ -10,13 +10,14 @@
     />
     <link rel="stylesheet" href="" />
     <script src="https://cdn.tailwindcss.com"></script>
+    
     <style>
       body {
         font-family: "Poppins", sans-serif;
         text-align: justify;
         text-justify: inter-word;
       }
-      .underline-green {
+      .underline-blue {
         text-decoration: underline;
         text-decoration-color: rgb(34 197 94 / var(--tw-bg-opacity));
       }
@@ -28,32 +29,32 @@
         height: 100%;
       }
       .slide {
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  background-size: cover;
-  background-position: center;
-  opacity: 0;
-  animation: slideShow 12s infinite;
-}
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        background-size: cover;
+        background-position: center;
+        opacity: 0;
+        animation: slideShow 12s infinite;
+      }
 
-.slide:nth-child(1) {
-  animation-delay: 0s;
-}
+      .slide:nth-child(1) {
+        animation-delay: 0s;
+      }
 
-.slide:nth-child(2) {
-  animation-delay: 3s;
-}
+      .slide:nth-child(2) {
+        animation-delay: 3s;
+      }
 
-.slide:nth-child(3) {
-  animation-delay: 6s;
-}
+      .slide:nth-child(3) {
+        animation-delay: 6s;
+      }
 
-.slide:nth-child(4) {
-  animation-delay: 9s;
-}
+      .slide:nth-child(4) {
+        animation-delay: 9s;
+      }
 
     
       @keyframes slideShow {
@@ -70,7 +71,7 @@
       }
     
       .button-container button {
-        background-color: rgb(21 128 61 / var(--tw-bg-opacity));
+        background-color: rgb(30 58 138 / var(--tw-bg-opacity));
         color: white;
         /* padding: 0.75rem 1.5rem; */
         padding: 15px;
@@ -116,7 +117,7 @@
       }
     
       .tab button.active {
-        background-color: rgb(21 128 61 / var(--tw-bg-opacity));
+        background-color: rgb(30 58 138 / var(--tw-bg-opacity));
         color: white;
       }
     
@@ -126,9 +127,9 @@
         border-top: none;
       }
     
-      .underline-green {
+      .underline-blue {
         text-decoration: underline;
-        text-decoration-color: green;
+        text-decoration-color: blue;
       }
 
       .map-container {
@@ -155,107 +156,105 @@
   max-width: 1000px;
   position: relative;
   margin: auto;
-}
+      }
 
-/* Remove Next & Previous buttons */
-.prev, .next {
-  display: none;
-}
+      /* Remove Next & Previous buttons */
+      .prev, .next {
+        display: none;
+      }
 
-/* Caption text */
-.text {
-  color: #f2f2f2;
-  font-size: 15px;
-  padding: 8px 12px;
-  position: absolute;
-  bottom: 8px;
-  width: 100%;
-  text-align: center;
-}
+      /* Caption text */
+      .text {
+        color: #f2f2f2;
+        font-size: 15px;
+        padding: 8px 12px;
+        position: absolute;
+        bottom: 8px;
+        width: 100%;
+        text-align: center;
+      }
 
-/* Number text (1/3 etc) */
-.numbertext {
-  color: #f2f2f2;
-  font-size: 12px;
-  padding: 8px 12px;
-  position: absolute;
-  top: 0;
-}
+      /* Number text (1/3 etc) */
+      .numbertext {
+        color: #f2f2f2;
+        font-size: 12px;
+        padding: 8px 12px;
+        position: absolute;
+        top: 0;
+      }
 
-/* The dots/bullets/indicators */
-.dot {
-  cursor: pointer;
-  height: 15px;
-  width: 15px;
-  margin: 0 2px;
-  background-color: #bbb;
-  border-radius: 50%;
-  display: inline-block;
-  transition: background-color 0.6s ease;
-}
+      /* The dots/bullets/indicators */
+      .dot {
+        cursor: pointer;
+        height: 15px;
+        width: 15px;
+        margin: 0 2px;
+        background-color: #bbb;
+        border-radius: 50%;
+        display: inline-block;
+        transition: background-color 0.6s ease;
+      }
 
-.active, .dot:hover {
-  background-color: #717171;
-}
+      .active, .dot:hover {
+        background-color: #717171;
+      }
 
-/* Fading animation */
-.fade {
-  animation-name: fade;
-  animation-duration: 1.5s;
-}
+      /* Fading animation */
+      .fade {
+        animation-name: fade;
+        animation-duration: 1.5s;
+      }
 
-@keyframes fade {
-  from {opacity: .4} 
-  to {opacity: 1}
-}
+      @keyframes fade {
+        from {opacity: .4} 
+        to {opacity: 1}
+      }
 
-/* On smaller screens, decrease text size */
-@media only screen and (max-width: 300px) {
-  .text {font-size: 11px}
-}
-
-
+      /* On smaller screens, decrease text size */
+      @media only screen and (max-width: 300px) {
+        .text {font-size: 11px}
+      }
     </style>
   </head>
-<body class="bg-gray-100 text-black text-justify">
+  <body class="bg-gray-100 text-black text-justify">
     <nav class="fixed w-full bg-gray-50 text-black py-3 z-50">
         <div class="container mx-auto flex justify-between items-center px-4">
           <div class="flex items-center">
             <img src="springer.png" alt="Springer Logo" class="h-10 mr-2" />
             <a href="#" class="text-2xl font-bold">
-              <span class="bg-green-700 text-white px-2 py-1 rounded"
+              <span class="bg-blue-900 text-white px-2 py-1 rounded"
                 >ICDSCI</span
               >
               2025
             </a>
           </div>
           <ul class="hidden md:flex space-x-6">
-            <li><a href="index.html" class="hover:text-green-400">Home</a></li>
+            <li><a href="index.html" class="hover:text-blue-400">Home</a></li>
             <li>
-              <a href="callforPapers.html" class="hover:text-green-400"
+              <a href="callforPapers.html" class="hover:text-blue-400"
                 >Call for papers</a
               >
             </li>
             <li>
-              <a href="committees.html" class="hover:text-green-400">Committees</a>
+              <a href="committees.html" class="hover:text-blue-400">Committees</a>
             </li>
             <li>
-              <a href="registration.html" class="hover:text-green-400"
+              <a href="registration.html" class="hover:text-blue-400"
                 >Registration</a
               >
             </li>
             <li>
-              <a href="sponsors.html" class="hover:text-green-400">Sponsors</a>
+              <a href="sponsors.html" class="hover:text-blue-400">Sponsors</a>
             </li>
             <li>
-              <a href="specialSessions.html" class="text-green-400"
+              <a href="specialSessions.html" class="text-blue-400"
                 >Special sessions</a
               >
             </li>
-            <li><a href="contactus.html" class="hover:text-green-400">Contact</a></li>
+            <li><a href="contactus.html" class="hover:text-blue-400">Contact</a></li>
           </ul>
           <button
-            class="md:hidden text-green-400 focus:outline-none"
+            class="md:hidden text-blue-400 focus:outline-none"
             id="menu-button"
           >
             <svg
@@ -278,33 +277,33 @@
           class="md:hidden flex flex-col space-y-2 px-4 pt-2 pb-4 bg-gray-100 hidden"
           id="mobile-menu"
         >
-          <li><a href="index.html" class="hover:text-green-400">Home</a></li>
+          <li><a href="index.html" class="hover:text-blue-400">Home</a></li>
           <li>
-            <a href="callforPapers.html" class="hover:text-green-400"
+            <a href="callforPapers.html" class="hover:text-blue-400"
               >Call for papers</a
             >
           </li>
           <li>
-            <a href="committees.html" class="hover:text-green-400">Committees</a>
+            <a href="committees.html" class="hover:text-blue-400">Committees</a>
           </li>
           <li>
-            <a href="registration.html" class="hover:text-green-400"
+            <a href="registration.html" class="hover:text-blue-400"
               >Registration</a
             >
           </li>
           <li>
-            <a href="sponsors.html" class="hover:text-green-400">Sponsors</a>
+            <a href="sponsors.html" class="hover:text-blue-400">Sponsors</a>
           </li>
           <li>
-            <a href="specialSessions.html" class="text-green-400"
+            <a href="specialSessions.html" class="text-blue-400"
               >Special sessions</a
             >
           </li>
-          <li><a href="contactus.html" class="hover:text-green-400">Contact</a></li>
+          <li><a href="contactus.html" class="hover:text-blue-400">Contact</a></li>
         </ul>
       </nav>
   
-      <header class="h-[1150px] md:h-[700px] text-center text-white bg-green-700 relative">
+      <header class="h-[1020px] md:h-[625px] text-center text-white bg-blue-900 relative">
         <div class="flex flex-col md:flex-row h-full relative z-10">
           <div class="w-full md:w-1/2 px-4 py-24">
             <div class="w-full md:w-1/2">
@@ -348,7 +347,8 @@
               ALL ACCEPTED & PRESENTED papers will be published in <br> <b>SCOPUS indexed SPRINGER PROMS</b>.
             </h3>
             <div class="flex justify-center space-x-4 mb-4">
-              <img src="springer.png" alt="Springer" class="h-36 w-36" />
+              <img src="springer.png" alt="Springer" class="h-20 w-20" />
+              <img src="bg2.jpg" alt="" class="h-20 w-20">
             </div>
             <p class="mb-2">Submission is now open: Till December 15, 2024.</p>
             <div class="button-container2"></div>
@@ -398,24 +398,24 @@
           submit their work but are unable to attend the conference.</marquee
         >
       </div>
-      
+  
       <section class="bg-white pt-[20px] md:pt-0">
         <div class="flex flex-wrap ">
   
-          <div class="w-[680px] md:mt-3 bg-gray-50 md:bg-white">
+          <div class="w-[500px] md:mt-3 bg-gray-50 md:bg-white">
             <div
               class="tab flex flex-col lg:flex-row space-y-4 lg:space-y-0 lg:space-x-4 mb-4"
             >
               <button
-                class="tablinks btn mt-[20px] md:mt-0 font-bold"
+                class="tablinks btn mt-[20px] md:mt-0 font-bold text-white"
                 onclick="openTab(event, 'about-pscmr')"
               >
                 About PSCMR
               </button>
-              <button class="tablinks btn font-bold" onclick="openTab(event, 'about-ds')">
+              <button class="tablinks btn font-bold text-white" onclick="openTab(event, 'about-ds')">
                 About DS
               </button>
-              <button class="tablinks btn font-bold" onclick="openTab(event, 'about-mca')">
+              <button class="tablinks btn font-bold text-white" onclick="openTab(event, 'about-mca')">
                 About MCA
               </button>
             </div>
@@ -436,7 +436,7 @@
                 strategic partnerships with industry and academia. At PSCMRCET education around providing a multidimensional development
                 <span class="dots">...</span>
               </p>
-              <a href="about.html#about-pscmr"><button class="text-green-700 font-bold">Read more</button></a>
+              <a href="about.html#about-pscmr"><button class="text-blue-900 font-bold">Read more</button></a>
             </div>
             <div id="about-ds" class="tabcontent">
               <p>
@@ -456,7 +456,7 @@
                 year 2022 with an annual intake of 60 students.
                 <span class="dots">...</span>
               </p>
-              <a href="about.html#about-ds"><button class="text-green-700 font-bold">Read more</button></a>
+              <a href="about.html#about-ds"><button class="text-blue-900 font-bold">Read more</button></a>
             </div>
             <div id="about-mca" class="tabcontent">
               <p>
@@ -475,18 +475,8 @@
                 Why MCA in PSCMRCET? Hands-on Curriculum designed by experts from
                 academia and industry
                 <span class="dots">...</span>
-                <span class="more">
-                  <!-- and taught by Quality Faculty Members More emphasis on the latest programming languages and
-                  tools to develop better and faster applications. Enhancing
-                  students’ capabilities as per the career requirements and giving
-                  them necessary placement assistance Specially organized
-                  Workshops, Webinars and Guest Lectures by Industry experts to
-                  provide the latest Industry insights Professional enhancement
-                  Program focusing on aptitude, reasoning, soft skills and
-                  interviewing skills of the student. -->
-                </span>
               </p>
-              <a href="about.html#about-mca"><button class="text-green-700 font-bold">Read more</button></a>
+              <a href="about.html#about-mca"><button class="text-blue-900 font-bold">Read more</button></a>
             </div>
           </div>
   
@@ -507,7 +497,22 @@
                 (Autonomous), Vijayawada
               </p>
             </div>
-            <div class="ml-10 md:ml-10 mr-4 md:mt-[60px]">
+            <div class="md:ml-2 md:mt-[60px]">
+              <a href="https://www.cardiffmet.ac.uk/Pages/default.aspx" target="_blank">
+                <img
+                src="CardiffMet_logo-1.png"
+                alt="js-logo"
+                class="mb-4 ml-10 md:ml-0"
+                style="max-width: 100%; height: 190px"
+              />
+              </a>
+              
+              <p class="text-md text-center text-gray-700 ml-3 md:ml-0 font-bold">
+                Cardiff Metropolitan University <br />
+                Prifysgol Metropolitan caerdydd
+              </p>
+            </div>
+            <div class="ml-7 md:ml-3 md:mt-[60px]">
               <a href="https://jacksparrowpublishers.com/" target="_blank">
                 <img
                 src="jslogo.png"
@@ -517,14 +522,15 @@
               />
               </a>
               
-              <p class="text-md text-center text-gray-700 m-3 md:m-0 font-bold">
+              <p class="text-md text-center text-gray-700 m-3 md:m-0 font-bold ml-7 md:ml-0">
                 Jack Sparrow Publishers <br />
                 Private Limited
               </p>
             </div>
+            
+            
         </div>
       </section>
-    
     
   
       <script>
@@ -534,184 +540,328 @@
             document.getElementById("mobile-menu").classList.toggle("hidden");
           });
       </script>
-
-    <script>
-      function openTab(evt, tabName) {
-        var i, tabcontent, tablinks;
-        tabcontent = document.getElementsByClassName("tabcontent");
-        for (i = 0; i < tabcontent.length; i++) {
-          tabcontent[i].style.display = "none";
+  
+      <script>
+        function openTab(evt, tabName) {
+          var i, tabcontent, tablinks;
+          tabcontent = document.getElementsByClassName("tabcontent");
+          for (i = 0; i < tabcontent.length; i++) {
+            tabcontent[i].style.display = "none";
+          }
+          tablinks = document.getElementsByClassName("tablinks");
+          for (i = 0; i < tablinks.length; i++) {
+            tablinks[i].className = tablinks[i].className.replace(" active", "");
+          }
+          document.getElementById(tabName).style.display = "block";
+          evt.currentTarget.className += " active";
         }
-        tablinks = document.getElementsByClassName("tablinks");
-        for (i = 0; i < tablinks.length; i++) {
-          tablinks[i].className = tablinks[i].className.replace(" active", "");
-        }
-        document.getElementById(tabName).style.display = "block";
-        evt.currentTarget.className += " active";
-      }
-
-      // Display the first tab by default
-      document.addEventListener("DOMContentLoaded", (event) => {
-        document.querySelector(".tab button").click();
-      });
-
-      document.addEventListener("DOMContentLoaded", function () {
-        const readMoreButtons = document.querySelectorAll(".read-more-btn");
-        const allDots = document.querySelectorAll(".dots");
-        const allMoreTexts = document.querySelectorAll(".more");
-
-        // Hide all the extended content initially
-        allDots.forEach((dot) => (dot.style.display = "inline"));
-        allMoreTexts.forEach((moreText) => (moreText.style.display = "none"));
-
-        readMoreButtons.forEach((button) => {
-          button.addEventListener("click", function () {
-            const parent = this.parentElement;
-            const dots = parent.querySelector(".dots");
-            const moreText = parent.querySelector(".more");
-            const btnText = this;
-
-            if (dots.style.display === "none") {
-              dots.style.display = "inline";
-              btnText.innerHTML = "Read more";
-              moreText.style.display = "none";
-            } else {
-              dots.style.display = "none";
-              btnText.innerHTML = "Read less";
-              moreText.style.display = "inline";
-            }
+  
+        // Display the first tab by default
+        document.addEventListener("DOMContentLoaded", (event) => {
+          document.querySelector(".tab button").click();
+        });
+  
+        document.addEventListener("DOMContentLoaded", function () {
+          const readMoreButtons = document.querySelectorAll(".read-more-btn");
+          const allDots = document.querySelectorAll(".dots");
+          const allMoreTexts = document.querySelectorAll(".more");
+  
+          // Hide all the extended content initially
+          allDots.forEach((dot) => (dot.style.display = "inline"));
+          allMoreTexts.forEach((moreText) => (moreText.style.display = "none"));
+  
+          readMoreButtons.forEach((button) => {
+            button.addEventListener("click", function () {
+              const parent = this.parentElement;
+              const dots = parent.querySelector(".dots");
+              const moreText = parent.querySelector(".more");
+              const btnText = this;
+  
+              if (dots.style.display === "none") {
+                dots.style.display = "inline";
+                btnText.innerHTML = "Read more";
+                moreText.style.display = "none";
+              } else {
+                dots.style.display = "none";
+                btnText.innerHTML = "Read less";
+                moreText.style.display = "inline";
+              }
+            });
           });
         });
-      });
-    </script>
+      </script>
   
-      <div class="bg-green-700 text-white text-center p-3">
+      <div class="bg-blue-900 text-white text-center p-3">
         <p class="font-bold text-2xl">SPECIAL SESSIONS</p>
         
       </div>
-      <div class="p-3 md:p-10">
-        <P>ICDSAI-2024 invites eminent academicians, scientists, researchers, industrialists, technocrats, government representatives, social visionaries and experts from all strata of society to work together for more meaningful and professional outcome. The ICDSAI 2024 team plans to hold workshops/special sessions on various areas of expertise, in any of the tracks based on related theme. <br> <br>
+      <div class="p-3 md:p-10 bg-white">
+        <P>ICDSAI-2024 invites eminent academicians, scientists, researchers, industrialists, technocrats, government representatives, social visionaries and experts from all strata of society to work together for more meaningful and professional outcome. The ICDSAI 2024 team plans to hold workshops/special sessions on various areas of expertise, in any of the tracks based on related theme. <br>
         The Workshops/Special Sessions will be chaired by experts from different fields. The presentation of the papers will be scheduled on any day of the conference.</P>
       </div>
-      <div class="p-3 md:p-10">
-        <section class="bg-gray-200 py-12 text-black">
-            <div class="container mx-auto text-center mb-8">
-              <h1 class="text-4xl font-bold">Conference Tracks</h1>
+
+      <div class="p-3 bg-blue-900">
+        <section class="text-black">
+            <div class="flex flex-col gap-5 lg:flex-row lg:gap-5" id="conference-tracks">
+              <div class="bg-white p-6 rounded-lg shadow w-full lg:w-1/2 mt-5">
+                <h2 class="text-2xl font-bold mb-2 text-left text-blue-900">
+                  Computational Intelligence for Machine Learning, Internet of Things, IIOT
+                </h2>
+                <p class=" mt-2"><b>Chair:</b>
+                  Dr. Y. Ramesh; Aditya Institute of Technology and Management (A), JNTU Kakinada, Andhra Pradesh, India
+                  </p>
+                  <p class="text-left mt-2"><b>Phone:</b>
+                    +919849765747
+                    </p>
+                <p class="text-left mt-2"><b>e-Mail:</b>
+                    rameshyegireddi@gmail.com</p> 
+                <p class=" mt-2"><b>Co-Chair:</b>
+                  K.S.N. Murty; M.R. P.G College(A), Vizianagaram, Andhra University Visakhapatnam, Andhra Pradesh, India. & Vamsi Bandi; Madanapalle Institute of Technology & Science (MITS), Madanapalle, JNTU Anantapuramu, Andhra Pradesh, India & T. Thirupatirao; Lendi Institute of Engineering and Technology(A), Vizianagaram, JNTU Kakinada, Andhra Pradesh, India & Rajendra Kumar Ganiya; Vignan’s Institute of Information Technology(A), Visakhapatnam, JNTU Kakinada, Andhra Pradesh, India & Appla Srinivasu Muttipati; Anil Neerukonda Institute of Technology & Sciences (A), Visakhapatnam Andhra Pradesh, India</p>
+                <p class="text-left mt-2"><b>Phone:</b>
+                  9849765747, 7989799468, 9491320403, 9618912959, 9390180360, 939311075, 8341645858
+                  </p>
+                <p class="text-left mt-2"><b>e-Mail:</b>
+                  rameshyegireddi@gmail.com, snmurtyk@gmail.com, vamsib111@gmail.com, thirupatiraotirlingi@gmail.com, rajendragk@rediffmail.com, srinivasum.csm@anits.edu.in</p> 
+              </div> 
+
+              <div class="bg-white p-6 rounded-lg shadow w-full lg:w-1/2 mt-5">
+                <h2 class="text-2xl font-bold mb-2 text-left text-blue-900">
+                    Artificial Intelligence and its Applications
+                </h2>
+                <p class="mt-2"><b>Chair:</b>
+                    Bosubabu Sambana, Avanthi Institute of Engineering and Technology (Autonomous), 
+                    Narsipatnam, JNTU GV University, Andhra Pradesh, India
+                </p>
+                <p class="text-left mt-2"><b>Phone:</b>
+                    9640641136
+                </p>
+                <p class="text-left mt-2"><b>e-Mail:</b>
+                    bosukalam@gmail.com
+                </p> 
+                <p class="mt-2"><b>Co-Chair:</b>
+                    Dr. Rahul Jashvantbhai Pandya; Indian Institute of Technology (IIT), Dharwad, Karnataka, India & 
+                    Dr. Priyanka Mishra; Indian Institute of Information Technology Kota, Rajasthan, India & 
+                    Dr. Ghanapriya Singh; National Institute of Technology (NIT) Uttarakhand, India
+                </p>
+                <p class="text-left mt-2"><b>Phone:</b>
+                    7428335049, 9549650567, 9068289740
+                </p>
+                <p class="text-left mt-2"><b>e-Mail:</b>
+                    priyanka.cse@iiitkota.ac.in, 2021krcp1001@iiitkota.ac.in, rpandya@iitdh.ac.in, ghanapriya@nituk.ac.in
+                </p> 
+            </div> 
+             
+          </div>
+
+            <div class="flex flex-col gap-5 lg:flex-row lg:gap-5" id="conference-tracks">
+              <div class="bg-white p-6 rounded-lg shadow w-full lg:w-1/2 mt-5">
+                <h2 class="text-2xl font-bold mb-2 text-left text-blue-900">
+                  Computational Intelligence for Engineering Sciences and Its Applications
+                </h2>
+                <p class="mt-2"><b>Chair:</b>
+                  Dr. C.P.V.N.J. Mohan Rao; Avanthi Institute of Engineering & Technology, Makavarapalem, Anakapalle, JNTU GV Vizianagaram, AP, India
+                </p>
+                <p class="text-left mt-2"><b>Phone:</b>
+                  9849147304
+                </p>
+                <p class="text-left mt-2"><b>e-Mail:</b>
+                  mohanrao_c@yahoo.com
+                </p> 
+                <p class="mt-2"><b>Co-Chair:</b>
+                  Dr. Ennam Govinda, Dr. U. Nanaj, Dr. T. Srinivasa Rao, Dr. R. Prasad Rao, Dr. Challa Suresh, Dr. Abburi Srinivasa Rao; 
+                  Avanthi Institute of Engineering & Technology, Makavarapalem, Anakapalle, JNTU GV Vizianagaram, AP, India
+                </p>
+                <p class="text-left mt-2"><b>Phone:</b>
+                  9640189549
+                </p>
+                <p class="text-left mt-2"><b>e-Mail:</b>
+                  ennamgovinda19@gmail.com, srinivasarao_tegala@yahoo.co.in, drchallasuresh@gmail.com, rayavarapu.prasadrao09<br>@gmail.com, asr161969@gmail.com
+                </p> 
+              </div>
+               
+
+              <div class="bg-white p-6 rounded-lg shadow w-full lg:w-1/2 mt-5">
+                <h2 class="text-2xl font-bold mb-2 text-left text-blue-900">
+                  Digital Image Processing and Advanced Computing
+                </h2>
+                <p class="mt-2"><b>Chair:</b>
+                  Mr. K. Krishna Reddy; Mother Theresa Institute of Engineering and Technology, Palamaner, JNTUA Anantapur, Andhra Pradesh, India
+                </p>
+                <p class="text-left mt-2"><b>Phone:</b>
+                  9391810695
+                </p>
+                <p class="text-left mt-2"><b>e-Mail:</b>
+                  krishnareddy206@mtieat.org
+                </p> 
+                <p class="mt-2"><b>Co-Chair:</b>
+                  Dr. M. Anka Rao; JNTU College of Engineering Anantapur, JNTUA Anantapur, Andhra Pradesh, India. & 
+                  Dr. P.C. Prabhu Kumar; Mother Theresa Institute of Engineering and Technology, Palamaner & 
+                  Dr. S. Murali Mohan; Mother Theresa Institute of Engineering and Technology, Palamaner, JNTUA Anantapur, Andhra Pradesh, India & 
+                  Dr. C. Geetha; Mother Theresa Institute of Engineering and Technology, Palamaner, JNTUA Anantapur, Andhra Pradesh, India & 
+                  Mr. P. Chandrasekhar; Mother Theresa Institute of Engineering and Technology, Palamaner, JNTUA Anantapur, Andhra Pradesh, India
+                </p>
+                <p class="text-left mt-2"><b>Phone:</b>
+                  9491694858
+                </p>
+                <p class="text-left mt-2"><b>e-Mail:</b>
+                  ankaraomogili@gmail.com, drprabhu.cse@mtieat.org, muralimohanieee@gmail.com, geetharai202@gmail.com, pcsmtech2023@gmail.com
+                </p> 
+              </div>
+              
+             
             </div>
-            <div class="container mx-auto grid grid-cols-1 md:grid-cols-3 gap-6" id="conference-tracks">
-              <div class="bg-white p-6 rounded-lg shadow ml-3 mr-3">
-                <h2 class="text-2xl font-bold mb-2 text-left underline-green">
-                  Mathematical Foundations:
+
+            <div class="flex flex-col gap-5 lg:flex-row lg:gap-5" id="conference-tracks">
+              <div class="bg-white p-6 rounded-lg shadow w-full lg:w-1/2 mt-5">
+                <h2 class="text-2xl font-bold mb-2 text-left text-blue-900">
+                  Soft Computing and Pattern Recognition
                 </h2>
-                <p>- Fuzzy Logics</p>
-                <p>- Concepts and principles of fuzzy set theory</p>
-                <p>- Fuzzy inference systems</p>
-                <p class="text-left">- Applications of fuzzy logic in decision-making and control</p>
+                <p class="mt-2"><b>Chair:</b>
+                  Dr. D. Jaya Kumari; Sri Vasavi Engineering College (Autonomous), Tadepalligudem, JNTU Kakinada, Andhra Pradesh, India
+                </p>
+                <p class="text-left mt-2"><b>Phone:</b>
+                  9642022170
+                </p>
+                <p class="text-left mt-2"><b>e-Mail:</b>
+                  hod_cse@srivasaviengg.ac.in
+                </p> 
+                <p class="mt-2"><b>Co-Chair:</b>
+                  Mr. K. Praveen Kumar; Sri Vasavi Engineering College (Autonomous), Tadepalligudem, JNTU Kakinada, Andhra Pradesh, India. & 
+                  Dr. D. Sudha Rani; Sri Vasavi Engineering College (Autonomous), Tadepalligudem, JNTU Kakinada, Andhra Pradesh, India & 
+                  Mr. Mamillapalli Chilaka Rao; Sagi Rama Krishnam Raju (SRKR) Engineering College (Autonomous), Bhimavaram, JNTU Kakinada, Andhra Pradesh, India & 
+                  Mrs. N. Akhila; Aditya Engineering College (Autonomous), Surampalem, JNTU Kakinada, Andhra Pradesh, India & 
+                  Mrs. M. Durgadevi; Ch.S.D.St.Theresa's College for Women (A), Eluru, Adikavi Nannaya University, Andhra Pradesh, India
+                </p>
+                <p class="text-left mt-2"><b>Phone:</b>
+                  7702215245
+                </p>
+                <p class="text-left mt-2"><b>e-Mail:</b>
+                  praveenkumar.cse<br>@srivasaviengg.ac.in, hod_eee@srivasaviengg.ac.in, chilakarao@gmail.com, akhila.nalla@aec.edu.in, m.devi.mca.06@gmail.com
+                </p> 
               </div>
-              <div class="bg-white p-6 rounded-lg shadow ml-3 mr-3">
-                <h2 class="text-2xl font-bold mb-2 text-left underline-green">
-                  Computational Mathematics:
+              
+               
+
+              <div class="bg-white p-6 rounded-lg shadow w-full lg:w-1/2 mt-5">
+                <h2 class="text-2xl font-bold mb-2 text-left text-blue-900">
+                  Computational Intelligence for Sciences, Management and Its Applications
                 </h2>
-                <p>- Numerical Analysis</p>
-                <p>- Optimization</p>
-                <p>- Computational Algebra</p>
-                <p>- Mathematical Modeling</p>
-                <p>- Computational Statistics</p>
-                <p>- Graph Theory and Network Analysis</p>
-                <p>- Differential Equation</p>
-                <p>- Computational Geometry</p>
+                <p class="mt-2"><b>Chair:</b>
+                  Dr. B.S.N. Raju, Professor & Principal, School of Management Studies, M. R. PG College, Vizianagaram, Andhra University Visakhapatnam, Andhra Pradesh, India
+                </p>
+                <p class="text-left mt-2"><b>Phone:</b>
+                  9866461078
+                </p>
+                <p class="text-left mt-2"><b>e-Mail:</b>
+                  bsnraju333@gmail.com
+                </p> 
+                <p class="mt-2"><b>Co-Chair:</b>
+                  K.S.N. Murty, Assistant Professor, School of Management Studies, M. R. PG College, Vizianagaram, Andhra University Visakhapatnam, Andhra Pradesh, India
+                </p>
+                <p class="text-left mt-2"><b>Phone:</b>
+                  9491320403
+                </p>
+                <p class="text-left mt-2"><b>e-Mail:</b>
+                  snmurtyk@gmail.com
+                </p> 
               </div>
-              <div class="bg-white p-6 rounded-lg shadow ml-3 mr-3">
-                <h2 class="text-2xl font-bold mb-2 text-left underline-green">
-                  Data Science Foundations:
+              
+              
+             
+            </div>
+
+            <div class="flex flex-col gap-5 lg:flex-row lg:gap-5" id="conference-tracks">
+              <div class="bg-white p-6 rounded-lg shadow w-full lg:w-1/2 mt-5">
+                <h2 class="text-2xl font-bold mb-2 text-left text-blue-900">
+                  Information Security and Network Communications
                 </h2>
-                <p>- Statistical learning theory</p>
-                <p>- Data mining techniques</p>
-                <p>- Big data analytics</p>
-                <p class="text-left">- Machine learning algorithms</p>
-                <p>- Deep learning techniques</p>
+                <p class="mt-2"><b>Chair:</b>
+                  Dr. T. Murali Mohan; AITAM Institute of Engineering and Technology (SIET), Narsapur, JNTU Kakinada, Andhra Pradesh, India
+                </p>
+                <p class="text-left mt-2"><b>Phone:</b>
+                  9885602412
+                </p>
+                <p class="text-left mt-2"><b>e-Mail:</b>
+                  drtmm512@lgmail.com
+                </p> 
+                <p class="mt-2"><b>Co-Chair:</b>
+                  A. Krishna Mohan; UCE Kakinada, JNTU Kakinada, Andhra Pradesh, India & 
+                  P. Vamsi Krishna Raja; Pydah Institute of Engineering and Technology(A), Kakinada & 
+                  A.S.N. Chakravarthy; UCEV Vizianagaram, JNTU Kakinada, Andhra Pradesh, India & 
+                  K. Narasimharaju; GVP College of Engineering (A), Visakhapatnam, Andhra University, Andhra Pradesh, India
+                </p>
+                <p class="text-left mt-2"><b>Phone:</b>
+                  9885774322, 6300812123, 9885602412, 9618719229, 9885871466, 9381395778, 9100728999
+                </p>
+                <p class="text-left mt-2"><b>e-Mail:</b>
+                  krishna.ankala@gmail.com, drpvkraja@swarnandhra.ac.in, asnchakravarthy@yahoo.com, rj.vizagg@gmail.com, Sriram310@gmail.com
+                </p> 
               </div>
-              <div class="bg-white p-6 rounded-lg shadow ml-3 mr-3">
-                <h2 class="text-2xl font-bold mb-2 underline-green">
-                  Computational Intelligence:
+              <div class="bg-white p-6 rounded-lg shadow w-full lg:w-1/2 mt-5">
+                <h2 class="text-2xl font-bold mb-2 text-left text-blue-900">
+                  Image Processing and Pattern Recognition
                 </h2>
-                <p>- Evolutionary computation</p>
-                <p>- Neural networks</p>
-                <p>- Fuzzy systems</p>
-                <p>- Swarm intelligence</p>
-                <p>- Genetic algorithms</p>
-              </div>
-              <div class="bg-white p-6 rounded-lg shadow ml-3 mr-3">
-                <h2 class="text-2xl text-left font-bold mb-2 underline-green">
-                  Applications of Data Science:
-                </h2>
-                <p class="text-left">- Natural language processing</p>
-                <p>- Image and video analysis</p>
-                <p>- Bioinformatics</p>
-                <p>- Social media analytics</p>
-                <p>- Recommender systems</p>
-              </div>
-              <div class="bg-white p-6 rounded-lg shadow ml-3 mr-3">
-                <h2 class="text-2xl font-bold mb-2 underline-green text-left">
-                  Computational intelligence applications:
-                </h2>
-                <p>- Robotics and autonomous systems</p>
-                <p>- Decision support systems</p>
-                <p>- Optimization problems</p>
-                <p class="text-left">- Computational neuroscience</p>
-                <p>- Intelligent control</p>
-              </div>
-              <div class="bg-white p-6 rounded-lg shadow ml-3 mr-3">
-                <h2 class="text-2xl font-bold mb-2 underline-green">
-                  Data Science and Al Ethics:
-                </h2>
-                <p>- Privacy and security in data analytics</p>
-                <p class="text-left">- Fairness and transparency in Al</p>
-                <p>- Ethical considerations in big data research</p>
-              </div>
-              <div class="bg-white p-6 rounded-lg shadow ml-3 mr-3">
-                <h2 class="text-2xl text-left font-bold mb-2 underline-green">
-                  Data Visualization and Interpretation:
-                </h2>
-                <p>- Visual analytics</p>
-                <p class="text-left">- Interactive data exploration</p>
-                <p>- Interpretability of machine learning models</p>
-              </div>
-              <div class="bg-white p-6 rounded-lg shadow ml-3 mr-3">
-                <h2 class="text-2xl font-bold mb-2 underline-green text-left">
-                  Cloud Computing and Virtualization:
-                </h2>
-                <p>- Cloud service models</p>
-                <p class="text-left">- Containerization technologies</p>
-                <p>- Serverless computing and functions-as-a-service</p>
-              </div>
-              <div class="bg-white p-6 rounded-lg shadow ml-3 mr-3">
-                <h2 class="text-2xl font-bold mb-2 underline-green text-left">
-                  Software Engineering Practices:
-                </h2>
-                <p class="text-left">- Agile methodologies and DevOps practices</p>
-                <p class="text-left">- Software testing and quality assurance</p>
-                <p>- Software architecture and design pattems</p>
-              </div>
-              <div class="bg-white p-6 rounded-lg shadow ml-3 mr-3">
-                <h2 class="text-2xl font-bold mb-2 underline-green">
-                  Emerging Trends:
-                </h2>
-                <p>- Quantum.computing and data science</p>
-                <p>- Edge computing for data analytics</p>
-                <p>- Blockchain and Al</p>
-              </div>
-              <div class="bg-white p-6 rounded-lg shadow ml-3 mr-3">
-                <h2 class="text-2xl font-bold mb-2 underline-green">
-                  Industry Applications:
-                </h2>
-                <p>- Financial analytics</p>
-                <p>- Heathcare informatics</p>
-                <p>- Industrial IoT appications</p>
-                <p class="text-left">- Smart c and arbian analytics</p>
+                <p class="mt-2"><b>Chair:</b>
+                  Dr. A. Rama Rao, Lendi Institute of Engineering and Technology (A), Vizianagaram, JNTU Kakinada, AP, India.
+                </p>
+                <p class="text-left mt-2"><b>Phone:</b>
+                  9052740752
+                </p>
+                <p class="text-left mt-2"><b>e-Mail:</b>
+                  ramaraoadimalla@gmail.com
+                </p> 
+                <p class="mt-2"><b>Co-Chair:</b>
+                  Dr. K. V. Kadambari, National Institute of Technology (NIT) Warangal, Telangana, India & 
+                  Dr. P. Aruna Kumari, JNTU-GV Vizianagaram, Andhra Pradesh, India & 
+                  Mr. P. J. V. G. Prakasa Rao & Mr. N. P. Patnaik M, Lendi Institute of Engineering and Technology (A), Vizianagaram, JNTU Kakinada, AP, India & 
+                  Dr. Mohan Mahanty, Vignan Institute of Information and Technology (A), Visakhapatnam, India
+                </p>
+                <p class="text-left mt-2"><b>Phone:</b>
+                  9705460461, 9440520606, 7382595587, 8328288485
+                </p>
+                <p class="text-left mt-2"><b>e-Mail:</b>
+                  kadambari@nitw.ac.in, prakash.pyla@gmail.com, nppatnaikm@gmail.com
+                </p> 
               </div>
             </div>
-          </section>
+
+          <div class="flex flex-col gap-5 lg:flex-row lg:gap-5" id="conference-tracks">
+            <div class="bg-white p-6 rounded-lg shadow w-full lg:w-1/2 mt-5">
+              <h2 class="text-2xl font-bold mb-2 text-left text-blue-900">
+                Security and Intelligence Applications
+              </h2>
+              <p class="mt-2"><b>Chair:</b>
+                Dr. R. Sivaranjani, Raghu Engineering College(A), Visakhapatnam, JNTU GV Vizianagaram, Andhra Pradesh, India
+              </p>
+              <p class="text-left mt-2"><b>Phone:</b>
+                9642022170
+              </p>
+              <p class="text-left mt-2"><b>e-Mail:</b>
+                sivaranjani.reddi@<br>raghuenggcollege.in
+              </p> 
+              <p class="mt-2"><b>Co-Chair:</b>
+                Ch. Chakradhara Rao; Raghu Engineering College(A), Visakhapatnam, Andhra Pradesh, India & 
+                Ms. P.S.S. Geethika; Raghu Engineering College(A), Visakhapatnam, Andhra Pradesh, India & 
+                Mr. Ch. Seshadri Rao; Raghu Engineering College(A), Visakhapatnam, Andhra Pradesh, India & 
+                Mrs. G. Gayathri; Anil Neerukonda Institute of Technology and Sciences (A), Andhra Pradesh, India & 
+                Ch. Madhu; Software Developer III, BPMLinks LLC, Atlanta, GA, USA
+              </p>
+              <p class="text-left mt-2"><b>Phone:</b>
+                7702215245
+              </p>
+              <p class="text-left mt-2"><b>e-Mail:</b>
+                h@raghuenggcollege.in, saigeethika.p<br>@raghuenggcollege.in, seshadrirao.chinta<br>@raghuenggcollege.in, ggayatri.cse@anits.edu.in, Madhu.ncc@gmail.com
+              </p> 
+            </div>
+          </div>
+        </section>
       </div>
+    </div>
+    <footer class="bg-blue-900 py-6 text-center text-white">
+      <p>
+        &copy; 2025 International Conference on Data Science and Computational
+        Intelligence. All rights reserved.
+      </p>
+    </footer>
 </body>
 </html>
