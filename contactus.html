@@ -1,264 +1,260 @@
 <!DOCTYPE html>
 <html lang="en">
-    <head>
-        <meta charset="UTF-8" />
-        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-        <title>ICDSCI</title>
-        <link
-          href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap"
-          rel="stylesheet"
-        />
-        <link rel="stylesheet" href="" />
-        <script src="https://cdn.tailwindcss.com"></script>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>ICDSCI</title>
+    <link
+      href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="" />
+    <script src="https://cdn.tailwindcss.com"></script>
     
-        <style>
-          body {
-            font-family: "Poppins", sans-serif;
-            text-align: justify;
-            text-justify: inter-word;
-          }
-          .underline-green {
-            text-decoration: underline;
-            text-decoration-color: rgb(34 197 94 / var(--tw-bg-opacity));
-          }
-          .slideshow {
-            position: absolute;
-            top: 0;
-            left: 0;
-            width: 100%;
-            height: 100%;
-          }
-          .slide {
-      position: absolute;
-      top: 0;
-      left: 0;
-      width: 100%;
-      height: 100%;
-      background-size: cover;
-      background-position: center;
-      opacity: 0;
-      animation: slideShow 12s infinite;
-    }
-    
-    .slide:nth-child(1) {
-      animation-delay: 0s;
-    }
-    
-    .slide:nth-child(2) {
-      animation-delay: 3s;
-    }
-    
-    .slide:nth-child(3) {
-      animation-delay: 6s;
-    }
-    
-    .slide:nth-child(4) {
-      animation-delay: 9s;
-    }
-    
-        
-          @keyframes slideShow {
-            0% { opacity: 1; }
-            33% { opacity: 1; }
-            33.33% { opacity: 0; }
-            100% { opacity: 0; }
-          }
-        
-          .button-container {
-            margin-top: 2.5rem; /* mt-10 */
-            display: flex;
-            justify-content: space-between;
-          }
-        
-          .button-container button {
-            background-color: rgb(21 128 61 / var(--tw-bg-opacity));
-            color: white;
-            /* padding: 0.75rem 1.5rem; */
-            padding: 15px;
-            font-size: 1.125rem;
-            font-weight: 300;
-            border: none;
-            border-radius: 0.375rem;
-            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1), 0 2px 4px rgba(0, 0, 0, 0.06);
-            transition: all 0.3s ease-in-out;
-            cursor: pointer;
-          }
-        
-          .button-container button:hover {
-            background-color: gray;
-            box-shadow: 0 8px 10px rgba(0, 0, 0, 0.15), 0 4px 6px rgba(0, 0, 0, 0.1);
-            transform: translateY(-2px);
-          }
-        
-          .button-container button:focus {
-            outline: none;
-            box-shadow: 0 0 0 3px rgba(110, 231, 183, 0.5);
-          }
-          .tab {
-            overflow: hidden;
-            display: flex;
-            justify-content: space-evenly;
-          }
-        
-          .tab button {
-            background-color: gray;
-            border: none;
-            outline: none;
-            cursor: pointer;
-            padding: 14px 16px;
-            margin: 0 5px;
-            transition: 0.3s;
-            font-size: 17px;
-            flex: 1;
-          }
-        
-          .tab button:hover {
-            background-color: #ddd;
-          }
-        
-          .tab button.active {
-            background-color: rgb(21 128 61 / var(--tw-bg-opacity));
-            color: white;
-          }
-        
-          .tabcontent {
-            display: none;
-            padding: 6px 12px;
-            border-top: none;
-          }
-        
-          .underline-green {
-            text-decoration: underline;
-            text-decoration-color: green;
-          }
-    
-          .map-container {
-              height: 100%;
-          }
-        
-          @keyframes fadeIn {
-            from {
-              opacity: 0;
-              transform: translateY(20px);
-            }
-            to {
-              opacity: 1;
-              transform: translateY(0);
-            }
-          }
-        
-          .animate-fadeIn {
-            animation: fadeIn 0.6s ease-out forwards;
-          }
-    
-          /* Slideshow container */
-          .slideshow-container {
-      max-width: 1000px;
-      position: relative;
-      margin: auto;
-    }
-    
-    /* Remove Next & Previous buttons */
-    .prev, .next {
-      display: none;
-    }
-    
-    /* Caption text */
-    .text {
-      color: #f2f2f2;
-      font-size: 15px;
-      padding: 8px 12px;
-      position: absolute;
-      bottom: 8px;
-      width: 100%;
-      text-align: center;
-    }
-    
-    /* Number text (1/3 etc) */
-    .numbertext {
-      color: #f2f2f2;
-      font-size: 12px;
-      padding: 8px 12px;
-      position: absolute;
-      top: 0;
-    }
-    
-    /* The dots/bullets/indicators */
-    .dot {
-      cursor: pointer;
-      height: 15px;
-      width: 15px;
-      margin: 0 2px;
-      background-color: #bbb;
-      border-radius: 50%;
-      display: inline-block;
-      transition: background-color 0.6s ease;
-    }
-    
-    .active, .dot:hover {
-      background-color: #717171;
-    }
-    
-    /* Fading animation */
-    .fade {
-      animation-name: fade;
-      animation-duration: 1.5s;
-    }
-    
-    @keyframes fade {
-      from {opacity: .4} 
-      to {opacity: 1}
-    }
-    
-    /* On smaller screens, decrease text size */
-    @media only screen and (max-width: 300px) {
-      .text {font-size: 11px}
-    }
-    
-    
-        </style>
+    <style>
+      body {
+        font-family: "Poppins", sans-serif;
+        text-align: justify;
+        text-justify: inter-word;
+      }
+      .underline-blue {
+        text-decoration: underline;
+        text-decoration-color: rgb(34 197 94 / var(--tw-bg-opacity));
+      }
+      .slideshow {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+      }
+      .slide {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        background-size: cover;
+        background-position: center;
+        opacity: 0;
+        animation: slideShow 12s infinite;
+      }
 
+      .slide:nth-child(1) {
+        animation-delay: 0s;
+      }
 
-    </head>
-<body class="bg-white text-black text-justify">
+      .slide:nth-child(2) {
+        animation-delay: 3s;
+      }
+
+      .slide:nth-child(3) {
+        animation-delay: 6s;
+      }
+
+      .slide:nth-child(4) {
+        animation-delay: 9s;
+      }
+
+    
+      @keyframes slideShow {
+        0% { opacity: 1; }
+        33% { opacity: 1; }
+        33.33% { opacity: 0; }
+        100% { opacity: 0; }
+      }
+    
+      .button-container {
+        margin-top: 2.5rem; /* mt-10 */
+        display: flex;
+        justify-content: space-between;
+      }
+    
+      .button-container button {
+        background-color: rgb(30 58 138 / var(--tw-bg-opacity));
+        color: white;
+        /* padding: 0.75rem 1.5rem; */
+        padding: 15px;
+        font-size: 1.125rem;
+        font-weight: 300;
+        border: none;
+        border-radius: 0.375rem;
+        box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1), 0 2px 4px rgba(0, 0, 0, 0.06);
+        transition: all 0.3s ease-in-out;
+        cursor: pointer;
+      }
+    
+      .button-container button:hover {
+        background-color: gray;
+        box-shadow: 0 8px 10px rgba(0, 0, 0, 0.15), 0 4px 6px rgba(0, 0, 0, 0.1);
+        transform: translateY(-2px);
+      }
+    
+      .button-container button:focus {
+        outline: none;
+        box-shadow: 0 0 0 3px rgba(110, 231, 183, 0.5);
+      }
+      .tab {
+        overflow: hidden;
+        display: flex;
+        justify-content: space-evenly;
+      }
+    
+      .tab button {
+        background-color: gray;
+        border: none;
+        outline: none;
+        cursor: pointer;
+        padding: 14px 16px;
+        margin: 0 5px;
+        transition: 0.3s;
+        font-size: 17px;
+        flex: 1;
+      }
+    
+      .tab button:hover {
+        background-color: #ddd;
+      }
+    
+      .tab button.active {
+        background-color: rgb(30 58 138 / var(--tw-bg-opacity));
+        color: white;
+      }
+    
+      .tabcontent {
+        display: none;
+        padding: 6px 12px;
+        border-top: none;
+      }
+    
+      .underline-blue {
+        text-decoration: underline;
+        text-decoration-color: blue;
+      }
+
+      .map-container {
+          height: 100%;
+      }
+    
+      @keyframes fadeIn {
+        from {
+          opacity: 0;
+          transform: translateY(20px);
+        }
+        to {
+          opacity: 1;
+          transform: translateY(0);
+        }
+      }
+    
+      .animate-fadeIn {
+        animation: fadeIn 0.6s ease-out forwards;
+      }
+
+      /* Slideshow container */
+      .slideshow-container {
+  max-width: 1000px;
+  position: relative;
+  margin: auto;
+      }
+
+      /* Remove Next & Previous buttons */
+      .prev, .next {
+        display: none;
+      }
+
+      /* Caption text */
+      .text {
+        color: #f2f2f2;
+        font-size: 15px;
+        padding: 8px 12px;
+        position: absolute;
+        bottom: 8px;
+        width: 100%;
+        text-align: center;
+      }
+
+      /* Number text (1/3 etc) */
+      .numbertext {
+        color: #f2f2f2;
+        font-size: 12px;
+        padding: 8px 12px;
+        position: absolute;
+        top: 0;
+      }
+
+      /* The dots/bullets/indicators */
+      .dot {
+        cursor: pointer;
+        height: 15px;
+        width: 15px;
+        margin: 0 2px;
+        background-color: #bbb;
+        border-radius: 50%;
+        display: inline-block;
+        transition: background-color 0.6s ease;
+      }
+
+      .active, .dot:hover {
+        background-color: #717171;
+      }
+
+      /* Fading animation */
+      .fade {
+        animation-name: fade;
+        animation-duration: 1.5s;
+      }
+
+      @keyframes fade {
+        from {opacity: .4} 
+        to {opacity: 1}
+      }
+
+      /* On smaller screens, decrease text size */
+      @media only screen and (max-width: 300px) {
+        .text {font-size: 11px}
+      }
+    </style>
+  </head>
+  <body class="bg-white text-black text-justify">
     <nav class="fixed w-full bg-gray-50 text-black py-3 z-50">
         <div class="container mx-auto flex justify-between items-center px-4">
           <div class="flex items-center">
             <img src="springer.png" alt="Springer Logo" class="h-10 mr-2" />
             <a href="#" class="text-2xl font-bold">
-              <span class="bg-green-700 text-white px-2 py-1 rounded"
+              <span class="bg-blue-900 text-white px-2 py-1 rounded"
                 >ICDSCI</span
               >
               2025
             </a>
           </div>
           <ul class="hidden md:flex space-x-6">
-            <li><a href="index.html" class="hover:text-green-400">Home</a></li>
+            <li><a href="index.html" class="hover:text-blue-400">Home</a></li>
             <li>
-              <a href="callforPapers.html" class="hover:text-green-400"
+              <a href="callforPapers.html" class="hover:text-blue-400"
                 >Call for papers</a
               >
             </li>
             <li>
-              <a href="committees.html" class="hover:text-green-400">Committees</a>
+              <a href="committees.html" class="hover:text-blue-400">Committees</a>
             </li>
             <li>
-              <a href="registration.html" class="hover:text-green-400"
+              <a href="registration.html" class="hover:text-blue-400"
                 >Registration</a
               >
             </li>
             <li>
-              <a href="sponsors.html" class="hover:text-green-400">Sponsors</a>
+              <a href="sponsors.html" class="hover:text-blue-400">Sponsors</a>
             </li>
             <li>
-              <a href="specialSessions.html" class="hover:text-green-400"
+              <a href="specialSessions.html" class="hover:text-blue-400"
                 >Special sessions</a
               >
             </li>
-            <li><a href="contactus.html" class="text-green-400">Contact</a></li>
+            <li><a href="contactus.html" class="text-blue-400">Contact</a></li>
           </ul>
           <button
-            class="md:hidden text-green-400 focus:outline-none"
+            class="md:hidden text-blue-400 focus:outline-none"
             id="menu-button"
           >
             <svg
@@ -281,33 +277,33 @@
           class="md:hidden flex flex-col space-y-2 px-4 pt-2 pb-4 bg-gray-100 hidden"
           id="mobile-menu"
         >
-          <li><a href="index.html" class="hover:text-green-400">Home</a></li>
+          <li><a href="index.html" class="hover:text-blue-400">Home</a></li>
           <li>
-            <a href="callforPapers.html" class="hover:text-green-400"
+            <a href="callforPapers.html" class="hover:text-blue-400"
               >Call for papers</a
             >
           </li>
           <li>
-            <a href="committees.html" class="hover:text-green-400">Committees</a>
+            <a href="committees.html" class="hover:text-blue-400">Committees</a>
           </li>
           <li>
-            <a href="registration.html" class="hover:text-green-400"
+            <a href="registration.html" class="hover:text-blue-400"
               >Registration</a
             >
           </li>
           <li>
-            <a href="sponsors.html" class="hover:text-green-400">Sponsors</a>
+            <a href="sponsors.html" class="hover:text-blue-400">Sponsors</a>
           </li>
           <li>
-            <a href="specialSessions.html" class="hover:text-green-400"
+            <a href="specialSessions.html" class="hover:text-blue-400"
               >Special sessions</a
             >
           </li>
-          <li><a href="contactus.html" class="text-green-400">Contact</a></li>
+          <li><a href="contactus.html" class="text-blue-400">Contact</a></li>
         </ul>
       </nav>
   
-      <header class="h-[1150px] md:h-[700px] text-center text-white bg-green-700 relative">
+      <header class="h-[1020px] md:h-[625px] text-center text-white bg-blue-900 relative">
         <div class="flex flex-col md:flex-row h-full relative z-10">
           <div class="w-full md:w-1/2 px-4 py-24">
             <div class="w-full md:w-1/2">
@@ -351,7 +347,8 @@
               ALL ACCEPTED & PRESENTED papers will be published in <br> <b>SCOPUS indexed SPRINGER PROMS</b>.
             </h3>
             <div class="flex justify-center space-x-4 mb-4">
-              <img src="springer.png" alt="Springer" class="h-36 w-36" />
+              <img src="springer.png" alt="Springer" class="h-20 w-20" />
+              <img src="bg2.jpg" alt="" class="h-20 w-20">
             </div>
             <p class="mb-2">Submission is now open: Till December 15, 2024.</p>
             <div class="button-container2"></div>
@@ -401,24 +398,24 @@
           submit their work but are unable to attend the conference.</marquee
         >
       </div>
-      
+  
       <section class="bg-white pt-[20px] md:pt-0">
         <div class="flex flex-wrap ">
   
-          <div class="w-[680px] md:mt-3 bg-gray-50 md:bg-white">
+          <div class="w-[500px] md:mt-3 bg-gray-50 md:bg-white">
             <div
               class="tab flex flex-col lg:flex-row space-y-4 lg:space-y-0 lg:space-x-4 mb-4"
             >
               <button
-                class="tablinks btn mt-[20px] md:mt-0 font-bold"
+                class="tablinks btn mt-[20px] md:mt-0 font-bold text-white"
                 onclick="openTab(event, 'about-pscmr')"
               >
                 About PSCMR
               </button>
-              <button class="tablinks btn font-bold" onclick="openTab(event, 'about-ds')">
+              <button class="tablinks btn font-bold text-white" onclick="openTab(event, 'about-ds')">
                 About DS
               </button>
-              <button class="tablinks btn font-bold" onclick="openTab(event, 'about-mca')">
+              <button class="tablinks btn font-bold text-white" onclick="openTab(event, 'about-mca')">
                 About MCA
               </button>
             </div>
@@ -439,7 +436,7 @@
                 strategic partnerships with industry and academia. At PSCMRCET education around providing a multidimensional development
                 <span class="dots">...</span>
               </p>
-              <a href="about.html#about-pscmr"><button class="text-green-700 font-bold">Read more</button></a>
+              <a href="about.html#about-pscmr"><button class="text-blue-900 font-bold">Read more</button></a>
             </div>
             <div id="about-ds" class="tabcontent">
               <p>
@@ -459,7 +456,7 @@
                 year 2022 with an annual intake of 60 students.
                 <span class="dots">...</span>
               </p>
-              <a href="about.html#about-ds"><button class="text-green-700 font-bold">Read more</button></a>
+              <a href="about.html#about-ds"><button class="text-blue-900 font-bold">Read more</button></a>
             </div>
             <div id="about-mca" class="tabcontent">
               <p>
@@ -478,18 +475,8 @@
                 Why MCA in PSCMRCET? Hands-on Curriculum designed by experts from
                 academia and industry
                 <span class="dots">...</span>
-                <span class="more">
-                  <!-- and taught by Quality Faculty Members More emphasis on the latest programming languages and
-                  tools to develop better and faster applications. Enhancing
-                  students’ capabilities as per the career requirements and giving
-                  them necessary placement assistance Specially organized
-                  Workshops, Webinars and Guest Lectures by Industry experts to
-                  provide the latest Industry insights Professional enhancement
-                  Program focusing on aptitude, reasoning, soft skills and
-                  interviewing skills of the student. -->
-                </span>
               </p>
-              <a href="about.html#about-mca"><button class="text-green-700 font-bold">Read more</button></a>
+              <a href="about.html#about-mca"><button class="text-blue-900 font-bold">Read more</button></a>
             </div>
           </div>
   
@@ -510,7 +497,22 @@
                 (Autonomous), Vijayawada
               </p>
             </div>
-            <div class="ml-10 md:ml-10 mr-4 md:mt-[60px]">
+            <div class="md:ml-2 md:mt-[60px]">
+              <a href="https://www.cardiffmet.ac.uk/Pages/default.aspx" target="_blank">
+                <img
+                src="CardiffMet_logo-1.png"
+                alt="js-logo"
+                class="mb-4 ml-10 md:ml-0"
+                style="max-width: 100%; height: 190px"
+              />
+              </a>
+              
+              <p class="text-md text-center text-gray-700 ml-3 md:ml-0 font-bold">
+                Cardiff Metropolitan University <br />
+                Prifysgol Metropolitan caerdydd
+              </p>
+            </div>
+            <div class="ml-7 md:ml-3 md:mt-[60px]">
               <a href="https://jacksparrowpublishers.com/" target="_blank">
                 <img
                 src="jslogo.png"
@@ -520,14 +522,15 @@
               />
               </a>
               
-              <p class="text-md text-center text-gray-700 m-3 md:m-0 font-bold">
+              <p class="text-md text-center text-gray-700 m-3 md:m-0 font-bold ml-7 md:ml-0">
                 Jack Sparrow Publishers <br />
                 Private Limited
               </p>
             </div>
+            
+            
         </div>
       </section>
-    
     
   
       <script>
@@ -537,58 +540,58 @@
             document.getElementById("mobile-menu").classList.toggle("hidden");
           });
       </script>
-
-    <script>
-      function openTab(evt, tabName) {
-        var i, tabcontent, tablinks;
-        tabcontent = document.getElementsByClassName("tabcontent");
-        for (i = 0; i < tabcontent.length; i++) {
-          tabcontent[i].style.display = "none";
+  
+      <script>
+        function openTab(evt, tabName) {
+          var i, tabcontent, tablinks;
+          tabcontent = document.getElementsByClassName("tabcontent");
+          for (i = 0; i < tabcontent.length; i++) {
+            tabcontent[i].style.display = "none";
+          }
+          tablinks = document.getElementsByClassName("tablinks");
+          for (i = 0; i < tablinks.length; i++) {
+            tablinks[i].className = tablinks[i].className.replace(" active", "");
+          }
+          document.getElementById(tabName).style.display = "block";
+          evt.currentTarget.className += " active";
         }
-        tablinks = document.getElementsByClassName("tablinks");
-        for (i = 0; i < tablinks.length; i++) {
-          tablinks[i].className = tablinks[i].className.replace(" active", "");
-        }
-        document.getElementById(tabName).style.display = "block";
-        evt.currentTarget.className += " active";
-      }
-
-      // Display the first tab by default
-      document.addEventListener("DOMContentLoaded", (event) => {
-        document.querySelector(".tab button").click();
-      });
-
-      document.addEventListener("DOMContentLoaded", function () {
-        const readMoreButtons = document.querySelectorAll(".read-more-btn");
-        const allDots = document.querySelectorAll(".dots");
-        const allMoreTexts = document.querySelectorAll(".more");
-
-        // Hide all the extended content initially
-        allDots.forEach((dot) => (dot.style.display = "inline"));
-        allMoreTexts.forEach((moreText) => (moreText.style.display = "none"));
-
-        readMoreButtons.forEach((button) => {
-          button.addEventListener("click", function () {
-            const parent = this.parentElement;
-            const dots = parent.querySelector(".dots");
-            const moreText = parent.querySelector(".more");
-            const btnText = this;
-
-            if (dots.style.display === "none") {
-              dots.style.display = "inline";
-              btnText.innerHTML = "Read more";
-              moreText.style.display = "none";
-            } else {
-              dots.style.display = "none";
-              btnText.innerHTML = "Read less";
-              moreText.style.display = "inline";
-            }
+  
+        // Display the first tab by default
+        document.addEventListener("DOMContentLoaded", (event) => {
+          document.querySelector(".tab button").click();
+        });
+  
+        document.addEventListener("DOMContentLoaded", function () {
+          const readMoreButtons = document.querySelectorAll(".read-more-btn");
+          const allDots = document.querySelectorAll(".dots");
+          const allMoreTexts = document.querySelectorAll(".more");
+  
+          // Hide all the extended content initially
+          allDots.forEach((dot) => (dot.style.display = "inline"));
+          allMoreTexts.forEach((moreText) => (moreText.style.display = "none"));
+  
+          readMoreButtons.forEach((button) => {
+            button.addEventListener("click", function () {
+              const parent = this.parentElement;
+              const dots = parent.querySelector(".dots");
+              const moreText = parent.querySelector(".more");
+              const btnText = this;
+  
+              if (dots.style.display === "none") {
+                dots.style.display = "inline";
+                btnText.innerHTML = "Read more";
+                moreText.style.display = "none";
+              } else {
+                dots.style.display = "none";
+                btnText.innerHTML = "Read less";
+                moreText.style.display = "inline";
+              }
+            });
           });
         });
-      });
-    </script>
+      </script>
 
-<div class="bg-green-700 text-white text-center p-3">
+<div class="bg-blue-900 text-white text-center p-3">
     <p class="font-bold text-2xl">CONTACT</p>
   </div>
 
@@ -596,14 +599,14 @@
     <div style="border: 2px solid rgb(219, 214, 214);" class="bg-white flex flex-col items-center text-center space-y-4 bg-white p-6 rounded-lg shadow-lg transform hover:scale-105 transition-transform duration-300 ease-in-out">
         <img src="drakbar.png" alt="Dr. Sk Akbar" class="w-48 h-48 rounded-full shadow-md">
         <h3 class="text-2xl font-bold text-gray-800">Dr. Sk Akbar</h3>
-        <p class="text-green-600 font-semibold">Professor & HOD of CSE-DATA SCIENCE Dept</p>
+        <p class="text-blue-600 font-semibold">Professor & HOD of CSE-DATA SCIENCE Dept</p>
         <p class="text-gray-600"><strong>Email:</strong> dr.akbar@pscmr.ac.in</p>
         <p class="text-gray-600"><strong>Phone:</strong> +91 99480 33466</p>
     </div>
     <div style="border: 2px solid rgb(219, 214, 214);" class="bg-white flex flex-col items-center text-center space-y-4 bg-white p-6 rounded-lg shadow-lg transform hover:scale-105 transition-transform duration-300 ease-in-out">
         <img src="Pathanjali-Sastri.jpg" alt="Prof. A. Pathanjali Sastri" class="w-48 h-48 rounded-full shadow-md">
         <h3 class="text-2xl font-bold text-gray-800">Prof. A. Pathanjali Sastri</h3>
-        <p class="text-green-600 font-semibold">Professor and HOD of MCA dept & Vice-Principal</p>
+        <p class="text-blue-600 font-semibold">Professor and HOD of MCA dept & Vice-Principal</p>
         <p class="text-gray-600"><strong>Email:</strong> viceprincipal@pscmr.ac.in</p>
         <p class="text-gray-600"><strong>Phone:</strong> +91 98484 09689</p>
     </div>
@@ -613,13 +616,13 @@
     <div class="container mx-auto text-white flex flex-col md:flex-row">
       <div class="w-full md:w-1/2 mb-8 md:mb-0">
         <div class="map-container bg-white">
-          <p class="text-green-700 bg-white font-bold text-2xl text-center rounded-lg mb-3">POTTI SRIRAMULU CHALAVADI MALLIKARJUNA RAO COLLEGE OF ENGINEERING AND TECHNOLOGY <br>(AUTONOMOUS), VIJAYAWADA</p>
+          <p class="text-blue-900 bg-white font-bold text-2xl text-center rounded-lg mb-3">POTTI SRIRAMULU CHALAVADI MALLIKARJUNA RAO COLLEGE OF ENGINEERING AND TECHNOLOGY <br>(AUTONOMOUS), VIJAYAWADA</p>
           <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3825.0441850491925!2d80.61101557418971!3d16.52386682710849!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3a35f01e63539d21%3A0x71a2c954de88ca67!2sPSCMR%20College%20of%20Engineering%20and%20Technology!5e0!3m2!1sen!2sin!4v1722761562664!5m2!1sen!2sin" width="100%"  class="rounded-lg shadow-lg md:h-[490px]" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
         </div>
       </div>
 
       <div class="w-full md:w-1/2 space-y-8 md:ml-5 mt-10">
-        <p class="text-black font-bold text-3xl underline-green text-center">Contact Us</p>
+        <p class="text-black font-bold text-3xl underline-blue text-center">Contact Us</p>
         <div class="bg-gray-100 text-black p-6 rounded-lg shadow-lg">
           <form class="max-w-xl mx-auto p-8 rounded-lg">
             <div class="mb-4">
@@ -635,7 +638,7 @@
               <textarea id="message" name="message" rows="4" class="w-full px-3 py-2 bg-white border border-gray-700 rounded text-black" required></textarea>
             </div>
             <div class="text-center">
-              <button type="submit" class="bg-green-700 text-white px-4 py-2 rounded hover:bg-gray-500">Submit</button>
+              <button type="submit" class="bg-blue-900 text-white px-4 py-2 rounded hover:bg-gray-500">Submit</button>
             </div>
           </form>
         </div>
@@ -643,5 +646,11 @@
     </div>
   </section>
 
+  <footer class="bg-blue-900 py-6 text-center text-white">
+    <p>
+      &copy; 2025 International Conference on Data Science and Computational
+      Intelligence. All rights reserved.
+    </p>
+  </footer>
 </body>
 </html>
